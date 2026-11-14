@@ -7,6 +7,7 @@ from smp_forecast.training import scores
 from smp_forecast.http import write_json,now
 meta=pd.read_csv(ROOT/'data/processed/training_metadata.csv');data=np.load(ROOT/'data/processed/training_dataset.npz');meta['actual_smp']=data['y'].reshape(-1);metrics=[]
 for file in sorted((ROOT/'models').glob('*/artifacts/metrics.csv')):
+ if file.parents[1].name not in ['sarimax','lstm','xgboost','lightgbm']:continue
  f=pd.read_csv(file,dtype={'horizon_days':str});f['model']=file.parents[1].name;metrics.append(f)
 for name,col in [('last_origin_day','baseline_last_origin_day'),('weekly','baseline_weekly')]:
  f=meta[meta.split.isin(['validation','test'])].copy();f['predicted_smp']=f[col];f=f[np.isfinite(f.predicted_smp)];m=pd.DataFrame(scores(f));m['model']=name;metrics.append(m)

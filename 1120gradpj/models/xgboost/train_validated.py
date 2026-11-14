@@ -35,6 +35,7 @@ def audit(meta, x, y):
 
 
 def main():
+    raise SystemExit('기존 부분 입력 XGBoost 실험은 비활성화했습니다. 공통 입력 연결 후 새 실험으로 재구현해야 합니다.')
     start = time.monotonic()
     out = ROOT / 'models/xgboost/artifacts_validated'
     out.mkdir(parents=True, exist_ok=True)

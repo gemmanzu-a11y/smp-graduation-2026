@@ -9,7 +9,7 @@ from smp_forecast.training import algorithm
 from smp_forecast.http import now,write_json
 from smp_forecast.inference import input_gate
 from smp_forecast.dataset import config,build_hourly,sample
-p=argparse.ArgumentParser();p.add_argument('--model',choices=['lstm','hgb','lightgbm','extra_trees','linear_regression','random_forest','xgboost'],required=True);p.add_argument('--origin',help='Reference origin in KST, e.g. 2026-11-13T23:00:00+09:00. Not an actual past issuance claim.');a=p.parse_args();out=ROOT/'models'/a.model/'artifacts'
+p=argparse.ArgumentParser();p.add_argument('--model',choices=['lstm','lightgbm','xgboost'],required=True);p.add_argument('--origin',help='Reference origin in KST, e.g. 2026-11-13T23:00:00+09:00. Not an actual past issuance claim.');a=p.parse_args();out=ROOT/'models'/a.model/'artifacts'
 if a.origin:
  origin=pd.Timestamp(a.origin);origin=origin.tz_localize('Asia/Seoul') if origin.tzinfo is None else origin.tz_convert('Asia/Seoul')
  if origin.hour!=23 or origin.minute!=0:raise SystemExit('Origin must be daily 23:00 KST')

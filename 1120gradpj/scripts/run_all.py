@@ -1,11 +1,19 @@
-"""Run each requested algorithm as an isolated process, continuing only after recording failures."""
-import sys,subprocess,json,os,time
+"""Only the four team models; every run requires the full shared data contract."""
+import os
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'))
-from smp_forecast.http import write_json,now
-models=sys.argv[1:] or ['linear_regression','hgb','lightgbm','extra_trees','random_forest','xgboost','lstm'];status=[]
-for name in models:
- if name not in ['linear_regression','hgb','lightgbm','extra_trees','random_forest','xgboost','lstm']:raise SystemExit('Unknown model '+name)
- env={**os.environ,'OMP_NUM_THREADS':'4','OPENBLAS_NUM_THREADS':'4','MPLCONFIGDIR':str(ROOT/'data/matplotlib')};print('START',name,flush=True);p=subprocess.run([sys.executable,str(ROOT/'models'/name/'train.py')],cwd=ROOT,env=env);status.append(dict(model=name,exit_code=p.returncode,finished_at=now()));write_json(ROOT/'reports/run_status.json',status)
-subprocess.run([sys.executable,str(ROOT/'scripts/summarize.py')],cwd=ROOT)
-raise SystemExit(1 if any(r['exit_code'] for r in status) else 0)
+import subprocess
+import sys
+ROOT=Path(__file__).resolve().parents[1]
+MODELS=['sarimax','lstm','xgboost','lightgbm']
+
+def main():
+    names=sys.argv[1:] or MODELS
+    if any(n not in MODELS for n in names):raise SystemExit('Allowed models: '+', '.join(MODELS))
+    gate=subprocess.run([sys.executable,str(ROOT/'models/sarimax/train.py'),'--audit-only'],cwd=ROOT)
+    if gate.returncode:raise SystemExit(gate.returncode)
+    # The retained ML/DL runners are previous partial-input experiments, not the new contract.
+    if any(n!='sarimax' for n in names):
+        raise SystemExit('공통 데이터 게이트는 통과했지만 LSTM/XGBoost/LightGBM의 새 공통 입력 연결은 별도 작업입니다. 기존 부분 입력 결과로 대체하지 않습니다. SARIMAX만 실행하려면 run_all.py sarimax')
+    raise SystemExit(subprocess.run([sys.executable,str(ROOT/'models/sarimax/train.py')],cwd=ROOT,env={**os.environ,'OMP_NUM_THREADS':'4'}).returncode)
+
+if __name__=='__main__':main()

@@ -11,5 +11,5 @@ if not cal.official_api_verified.all():issues.append({'field':'holidays_api','de
 if last_renew<origin-pd.Timedelta(hours=48):issues.append({'field':'latest_solar_wind','detail':'archive ends '+str(last_renew)+'; latest forecast history is missing renewables'})
 issues.append({'field':'historical_vintages','detail':'Original historical public release/revision times of retrospective observation files unverified; 24h/48h delays are assumptions'})
 issues.append({'field':'load_geography','detail':'EPSIS load/reserve scope is not independently certified as mainland-only'})
-record={'at':now(),'all_seven_models_executed':all((ROOT/'models'/m/'artifacts/run.json').exists() for m in ['lstm','hgb','lightgbm','extra_trees','linear_regression','random_forest','xgboost']),'full_requested_data_contract_ready':not issues,'research_execution_ready':True,'issues':issues};write_json(ROOT/'reports/readiness.json',record);print(json.dumps(record,ensure_ascii=False,indent=2))
+record={'at':now(),'retained_legacy_models_executed':all((ROOT/'models'/m/'artifacts/run.json').exists() for m in ['lstm','lightgbm','xgboost']),'full_requested_data_contract_ready':not issues,'research_execution_ready':True,'issues':issues};write_json(ROOT/'reports/readiness.json',record);print(json.dumps(record,ensure_ascii=False,indent=2))
 if '--strict' in sys.argv and issues:raise SystemExit(2)

@@ -1,3 +1,4 @@
+raise SystemExit('과거 7개 모델 보고서 생성기는 비활성화했습니다. 현재 SARIMAX 상태는 models/sarimax/DATA_STATUS.md를 확인하세요.')
 import sys,json,os
 from pathlib import Path
 import numpy as np

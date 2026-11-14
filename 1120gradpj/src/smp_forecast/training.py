@@ -44,6 +44,7 @@ def plot_results(frame,out,name):
  ax.set(xlabel='KST hour',ylabel='MAE (KRW/kWh)',title=name+' hourly errors');ax.legend();fig.tight_layout();fig.savefig(out/'hourly_mae.png',dpi=150);plt.close(fig)
 
 def run(name):
+ raise SystemExit('기존 부분 입력 학습기는 비활성화했습니다. 새 SARIMAX는 models/sarimax/train.py를 사용하세요. 다른 모델의 공통 입력 연결은 별도 작업입니다.')
  cfg=config();out=ROOT/'models'/name/'artifacts';out.mkdir(parents=True,exist_ok=True);started=time.monotonic();np.random.seed(cfg['seed'])
  data=np.load(ROOT/'data/processed/training_dataset.npz');x=data['x'];y=data['y'].reshape(-1);meta=pd.read_csv(ROOT/'data/processed/training_metadata.csv');splits=meta.split.to_numpy();train=splits=='train';validation=splits=='validation';test=splits=='test';assert train.any() and validation.any() and test.any()
  pre=Preprocessor(scale=name in ('lstm','linear_regression')).fit(x[train]);trainx=pre.transform(x[train]);valx=pre.transform(x[validation]);module=algorithm(name)

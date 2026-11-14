@@ -1,0 +1,18 @@
+{
+  "shared_directory": "../SMP_SHARED_DATA",
+  "timezone": "Asia/Seoul",
+  "train_start": "2023-01-01",
+  "train_end": "2024-12-31",
+  "validation_start": "2025-01-01",
+  "validation_end": "2025-06-30",
+  "test_start": "2025-07-01",
+  "test_end": "2025-12-31",
+  "candidates": [
+    {"order": [1, 0, 1], "seasonal_order": [1, 0, 0, 24]},
+    {"order": [2, 0, 1], "seasonal_order": [1, 0, 0, 24]},
+    {"order": [1, 1, 1], "seasonal_order": [1, 0, 0, 24]}
+  ],
+  "maxiter": 150,
+  "fuel_policy": "historical_target_month_lng_krw_kwh; november_demo_uses_2026_10",
+  "refit_on_test": false
+}

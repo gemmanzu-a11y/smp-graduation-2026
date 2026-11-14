@@ -9,3 +9,5 @@ certifi
 joblib
 holidays
 matplotlib
+statsmodels>=0.14
+openpyxl>=3.1
