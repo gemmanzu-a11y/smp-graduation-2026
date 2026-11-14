@@ -92,4 +92,4 @@ def inspect_bundle(shared, cfg):
                 raise ValueError('Missing 72h block: '+str(origin))
         return [], (hourly, future, manifest)
     except (ValueError, KeyError, TypeError) as exc:
-        return [{'variable': 'common_bundle', 'reason': str(exc), 'action': '修正: 공통 데이터 정합성 보완; 학습 금지'}], None
+        return [{'variable': 'common_bundle', 'reason': str(exc), 'action': '공통 데이터 정합성 보완; 학습 금지'}], None

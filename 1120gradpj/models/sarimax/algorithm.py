@@ -36,11 +36,13 @@ class Estimator:
         if not y.index.equals(x.index):
             raise ValueError('Training y/exog timestamps differ')
         self.columns = list(x.columns)
+        self.y_mean = float(y.mean())
+        self.y_scale = float(y.std(ddof=0)) or 1.0
         self.mean, self.scale = x.mean(), x.std(ddof=0).replace(0, 1)
         # Keep all agreed inputs. Constant columns are not silently removed.
         with warnings.catch_warnings(record=True) as caught:
             warnings.simplefilter('always')
-            self.result = SARIMAX(y.astype(float), exog=self._x(x), order=self.order,
+            self.result = SARIMAX((y.astype(float)-self.y_mean)/self.y_scale, exog=self._x(x), order=self.order,
                 seasonal_order=self.seasonal_order, trend='n',
                 enforce_stationarity=True, enforce_invertibility=True).fit(
                     disp=False, maxiter=self.maxiter)
@@ -64,7 +66,7 @@ class Estimator:
             raise ValueError('Update must immediately follow previous state')
         if y.index[-1] > origin:
             raise ValueError('Future actuals cannot enter state')
-        self.result = self.result.extend(y.astype(float), exog=self._x(x))
+        self.result = self.result.extend((y.astype(float)-self.y_mean)/self.y_scale, exog=self._x(x))
         self.last_timestamp = y.index[-1]
 
     def predict72(self, future_x, origin):
@@ -82,8 +84,8 @@ class Estimator:
             raise ValueError('Exactly the next 72 hourly exog rows are required')
         forecast = self.result.get_forecast(steps=72, exog=self._x(future_x))
         ci = np.asarray(forecast.conf_int(alpha=.05))
-        output = pd.DataFrame({'predicted_smp': np.asarray(forecast.predicted_mean),
-            'lower_95': ci[:, 0], 'upper_95': ci[:, 1]}, index=expected)
+        output = pd.DataFrame({'predicted_smp': np.asarray(forecast.predicted_mean)*self.y_scale+self.y_mean,
+            'lower_95': ci[:, 0]*self.y_scale+self.y_mean, 'upper_95': ci[:, 1]*self.y_scale+self.y_mean}, index=expected)
         if not np.isfinite(output.to_numpy()).all():
             raise RuntimeError('Nonfinite SARIMAX forecast')
         return output
@@ -93,7 +95,7 @@ class Estimator:
         folder.mkdir(parents=True, exist_ok=True)
         self.result.save(folder / 'state.pkl')
         metadata = dict(order=self.order, seasonal_order=self.seasonal_order,
-            maxiter=self.maxiter, columns=self.columns, mean=self.mean.to_dict(),
+            maxiter=self.maxiter, y_mean=self.y_mean, y_scale=self.y_scale, columns=self.columns, mean=self.mean.to_dict(),
             scale=self.scale.to_dict(), last_timestamp=str(self.last_timestamp),
             fit_warnings=self.fit_warnings)
         (folder / 'preprocessing.json').write_text(json.dumps(metadata, indent=2, allow_nan=False))
@@ -104,6 +106,7 @@ class Estimator:
         meta = json.loads((folder / 'preprocessing.json').read_text())
         obj = cls(meta['order'], meta['seasonal_order'], meta['maxiter'])
         obj.columns = meta['columns']
+        obj.y_mean, obj.y_scale = meta['y_mean'], meta['y_scale']
         obj.mean, obj.scale = pd.Series(meta['mean']), pd.Series(meta['scale'])
         obj.last_timestamp = pd.Timestamp(meta['last_timestamp'])
         obj.fit_warnings = meta['fit_warnings']

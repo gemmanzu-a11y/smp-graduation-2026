@@ -18,6 +18,32 @@ from fuel import read_lng, fuel_for_targets
 
 def audit(cfg, shared):
     issues, bundle = inspect_bundle(shared, cfg)
+    local_files = {
+        'demand_actual': 'power_hourly.csv', 'holidays': 'holidays.csv',
+        'renewables': 'renewable_hourly.csv', 'reserve': 'power_hourly.csv',
+        'weather_actual': 'weather_hourly.csv',
+    }
+    inventory = []
+    for source, label in SOURCES.items():
+        filename = local_files.get(source)
+        path = ROOT/'data/processed'/filename if filename else None
+        row = dict(source=source, variable=label, required_period='2023-01-01~2025-12-31')
+        if path is not None and path.is_file():
+            data = pd.read_csv(path)
+            timecol = next((c for c in ['timestamp','date','month'] if c in data), None)
+            row.update(file=filename, rows=len(data), first=str(data[timecol].min()) if timecol else None,
+                last=str(data[timecol].max()) if timecol else None,
+                state='기존 파일 존재; 새 공통 정의·품질·출처 검증 필요')
+            if source == 'reserve': row['state'] = '기존 예비율 있음; 공급예비력 MW 정규화는 미완료'
+            if source == 'holidays': row['state'] = '기존 대체 달력; 공식 API 자료 연결 필요'
+        elif source == 'domestic_lng':
+            row['state'] = '아래 지정 엑셀에서 직접 확인'
+        elif source == 'calendar':
+            row['state'] = '시간축에서 생성 가능; 공통 행렬 미생성'
+        else:
+            row['state'] = '전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개'
+        inventory.append(row)
+    write_json(HERE/'source_inventory.json', inventory)
     # Always inspect the actual supplied workbook; never silently use the old fuel CSV.
     workbooks = list(ROOT.parent.glob('HOME_*.xlsx'))
     if len(workbooks) != 1:
@@ -40,6 +66,10 @@ def audit(cfg, shared):
                 if not np.allclose(block.domestic_lng_cost_krw_kwh, expected_fuel):
                     issues.append(dict(variable='domestic_lng', reason='예측 입력의 대상월 매핑 불일치', action='동월 값 연결'))
                     break
+    if bundle is None:
+        for row in inventory:
+            if row['source'] not in ['calendar','domestic_lng']:
+                issues.append(dict(variable=row['variable'], reason=row['state'], action='2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정'))
     status = dict(at=now(), status='BLOCKED' if issues else 'READY', can_train=not issues,
         model='sarimax', shared_directory=str(shared), issues=issues, required_sources=SOURCES,
         limitation='동월 LNG 제공 조건부 실험; 실제 운영 공개시각 검증 아님')

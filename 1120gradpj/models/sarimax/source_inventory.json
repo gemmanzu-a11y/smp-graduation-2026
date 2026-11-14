@@ -1,0 +1,106 @@
+[
+  {
+    "source": "demand_actual",
+    "variable": "전력수요 실적",
+    "required_period": "2023-01-01~2025-12-31",
+    "file": "power_hourly.csv",
+    "rows": 33697,
+    "first": "2023-01-01 00:00:00+09:00",
+    "last": "2026-11-13 23:00:00+09:00",
+    "state": "기존 파일 존재; 새 공통 정의·품질·출처 검증 필요"
+  },
+  {
+    "source": "demand_forecast",
+    "variable": "하루전 육지 수요예측 mlfd",
+    "required_period": "2023-01-01~2025-12-31",
+    "state": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개"
+  },
+  {
+    "source": "holidays",
+    "variable": "공식 공휴일",
+    "required_period": "2023-01-01~2025-12-31",
+    "file": "holidays.csv",
+    "rows": 102,
+    "first": "2023-01-01",
+    "last": "2027-12-27",
+    "state": "기존 대체 달력; 공식 API 자료 연결 필요"
+  },
+  {
+    "source": "calendar",
+    "variable": "달력",
+    "required_period": "2023-01-01~2025-12-31",
+    "state": "시간축에서 생성 가능; 공통 행렬 미생성"
+  },
+  {
+    "source": "generation",
+    "variable": "LNG·석탄·원자력 발전량",
+    "required_period": "2023-01-01~2025-12-31",
+    "state": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개"
+  },
+  {
+    "source": "renewables",
+    "variable": "태양광·풍력 실적",
+    "required_period": "2023-01-01~2025-12-31",
+    "file": "renewable_hourly.csv",
+    "rows": 26304,
+    "first": "2023-01-01 00:00:00+09:00",
+    "last": "2025-12-31 23:00:00+09:00",
+    "state": "기존 파일 존재; 새 공통 정의·품질·출처 검증 필요"
+  },
+  {
+    "source": "solar_forecast",
+    "variable": "하루전 시장 태양광 예측 solgenKpx",
+    "required_period": "2023-01-01~2025-12-31",
+    "state": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개"
+  },
+  {
+    "source": "reserve",
+    "variable": "공급예비력·예비율",
+    "required_period": "2023-01-01~2025-12-31",
+    "file": "power_hourly.csv",
+    "rows": 33697,
+    "first": "2023-01-01 00:00:00+09:00",
+    "last": "2026-11-13 23:00:00+09:00",
+    "state": "기존 예비율 있음; 공급예비력 MW 정규화는 미완료"
+  },
+  {
+    "source": "domestic_lng",
+    "variable": "파일 LNG 연료비단가 원/kWh",
+    "required_period": "2023-01-01~2025-12-31",
+    "state": "아래 지정 엑셀에서 직접 확인"
+  },
+  {
+    "source": "oil",
+    "variable": "FRED WTI·Brent",
+    "required_period": "2023-01-01~2025-12-31",
+    "state": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개"
+  },
+  {
+    "source": "international_fuel",
+    "variable": "FRED 국제 LNG·석탄",
+    "required_period": "2023-01-01~2025-12-31",
+    "state": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개"
+  },
+  {
+    "source": "weather_actual",
+    "variable": "ASOS 기온·일사·풍속",
+    "required_period": "2023-01-01~2025-12-31",
+    "file": "weather_hourly.csv",
+    "rows": 33912,
+    "first": "2023-01-01 00:00:00+09:00",
+    "last": "2026-11-13 23:00:00+09:00",
+    "state": "기존 파일 존재; 새 공통 정의·품질·출처 검증 필요"
+  },
+  {
+    "source": "weather_forecast",
+    "variable": "기상청 과거 기온·풍속 예보",
+    "required_period": "2023-01-01~2025-12-31",
+    "state": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개"
+  },
+  {
+    "source": "solar_weather_forecast",
+    "variable": "동서발전 일사·기온·풍속 예측",
+    "required_period": "2023-01-01~2025-12-31",
+    "state": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개"
+  }
+]
