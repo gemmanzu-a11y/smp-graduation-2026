@@ -1,0 +1,114 @@
+{
+  "at": "2026-11-14T11:18:38.072455+09:00",
+  "results": [
+    {
+      "target_date": "20260101",
+      "rows": 408,
+      "total": 408,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByLocHr/getPvAmountByLocHr",
+        "params": {
+          "tradeYmd": "20260101",
+          "numOfRows": 500,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:18:28.912417+09:00",
+        "sha256": "ce76360415708bc5845bb43d6ac3fbd4c8d1f8897f3d4187acb3090f63734d86",
+        "raw": "ce76360415708bc5845bb43d6ac3fbd4c8d1f8897f3d4187acb3090f63734d86.raw",
+        "bytes": 64543,
+        "authenticated": true
+      }
+    },
+    {
+      "target_date": "20260701",
+      "rows": 408,
+      "total": 408,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByLocHr/getPvAmountByLocHr",
+        "params": {
+          "tradeYmd": "20260701",
+          "numOfRows": 500,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:18:31.139302+09:00",
+        "sha256": "ba825a8d6b5fb3db95be33257521fb7e98f9c07fffa77467deff71afb2bc8bd0",
+        "raw": "ba825a8d6b5fb3db95be33257521fb7e98f9c07fffa77467deff71afb2bc8bd0.raw",
+        "bytes": 64690,
+        "authenticated": true
+      }
+    },
+    {
+      "target_date": "20260901",
+      "rows": 432,
+      "total": 432,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByLocHr/getPvAmountByLocHr",
+        "params": {
+          "tradeYmd": "20260901",
+          "numOfRows": 500,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:18:31.937327+09:00",
+        "sha256": "d507d6b3ca2648d0a52cec1334648cb0b248b22c3dbd4b5df7478028f69a76d2",
+        "raw": "d507d6b3ca2648d0a52cec1334648cb0b248b22c3dbd4b5df7478028f69a76d2.raw",
+        "bytes": 68787,
+        "authenticated": true
+      }
+    },
+    {
+      "target_date": "20261001",
+      "rows": 0,
+      "total": 0,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByLocHr/getPvAmountByLocHr",
+        "params": {
+          "tradeYmd": "20261001",
+          "numOfRows": 500,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:18:37.826884+09:00",
+        "sha256": "055ff6e82bbde8788e592f15720aaf2e0f9534bf330f17bad42ed94a57cfa8de",
+        "raw": "055ff6e82bbde8788e592f15720aaf2e0f9534bf330f17bad42ed94a57cfa8de.raw",
+        "bytes": 254,
+        "authenticated": true
+      }
+    },
+    {
+      "name": "ASOS Incheon Wonju Suwon",
+      "rows": 72,
+      "station_rows": {
+        "112": 24,
+        "114": 24,
+        "119": 24
+      },
+      "solar_nonmissing": {
+        "112": 11,
+        "114": 11,
+        "119": 11
+      },
+      "receipt": {
+        "source": "https://apihub.kma.go.kr/api/typ01/url/kma_sfctm3.php",
+        "params": {
+          "tm1": "202501010000",
+          "tm2": "202501012300",
+          "stn": "112:114:119",
+          "help": 0
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:18:37.993141+09:00",
+        "sha256": "8f65a8fbdd35d8e6f5d2a4b6be84d2a2eebed6a54807a03ac7786e15cea93329",
+        "raw": "8f65a8fbdd35d8e6f5d2a4b6be84d2a2eebed6a54807a03ac7786e15cea93329.raw",
+        "bytes": 20033,
+        "authenticated": true
+      }
+    }
+  ]
+}

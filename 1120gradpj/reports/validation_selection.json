@@ -1,0 +1,97 @@
+{
+  "at": "2026-11-14T10:53:20.619745+09:00",
+  "selected": "random_forest",
+  "selection_metric": "validation pooled D+1..D+3 MAE",
+  "ranking": [
+    {
+      "split": "validation",
+      "horizon_days": "all",
+      "rows": 12888,
+      "origins": 179,
+      "MAE": 9.61219534543692,
+      "RMSE": 13.5394450799559,
+      "R2": 0.5749710191828804,
+      "model": "random_forest"
+    },
+    {
+      "split": "validation",
+      "horizon_days": "all",
+      "rows": 12888,
+      "origins": 179,
+      "MAE": 9.693917274475098,
+      "RMSE": 13.726628303527832,
+      "R2": 0.5631377100944519,
+      "model": "lstm"
+    },
+    {
+      "split": "validation",
+      "horizon_days": "all",
+      "rows": 12888,
+      "origins": 179,
+      "MAE": 9.699955940246582,
+      "RMSE": 13.566166877746582,
+      "R2": 0.5732916593551636,
+      "model": "xgboost"
+    },
+    {
+      "split": "validation",
+      "horizon_days": "all",
+      "rows": 12888,
+      "origins": 179,
+      "MAE": 9.723132491183614,
+      "RMSE": 13.489481081153324,
+      "R2": 0.5781021614074677,
+      "model": "hgb"
+    },
+    {
+      "split": "validation",
+      "horizon_days": "all",
+      "rows": 12888,
+      "origins": 179,
+      "MAE": 9.90636225993827,
+      "RMSE": 13.625466884509573,
+      "R2": 0.569553085753433,
+      "model": "lightgbm"
+    },
+    {
+      "split": "validation",
+      "horizon_days": "all",
+      "rows": 12888,
+      "origins": 179,
+      "MAE": 10.166120603485425,
+      "RMSE": 13.961339175299996,
+      "R2": 0.5480702102428383,
+      "model": "extra_trees"
+    },
+    {
+      "split": "validation",
+      "horizon_days": "all",
+      "rows": 12888,
+      "origins": 179,
+      "MAE": 11.827281951904297,
+      "RMSE": 16.414371490478516,
+      "R2": 0.3753088116645813,
+      "model": "linear_regression"
+    },
+    {
+      "split": "validation",
+      "horizon_days": "all",
+      "rows": 12888,
+      "origins": 179,
+      "MAE": 12.221091852934002,
+      "RMSE": 19.0249049110304,
+      "R2": 0.1608070952756896,
+      "model": "weekly"
+    },
+    {
+      "split": "validation",
+      "horizon_days": "all",
+      "rows": 12888,
+      "origins": 179,
+      "MAE": 14.314012396058853,
+      "RMSE": 21.71854201564259,
+      "R2": -0.09364947393334289,
+      "model": "last_origin_day"
+    }
+  ]
+}

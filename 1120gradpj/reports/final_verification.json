@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "check": "unit_tests",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "output": "test_asos_minus9_temperature_is_not_missing (test_pipeline.PipelineTest.test_asos_minus9_temperature_is_not_missing) ... ok\ntest_complete_power_hour_mean (test_pipeline.PipelineTest.test_complete_power_hour_mean) ... ok\ntest_exact_72_hour_horizons_and_baselines (test_pipeline.PipelineTest.test_exact_72_hour_horizons_and_baselines) ... ok\ntest_future_realizations_do_not_change_inputs (test_pipeline.PipelineTest.test_future_realizations_do_not_change_inputs) ... ok\ntest_missing_full_source_blocks_latest (test_pipeline.PipelineTest.test_missing_full_source_blocks_latest) ... ok\ntest_observation_delay_is_real (test_pipeline.PipelineTest.test_observation_delay_is_real) ... ok\ntest_partial_power_hour_is_missing (test_pipeline.PipelineTest.test_partial_power_hour_is_missing) ... ok\ntest_real_manifest_matches_training (test_pipeline.PipelineTest.test_real_manifest_matches_training) ... ok\ntest_target_date_split_purges_boundaries (test_pipeline.PipelineTest.test_target_date_split_purges_boundaries) ... ok\ntest_train_only_preprocessing (test_pipeline.PipelineTest.test_train_only_preprocessing) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.164s\n\nOK\n"
+    },
+    {
+      "check": "check_artifacts",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "output": "Verified all 7 models, common cohorts, 72-hour historical references, blocked incomplete latest inputs, recomputed metrics.\n"
+    },
+    {
+      "check": "audit_readiness",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "passed": true,
+      "output": "{\n  \"at\": \"2026-11-14T11:00:18.689081+09:00\",\n  \"all_seven_models_executed\": true,\n  \"full_requested_data_contract_ready\": false,\n  \"research_execution_ready\": true,\n  \"issues\": [\n    {\n      \"field\": \"lng_public_release\",\n      \"detail\": \"46 monthly release timestamps unknown; LNG excluded from historical training\"\n    },\n    {\n      \"field\": \"holidays_api\",\n      \"detail\": \"KASI returned 403; named python-holidays fallback used\"\n    },\n    {\n      \"field\": \"latest_solar_wind\",\n      \"detail\": \"archive ends 2025-12-31 14:00:00+00:00; latest forecast history is missing renewables\"\n    },\n    {\n      \"field\": \"historical_vintages\",\n      \"detail\": \"Original historical public release/revision times of retrospective observation files unverified; 24h/48h delays are assumptions\"\n    },\n    {\n      \"field\": \"load_geography\",\n      \"detail\": \"EPSIS load/reserve scope is not independently certified as mainland-only\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "notes": [
+    "Comparison PNG visually inspected: readable labels and shared zero-based axis.",
+    "Full latest forecasts blocked; 7 historical 72-hour references verified.",
+    "Original v20 and presentation sources unchanged."
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "results": [
+    {
+      "series": "DCOILWTICO",
+      "vintage": "latest",
+      "http": 200,
+      "count": 10660,
+      "sample": [
+        {
+          "realtime_start": "2026-11-12",
+          "realtime_end": "2026-11-12",
+          "date": "2026-11-11",
+          "value": "89.62"
+        },
+        {
+          "realtime_start": "2026-11-12",
+          "realtime_end": "2026-11-12",
+          "date": "2026-11-10",
+          "value": "89.62"
+        }
+      ]
+    },
+    {
+      "series": "DCOILBRENTEU",
+      "vintage": "latest",
+      "http": 200,
+      "count": 10301,
+      "sample": [
+        {
+          "realtime_start": "2026-11-12",
+          "realtime_end": "2026-11-12",
+          "date": "2026-11-11",
+          "value": "92.14"
+        },
+        {
+          "realtime_start": "2026-11-12",
+          "realtime_end": "2026-11-12",
+          "date": "2026-11-10",
+          "value": "90.16"
+        }
+      ]
+    },
+    {
+      "series": "PNGASJPUSDM",
+      "vintage": "latest",
+      "http": 200,
+      "count": 417,
+      "sample": [
+        {
+          "realtime_start": "2026-11-14",
+          "realtime_end": "2026-11-14",
+          "date": "2026-09-01",
+          "value": "26.637"
+        },
+        {
+          "realtime_start": "2026-11-14",
+          "realtime_end": "2026-11-14",
+          "date": "2026-08-01",
+          "value": "22.038"
+        }
+      ]
+    },
+    {
+      "series": "PCOALAUUSDM",
+      "vintage": "latest",
+      "http": 200,
+      "count": 561,
+      "sample": [
+        {
+          "realtime_start": "2026-11-14",
+          "realtime_end": "2026-11-14",
+          "date": "2026-09-01",
+          "value": "153.84"
+        },
+        {
+          "realtime_start": "2026-11-14",
+          "realtime_end": "2026-11-14",
+          "date": "2026-08-01",
+          "value": "140.5082143"
+        }
+      ]
+    },
+    {
+      "series": "PNGASJPUSDM",
+      "vintage": "2025-01-15",
+      "http": 200,
+      "count": 395,
+      "sample": [
+        {
+          "realtime_start": "2025-01-15",
+          "realtime_end": "2025-01-15",
+          "date": "2024-11-01",
+          "value": "14.025"
+        },
+        {
+          "realtime_start": "2025-01-15",
+          "realtime_end": "2025-01-15",
+          "date": "2024-10-01",
+          "value": "13.113"
+        }
+      ]
+    },
+    {
+      "series": "PCOALAUUSDM",
+      "vintage": "2025-01-15",
+      "http": 200,
+      "count": 539,
+      "sample": [
+        {
+          "realtime_start": "2025-01-15",
+          "realtime_end": "2025-01-15",
+          "date": "2024-11-01",
+          "value": "150.57"
+        },
+        {
+          "realtime_start": "2025-01-15",
+          "realtime_end": "2025-01-15",
+          "date": "2024-10-01",
+          "value": "153.2175"
+        }
+      ]
+    }
+  ],
+  "credentials_saved": false
+}

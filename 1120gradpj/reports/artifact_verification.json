@@ -1,0 +1,64 @@
+{
+  "at": "2026-11-14T11:00:18.291047+09:00",
+  "models": [
+    {
+      "model": "lstm",
+      "prediction_rows": 25992,
+      "reference_replay_rows": 72,
+      "latest_forecast_gate": "blocked_missing_input",
+      "saved_model_roundtrip": "passed",
+      "metrics_recomputed": true
+    },
+    {
+      "model": "hgb",
+      "prediction_rows": 25992,
+      "reference_replay_rows": 72,
+      "latest_forecast_gate": "blocked_missing_input",
+      "saved_model_roundtrip": "passed",
+      "metrics_recomputed": true
+    },
+    {
+      "model": "lightgbm",
+      "prediction_rows": 25992,
+      "reference_replay_rows": 72,
+      "latest_forecast_gate": "blocked_missing_input",
+      "saved_model_roundtrip": "passed",
+      "metrics_recomputed": true
+    },
+    {
+      "model": "extra_trees",
+      "prediction_rows": 25992,
+      "reference_replay_rows": 72,
+      "latest_forecast_gate": "blocked_missing_input",
+      "saved_model_roundtrip": "passed",
+      "metrics_recomputed": true
+    },
+    {
+      "model": "linear_regression",
+      "prediction_rows": 25992,
+      "reference_replay_rows": 72,
+      "latest_forecast_gate": "blocked_missing_input",
+      "saved_model_roundtrip": "passed",
+      "metrics_recomputed": true
+    },
+    {
+      "model": "random_forest",
+      "prediction_rows": 25992,
+      "reference_replay_rows": 72,
+      "latest_forecast_gate": "blocked_missing_input",
+      "saved_model_roundtrip": "passed",
+      "metrics_recomputed": true
+    },
+    {
+      "model": "xgboost",
+      "prediction_rows": 25992,
+      "reference_replay_rows": 72,
+      "latest_forecast_gate": "blocked_missing_input",
+      "saved_model_roundtrip": "passed",
+      "metrics_recomputed": true
+    }
+  ],
+  "shared_dataset_fingerprint": "88fb0712634662d9e962bf9b3548082f1a7280dc43396dd200d24bef399e34aa",
+  "same_validation_test_cohort": true,
+  "status": "passed"
+}

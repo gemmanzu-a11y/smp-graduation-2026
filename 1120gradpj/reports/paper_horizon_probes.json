@@ -1,0 +1,47 @@
+{
+  "at": "2026-11-14T11:17:48.231184+09:00",
+  "results": [
+    {
+      "target_date": "20261116",
+      "rows": 24,
+      "mainland_rows": 24,
+      "total": 24,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20261116",
+          "pageNo": 1,
+          "numOfRows": 100,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:17:48.228035+09:00",
+        "sha256": "03acb2a8cacf94659b80f0788a4cbdf30f54d7f297c01bb9c1c9175b9e626ac2",
+        "raw": "03acb2a8cacf94659b80f0788a4cbdf30f54d7f297c01bb9c1c9175b9e626ac2.raw",
+        "bytes": 5902,
+        "authenticated": true
+      }
+    },
+    {
+      "target_date": "20261117",
+      "rows": 0,
+      "mainland_rows": 0,
+      "total": 0,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20261117",
+          "pageNo": 1,
+          "numOfRows": 100,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:17:45.639723+09:00",
+        "sha256": "b9800b2956dea67e95dd3a5c83a0480dc9cf6530ae41e41f53c90fc2c3ada2c9",
+        "raw": "b9800b2956dea67e95dd3a5c83a0480dc9cf6530ae41e41f53c90fc2c3ada2c9.raw",
+        "bytes": 254,
+        "authenticated": true
+      }
+    }
+  ]
+}

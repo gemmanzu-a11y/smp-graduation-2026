@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-14T11:00:18.689081+09:00",
+  "all_seven_models_executed": true,
+  "full_requested_data_contract_ready": false,
+  "research_execution_ready": true,
+  "issues": [
+    {
+      "field": "lng_public_release",
+      "detail": "46 monthly release timestamps unknown; LNG excluded from historical training"
+    },
+    {
+      "field": "holidays_api",
+      "detail": "KASI returned 403; named python-holidays fallback used"
+    },
+    {
+      "field": "latest_solar_wind",
+      "detail": "archive ends 2025-12-31 14:00:00+00:00; latest forecast history is missing renewables"
+    },
+    {
+      "field": "historical_vintages",
+      "detail": "Original historical public release/revision times of retrospective observation files unverified; 24h/48h delays are assumptions"
+    },
+    {
+      "field": "load_geography",
+      "detail": "EPSIS load/reserve scope is not independently certified as mainland-only"
+    }
+  ]
+}

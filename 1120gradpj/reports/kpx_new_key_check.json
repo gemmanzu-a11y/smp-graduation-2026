@@ -1,0 +1,47 @@
+{
+  "at": "2026-11-14T11:38:06.106852+09:00",
+  "credential_values_saved": false,
+  "scope": "actual endpoint access check; account approval page not accessed",
+  "results": [
+    {
+      "service": "발전원별 발전량_2025",
+      "status": "failed",
+      "reason": "approval_recheck: HTTP 403"
+    },
+    {
+      "service": "발전원별 발전량_2026",
+      "status": "failed",
+      "reason": "approval_recheck: HTTP 403"
+    },
+    {
+      "service": "발전원별 발전량_최신표본",
+      "status": "failed",
+      "reason": "approval_recheck: HTTP 403"
+    },
+    {
+      "service": "발전원별 발전량 현황조회_GW",
+      "status": "failed",
+      "reason": "approval_recheck: HTTP 403"
+    },
+    {
+      "service": "지역별 시간별 태양광 및 풍력 발전량_파일API",
+      "status": "failed",
+      "reason": "approval_recheck: HTTP 401"
+    },
+    {
+      "service": "지역별 시간별 태양광 발전량 정보",
+      "status": "failed",
+      "reason": "approval_recheck: HTTP 403"
+    },
+    {
+      "service": "월간 연료비용 정보",
+      "status": "failed",
+      "reason": "approval_recheck: HTTP 403"
+    },
+    {
+      "service": "계통한계가격 및 수요예측",
+      "status": "failed",
+      "reason": "approval_recheck: HTTP 403"
+    }
+  ]
+}

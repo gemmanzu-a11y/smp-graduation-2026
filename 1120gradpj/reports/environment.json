@@ -1,0 +1,19 @@
+{
+  "python": "3.14.5 (v3.14.5:5607950ef23, May 10 2026, 07:38:09) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+  "libraries": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "lightgbm": "4.6.0",
+    "xgboost": "3.4.1",
+    "torch": "2.12.0",
+    "certifi": "2026.6.17",
+    "joblib": "1.5.3",
+    "holidays": "0.108",
+    "matplotlib": "3.10.9"
+  },
+  "compute": "CPU; max 4 training threads",
+  "virtualenv": "project local, system-site-packages reuse"
+}

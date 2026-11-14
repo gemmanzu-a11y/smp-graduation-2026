@@ -1,0 +1,18 @@
+[
+  {
+    "date": "2023-07-02",
+    "error": "no 5-minute power data"
+  },
+  {
+    "date": "2024-03-21",
+    "error": "no 5-minute power data"
+  },
+  {
+    "date": "2024-03-22",
+    "error": "no 5-minute power data"
+  },
+  {
+    "date": "2025-02-28",
+    "error": "no 5-minute power data"
+  }
+]

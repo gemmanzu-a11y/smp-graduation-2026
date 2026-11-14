@@ -1,0 +1,336 @@
+{
+  "at": "2026-11-14T11:14:22.247076+09:00",
+  "model_training_performed": false,
+  "results": [
+    {
+      "name": "paper_demand_today",
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20261114",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:14:14.784209+09:00",
+        "sha256": "80e8010fbe6acbeb7b09ce2982556a569a58ed663c235082b70666d6e45773ab",
+        "raw": "80e8010fbe6acbeb7b09ce2982556a569a58ed663c235082b70666d6e45773ab.raw",
+        "bytes": 11531,
+        "authenticated": true
+      },
+      "rows": 48,
+      "total": 48,
+      "sample": [
+        {
+          "date": "20261114",
+          "jlfd": 601.0,
+          "slfd": 57265.0,
+          "hour": "01",
+          "areaName": "육지",
+          "smp": 99.82,
+          "rn": 1,
+          "mlfd": 56664.0
+        },
+        {
+          "date": "20261114",
+          "jlfd": 601.0,
+          "slfd": 57265.0,
+          "hour": "01",
+          "areaName": "제주",
+          "smp": 99.82,
+          "rn": 2,
+          "mlfd": 56664.0
+        }
+      ],
+      "mainland_rows": 24,
+      "mainland_hours": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "forecast_fields": [
+        "mlfd",
+        "jlfd",
+        "slfd"
+      ],
+      "target_dates": [
+        "20261114"
+      ]
+    },
+    {
+      "name": "paper_demand_tomorrow",
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20261115",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:14:16.833887+09:00",
+        "sha256": "0f63dd1e6fa59694c8c294bd40dbc00ea7ca51ff14288b90bb0e9b2a569653e7",
+        "raw": "0f63dd1e6fa59694c8c294bd40dbc00ea7ca51ff14288b90bb0e9b2a569653e7.raw",
+        "bytes": 5891,
+        "authenticated": true
+      },
+      "rows": 24,
+      "total": 24,
+      "sample": [
+        {
+          "date": "20261115",
+          "jlfd": 600.0,
+          "slfd": 52314.0,
+          "hour": "01",
+          "areaName": "육지",
+          "smp": 96.27,
+          "rn": 1,
+          "mlfd": 51714.0
+        },
+        {
+          "date": "20261115",
+          "jlfd": 567.0,
+          "slfd": 49514.0,
+          "hour": "02",
+          "areaName": "육지",
+          "smp": 93.2,
+          "rn": 2,
+          "mlfd": 48947.0
+        }
+      ],
+      "mainland_rows": 24,
+      "mainland_hours": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "forecast_fields": [
+        "mlfd",
+        "jlfd",
+        "slfd"
+      ],
+      "target_dates": [
+        "20261115"
+      ]
+    },
+    {
+      "name": "paper_demand_past",
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20250101",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:14:14.784006+09:00",
+        "sha256": "6a3e7cd40fd08ec0946481c3a5367bbdd40a51ae240dc9ac7ad6c51171405147",
+        "raw": "6a3e7cd40fd08ec0946481c3a5367bbdd40a51ae240dc9ac7ad6c51171405147.raw",
+        "bytes": 11503,
+        "authenticated": true
+      },
+      "rows": 48,
+      "total": 48,
+      "sample": [
+        {
+          "date": "20250101",
+          "jlfd": 713.0,
+          "slfd": 59423.0,
+          "hour": "1",
+          "areaName": "육지",
+          "smp": 81.99,
+          "rn": 1,
+          "mlfd": 58710.0
+        },
+        {
+          "date": "20250101",
+          "jlfd": 713.0,
+          "slfd": 59423.0,
+          "hour": "1",
+          "areaName": "제주",
+          "smp": 81.99,
+          "rn": 2,
+          "mlfd": 58710.0
+        }
+      ],
+      "mainland_rows": 24,
+      "mainland_hours": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "forecast_fields": [
+        "mlfd",
+        "jlfd",
+        "slfd"
+      ],
+      "target_dates": [
+        "20250101"
+      ]
+    },
+    {
+      "name": "paper_solar_2026",
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByLocHr/getPvAmountByLocHr",
+        "params": {
+          "tradeYmd": "20261101",
+          "numOfRows": 500,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:14:19.657657+09:00",
+        "sha256": "055ff6e82bbde8788e592f15720aaf2e0f9534bf330f17bad42ed94a57cfa8de",
+        "raw": "055ff6e82bbde8788e592f15720aaf2e0f9534bf330f17bad42ed94a57cfa8de.raw",
+        "bytes": 254,
+        "authenticated": true
+      },
+      "rows": 0,
+      "total": 0,
+      "sample": []
+    },
+    {
+      "name": "paper_ewp_forecast",
+      "status": "failed",
+      "reason": "paper_ewp_forecast: HTTP 403"
+    },
+    {
+      "name": "paper_kma_forecast",
+      "status": "failed",
+      "reason": "paper_kma_forecast: HTTP 403"
+    },
+    {
+      "name": "paper_bid_monthly",
+      "status": "received",
+      "receipt": {
+        "source": "https://epsis.kpx.or.kr/epsisnew/selectEkmaBddBft.ajax",
+        "params": {
+          "selYear": "N",
+          "selRegion": "1"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:14:16.629515+09:00",
+        "sha256": "e8e6f43305db24ac236d47b103b3f344bd6e251ebc2e1eed819b246506e9f84f",
+        "raw": "e8e6f43305db24ac236d47b103b3f344bd6e251ebc2e1eed819b246506e9f84f.raw",
+        "bytes": 645912,
+        "authenticated": false
+      },
+      "periods": [],
+      "preview": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n            var c1,c2,c3,c4,c5,c6,c7,c8;\r\n            var count = $(\"#selCount option:selected\").val();\r\n            var year = \"\";\r\n            var localnm = \"\";\r\n            gridData = [];\r\n\r\n            \r\n\r\n                \r\n                        \r\n                        \r\n                            c1 = textFormmat(\"14314.169358514004\",count);\r\n                            c2 = textFormmat(\"23803.076756242004\",count);\r\n                            c3 = textFormmat(\"0\",count);\r\n                            c4 = textFormmat(\"29.821\",count);\r\n                            c5 = textFormmat(\"27865.028432348005\",count);\r\n                            c6 = textFormmat(\"7.345739423\",count);\r\n                            c7 = textFormmat(\"147.0905\",count);\r\n                            c8 = textFormmat(\"66616.31278739103\",count);\r\n                            c91 = textFormmat(\"0\",count);\r\n                            c92 = textFormmat(\"0\",count);\r\n                            c93 = textFormmat(\"7.40895\",count);\r\n                            c94 = textFormmat(\"1.3507840000000002\",count);\r\n                            c95 = textFormmat(\"159.85\",count);\r\n                            c96 = textFormmat(\"0\",count);\r\n                            c97 = textFormmat(\"281.171276864\",count);\r\n                            c98 = textFormmat(\"0\",count);\r\n\r\n                            local",
+      "resolution": "monthly or annual only; not hourly bidding vintages"
+    },
+    {
+      "name": "paper_capacity_file",
+      "status": "received",
+      "rows": 113880,
+      "columns": [
+        "거래일자",
+        "시간",
+        "연료원",
+        "설비용량",
+        "전력거래량(MWh)"
+      ],
+      "sample": [
+        {
+          "거래일자": "2025-01-01",
+          "시간": "01:00",
+          "연료원": "바이오가스",
+          "설비용량": 73.577,
+          "전력거래량(MWh)": 37.006981
+        },
+        {
+          "거래일자": "2025-01-01",
+          "시간": "02:00",
+          "연료원": "바이오가스",
+          "설비용량": 73.577,
+          "전력거래량(MWh)": 37.068148
+        }
+      ],
+      "first_date": "2025-01-01",
+      "last_date": "2025-12-31",
+      "receipt": {
+        "source": "https://www.data.go.kr/cmm/cmm/fileDownload.do",
+        "params": {
+          "atchFileId": "FILE_000000007622846",
+          "fileDetailSn": "1",
+          "insertDataPrcus": "N"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:14:21.912726+09:00",
+        "sha256": "cfaf9c267d0bed0e77fcb0406f9fa1d827030c50230e0a986e55e8eac4417087",
+        "raw": "cfaf9c267d0bed0e77fcb0406f9fa1d827030c50230e0a986e55e8eac4417087.raw",
+        "bytes": 5096124,
+        "authenticated": false
+      }
+    }
+  ]
+}

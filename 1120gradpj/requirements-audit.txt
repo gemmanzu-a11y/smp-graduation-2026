@@ -1,0 +1,2 @@
+# Optional: reading the public reference thesis, not required for model training.
+pypdf==7.1.0

@@ -1,0 +1,333 @@
+{
+  "at": "2026-11-14T11:35:26.790204+09:00",
+  "credential_values_saved": false,
+  "scope": "actual endpoint access check; account approval page not accessed",
+  "results": [
+    {
+      "service": "발전원별 발전량_2025",
+      "status": "data_received",
+      "http_status": 200,
+      "rows": 100,
+      "total": 192,
+      "result": {
+        "resultCode": "00",
+        "resultMsg": "OK"
+      },
+      "sample": [
+        {
+          "tradeNo": "01",
+          "fuelTpCd": "유전",
+          "tradeYmd": "20251001",
+          "amgo": 5.339,
+          "rn": 1
+        },
+        {
+          "tradeNo": "02",
+          "fuelTpCd": "유전",
+          "tradeYmd": "20251001",
+          "amgo": 5.117,
+          "rn": 2
+        }
+      ],
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByPwrGen/getPvAmountByPwrGen",
+        "params": {
+          "tradeYmd": "20251001",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:35:16.144003+09:00",
+        "sha256": "0faa6f5236f1cbb349166dcc0c153cb4f7e409fd3afab4fd6864b4c220c82fb4",
+        "raw": "0faa6f5236f1cbb349166dcc0c153cb4f7e409fd3afab4fd6864b4c220c82fb4.raw",
+        "bytes": 15764,
+        "authenticated": true
+      }
+    },
+    {
+      "service": "발전원별 발전량_2026",
+      "status": "data_received",
+      "http_status": 200,
+      "rows": 100,
+      "total": 192,
+      "result": {
+        "resultCode": "00",
+        "resultMsg": "OK"
+      },
+      "sample": [
+        {
+          "tradeNo": "01",
+          "fuelTpCd": "유전",
+          "tradeYmd": "20260901",
+          "amgo": 5.14,
+          "rn": 1
+        },
+        {
+          "tradeNo": "02",
+          "fuelTpCd": "유전",
+          "tradeYmd": "20260901",
+          "amgo": 5.44,
+          "rn": 2
+        }
+      ],
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByPwrGen/getPvAmountByPwrGen",
+        "params": {
+          "tradeYmd": "20260901",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:35:15.035466+09:00",
+        "sha256": "b758dcbbc3e83fa30f7b9d4257ab6ec69201a408c514cdbbbbd20ab22c711c4b",
+        "raw": "b758dcbbc3e83fa30f7b9d4257ab6ec69201a408c514cdbbbbd20ab22c711c4b.raw",
+        "bytes": 15759,
+        "authenticated": true
+      }
+    },
+    {
+      "service": "발전원별 발전량_최신표본",
+      "status": "normal_response_no_data",
+      "http_status": 200,
+      "rows": 0,
+      "total": 0,
+      "result": {
+        "resultCode": "00",
+        "resultMsg": "OK"
+      },
+      "sample": [],
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByPwrGen/getPvAmountByPwrGen",
+        "params": {
+          "tradeYmd": "20261101",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:35:15.031621+09:00",
+        "sha256": "b9800b2956dea67e95dd3a5c83a0480dc9cf6530ae41e41f53c90fc2c3ada2c9",
+        "raw": "b9800b2956dea67e95dd3a5c83a0480dc9cf6530ae41e41f53c90fc2c3ada2c9.raw",
+        "bytes": 254,
+        "authenticated": true
+      }
+    },
+    {
+      "service": "발전원별 발전량 현황조회_GW",
+      "status": "data_received",
+      "http_status": 200,
+      "rows": 1,
+      "total": 1,
+      "result": {
+        "resultCode": "00",
+        "resultMsg": "OK"
+      },
+      "sample": [
+        {
+          "fuelPwr7": 177.878,
+          "fuelPwr8": 839.362,
+          "fuelPwr5": -428.127,
+          "pEsmw": 1622.72,
+          "fuelPwr6": 12259.9,
+          "fuelPwrTot": 62659.7,
+          "fuelPwr9": 168.968,
+          "bEmsw": 501.539,
+          "baseDateTime": "20261114112500",
+          "fuelPwr10": 2883.89,
+          "rn": 1,
+          "fuelPwr3": 26455.2,
+          "fuelPwr4": 19837.6,
+          "fuelPwr1": 280.99,
+          "fuelPwr2": 183.784
+        }
+      ],
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/sumperfuel5m/getSumperfuel5m",
+        "params": {
+          "numOfRows": 10,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:35:16.140147+09:00",
+        "sha256": "04f40daf291c8a7391d86af9beba9c2ce8834cb93ec191a62f7dc6a150426410",
+        "raw": "04f40daf291c8a7391d86af9beba9c2ce8834cb93ec191a62f7dc6a150426410.raw",
+        "bytes": 828,
+        "authenticated": true
+      }
+    },
+    {
+      "service": "지역별 시간별 태양광 및 풍력 발전량_파일API",
+      "status": "data_received",
+      "http_status": 200,
+      "rows": 2,
+      "total": 166440,
+      "result": 0,
+      "sample": [
+        {
+          "거래시간": 1,
+          "거래일": "2025-01-01",
+          "연료원": "태양광",
+          "전력거래량(MWh)": "0.872331",
+          "지역": "강원도"
+        },
+        {
+          "거래시간": 2,
+          "거래일": "2025-01-01",
+          "연료원": "태양광",
+          "전력거래량(MWh)": "0.11766",
+          "지역": "강원도"
+        }
+      ],
+      "receipt": {
+        "source": "https://api.odcloud.kr/api/15065269/v1/uddi:76850689-e74c-402e-bfec-9142976b96c8",
+        "params": {
+          "page": 1,
+          "perPage": 2
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:35:15.272980+09:00",
+        "sha256": "6402ee724b2893683de574148fc0e03aad15fc855d39ff982ef8e7c18b71eb3c",
+        "raw": "6402ee724b2893683de574148fc0e03aad15fc855d39ff982ef8e7c18b71eb3c.raw",
+        "bytes": 334,
+        "authenticated": true
+      }
+    },
+    {
+      "service": "지역별 시간별 태양광 발전량 정보",
+      "status": "data_received",
+      "http_status": 200,
+      "rows": 432,
+      "total": 432,
+      "result": {
+        "resultCode": "00",
+        "resultMsg": "OK"
+      },
+      "sample": [
+        {
+          "tradeNo": "1",
+          "tradeYmd": "20260901",
+          "regionNm": "강원도",
+          "amgo": 0.0,
+          "rn": 1
+        },
+        {
+          "tradeNo": "1",
+          "tradeYmd": "20260901",
+          "regionNm": "경기도",
+          "amgo": 4e-05,
+          "rn": 2
+        }
+      ],
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByLocHr/getPvAmountByLocHr",
+        "params": {
+          "tradeYmd": "20260901",
+          "numOfRows": 500,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:35:19.141902+09:00",
+        "sha256": "d507d6b3ca2648d0a52cec1334648cb0b248b22c3dbd4b5df7478028f69a76d2",
+        "raw": "d507d6b3ca2648d0a52cec1334648cb0b248b22c3dbd4b5df7478028f69a76d2.raw",
+        "bytes": 68787,
+        "authenticated": true
+      }
+    },
+    {
+      "service": "월간 연료비용 정보",
+      "status": "data_received",
+      "http_status": 200,
+      "rows": 5,
+      "total": 5,
+      "result": {
+        "resultCode": "00",
+        "resultMsg": "OK"
+      },
+      "sample": [
+        {
+          "unit": "원/GCAL",
+          "fuelType": "유연탄",
+          "untpc": 41063.71,
+          "rn": 1,
+          "untpcType": "열량단가",
+          "day": "202610"
+        },
+        {
+          "unit": "원/GCAL",
+          "fuelType": "유류",
+          "untpc": 157285.94,
+          "rn": 2,
+          "untpcType": "열량단가",
+          "day": "202610"
+        }
+      ],
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/FuelCost1/getFuelCost1",
+        "params": {
+          "day": "202610",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:35:17.580868+09:00",
+        "sha256": "ddf32bfdf02b9f14540ab34b20e271299830126108ae15db36e84e77a7093e9a",
+        "raw": "ddf32bfdf02b9f14540ab34b20e271299830126108ae15db36e84e77a7093e9a.raw",
+        "bytes": 1209,
+        "authenticated": true
+      }
+    },
+    {
+      "service": "계통한계가격 및 수요예측",
+      "status": "data_received",
+      "http_status": 200,
+      "rows": 48,
+      "total": 48,
+      "result": {
+        "resultCode": "00",
+        "resultMsg": "OK"
+      },
+      "sample": [
+        {
+          "date": "20261114",
+          "jlfd": 601.0,
+          "slfd": 57265.0,
+          "hour": "01",
+          "areaName": "육지",
+          "smp": 99.82,
+          "rn": 1,
+          "mlfd": 56664.0
+        },
+        {
+          "date": "20261114",
+          "jlfd": 601.0,
+          "slfd": 57265.0,
+          "hour": "01",
+          "areaName": "제주",
+          "smp": 99.82,
+          "rn": 2,
+          "mlfd": 56664.0
+        }
+      ],
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20261114",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T11:35:26.782164+09:00",
+        "sha256": "80e8010fbe6acbeb7b09ce2982556a569a58ed663c235082b70666d6e45773ab",
+        "raw": "80e8010fbe6acbeb7b09ce2982556a569a58ed663c235082b70666d6e45773ab.raw",
+        "bytes": 11531,
+        "authenticated": true
+      }
+    }
+  ]
+}

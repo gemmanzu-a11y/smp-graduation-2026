@@ -1,0 +1,43 @@
+{
+  "at": "2026-11-14T10:42:30.894468+09:00",
+  "start": "2023-01-01",
+  "end": "2026-11-13",
+  "datasets": [
+    {
+      "dataset": "power",
+      "status": "collected",
+      "rows": 33697,
+      "normalized_file": "data/processed/power_hourly.csv"
+    },
+    {
+      "dataset": "fuel",
+      "status": "collected",
+      "rows": 46,
+      "normalized_file": "data/processed/fuel_monthly.csv"
+    },
+    {
+      "dataset": "renewable",
+      "status": "collected",
+      "rows": 26304,
+      "normalized_file": "data/processed/renewable_hourly.csv"
+    },
+    {
+      "dataset": "smp",
+      "status": "collected",
+      "rows": 33912,
+      "normalized_file": "data/processed/smp_hourly.csv"
+    },
+    {
+      "dataset": "weather",
+      "status": "collected",
+      "rows": 203316,
+      "normalized_file": "data/processed/weather_stations.csv"
+    },
+    {
+      "dataset": "holidays",
+      "status": "collected",
+      "rows": 102,
+      "normalized_file": "data/processed/holidays.csv"
+    }
+  ]
+}

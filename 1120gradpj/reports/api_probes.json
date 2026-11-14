@@ -1,0 +1,173 @@
+{
+  "checked_at": "2026-11-14T10:36:30.680142+09:00",
+  "results": [
+    {
+      "name": "smp_api",
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20261114",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T10:36:30.385739+09:00",
+        "sha256": "80e8010fbe6acbeb7b09ce2982556a569a58ed663c235082b70666d6e45773ab",
+        "raw": "80e8010fbe6acbeb7b09ce2982556a569a58ed663c235082b70666d6e45773ab.raw",
+        "bytes": 11531,
+        "authenticated": true
+      },
+      "rows": 48,
+      "total": 48,
+      "sample": [
+        {
+          "date": "20261114",
+          "jlfd": 601.0,
+          "slfd": 57265.0,
+          "hour": "01",
+          "areaName": "육지",
+          "smp": 99.82,
+          "rn": 1,
+          "mlfd": 56664.0
+        },
+        {
+          "date": "20261114",
+          "jlfd": 601.0,
+          "slfd": 57265.0,
+          "hour": "01",
+          "areaName": "제주",
+          "smp": 99.82,
+          "rn": 2,
+          "mlfd": 56664.0
+        }
+      ]
+    },
+    {
+      "name": "generation_api",
+      "status": "failed",
+      "reason": "generation_api: HTTP 403"
+    },
+    {
+      "name": "solar_api",
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByLocHr/getPvAmountByLocHr",
+        "params": {
+          "tradeYmd": "20251001",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T10:36:30.677294+09:00",
+        "sha256": "f681226a5a59294f2a1af19b6bba6c14ad2071f15e6e4547c53d36f1e2b6a50c",
+        "raw": "f681226a5a59294f2a1af19b6bba6c14ad2071f15e6e4547c53d36f1e2b6a50c.raw",
+        "bytes": 16109,
+        "authenticated": true
+      },
+      "rows": 100,
+      "total": 408,
+      "sample": [
+        {
+          "tradeNo": "1",
+          "tradeYmd": "20251001",
+          "regionNm": "강원도",
+          "amgo": 0.207504,
+          "rn": 1
+        },
+        {
+          "tradeNo": "1",
+          "tradeYmd": "20251001",
+          "regionNm": "경기도",
+          "amgo": 0.0,
+          "rn": 2
+        }
+      ]
+    },
+    {
+      "name": "generation_live_api",
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/sumperfuel5m/getSumperfuel5m",
+        "params": {
+          "numOfRows": 10,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T10:36:29.491438+09:00",
+        "sha256": "8f577ee68ba31a87a0d78c036ea70baf46f53cd8a57ac77a01256bb5b2988174",
+        "raw": "8f577ee68ba31a87a0d78c036ea70baf46f53cd8a57ac77a01256bb5b2988174.raw",
+        "bytes": 828,
+        "authenticated": true
+      },
+      "rows": 1,
+      "total": 1,
+      "sample": [
+        {
+          "fuelPwr7": 182.602,
+          "fuelPwr8": 644.726,
+          "fuelPwr5": -427.369,
+          "pEsmw": 1293.7,
+          "fuelPwr6": 12379.2,
+          "fuelPwrTot": 62970.8,
+          "fuelPwr9": 197.701,
+          "bEmsw": 410.382,
+          "baseDateTime": "20261114103000",
+          "fuelPwr10": 2925.96,
+          "rn": 1,
+          "fuelPwr3": 26757.3,
+          "fuelPwr4": 19838.3,
+          "fuelPwr1": 286.124,
+          "fuelPwr2": 186.342
+        }
+      ]
+    },
+    {
+      "name": "holidays_api",
+      "status": "failed",
+      "reason": "holidays_api: HTTP 403"
+    },
+    {
+      "name": "power_hourly_probe",
+      "status": "received",
+      "receipt": {
+        "source": "https://epsis.kpx.or.kr/epsisnew/selectEkgeEpsMepRealGridAjax.ajax",
+        "params": {
+          "beginDate": "20250101",
+          "endDate": "20250102",
+          "editYn": "N"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T10:36:29.721590+09:00",
+        "sha256": "8abc21f305de1003600f7be19f98d0bb95ce8eb0d755be1d37f103c218f0836e",
+        "raw": "8abc21f305de1003600f7be19f98d0bb95ce8eb0d755be1d37f103c218f0836e.raw",
+        "bytes": 132270,
+        "authenticated": false
+      },
+      "preview": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nvar c1,c2,c3,c4,c5,c6,temperature;\r\ngridData = [];\r\n\r\n\r\n\tc1 = textFormmat(\"104673.0\",0);\r\n    c2 = textFormmat(\"67455.0\",0);\r\n    c5 = textFormmat(\"37217.0\",0);\r\n    c6 = textFormmat(\"55.2\",0);\r\n    temperature = textFormmat(\"\",0);\r\n    \r\n\t\r\n\t\r\n\t\tgridData.push({\"year\":\"2025-01-02 23:55\",\r\n                        \"c1\":c1,\r\n                        \"c2\":c2,\r\n                        \"c5\":c5,\r\n                        \"c6\":c6,\r\n                        \"temperature\":temperature\r\n                        });\r\n\t\r\n\r\n\r\n\r\n\tc1 = textFormmat(\"104670.0\",0);\r\n    c2 = textFormmat(\"67902.0\",0);\r\n    c5 = textFormmat(\"36769.0\",0);\r\n    c6 = textFormmat(\"54.2\",0);\r\n    temperature = textFormmat(\"\",0);\r\n    \r\n\t\r\n\t\r\n\t\tgridData.push({\"year\":\"2025-01-02 23:50\",\r\n                        \"c1\":c1,\r\n                        \"c2\":c2,\r\n                        \"c5\":c5,\r\n                        \"c6\":c6,\r\n                        \"temperature\":temperature\r\n                        });\r\n\t\r\n\r\n\r\n\r\n\tc1 = textFormmat(\"104667.0\",0);\r\n    c2 = textFormmat(\"68083.0\",0);\r\n    c5 = textFormmat(\"36584.0\",0);\r\n    c6 = textFormmat(\"53.7\",0);\r\n    temperature = textFormmat(\"\",0);\r\n    \r\n\t\r\n\t\r\n\t\tgridData.push({\"year\":\"2025-01-02 23:45\",\r\n                        \"c1\":c1,\r\n                        \"c2\":c2,\r\n                        \"c5\":c5,\r\n                        \"c6\":c6,\r\n                        \"temperature\":temperature\r\n                        });\r\n\t\r\n\r\n\r\n\r\n\tc1 = textFormmat(\"104666.0\",0);\r\n    c2 = textFormmat(\"68366.0\",0);\r\n    c5 = textFormmat(\"36300.0\",0);\r\n    c6 = textFormmat(\"53.1\",0);\r\n    temperature = textFormmat(\"\",0);\r\n    \r\n\t\r\n\t\r\n\t\tgridData.push({\"year\":\"2025-01-02 23:40\",\r\n                        \"c1\":c1,\r\n                        \"c2\":c2,\r\n                        \"c5\":c5,\r\n       "
+    },
+    {
+      "name": "kma_period_probe",
+      "status": "received",
+      "receipt": {
+        "source": "https://apihub.kma.go.kr/api/typ01/url/kma_sfctm3.php",
+        "params": {
+          "tm1": "202501010000",
+          "tm2": "202501022300",
+          "stn": "108",
+          "help": 1
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-14T10:36:29.883842+09:00",
+        "sha256": "08755a38c9e237996e83bbbdfb0d99c3717e9d4d257d06c14e8d03f0fb3bc10a",
+        "raw": "08755a38c9e237996e83bbbdfb0d99c3717e9d4d257d06c14e8d03f0fb3bc10a.raw",
+        "bytes": 16191,
+        "authenticated": true
+      },
+      "preview": "#START7777\n#--------------------------------------------------------------------------------------------------\n#  ���û ������� �ð��ڷ� [�Է��μ�����][��] ?tm=201007151200&stn=0&help=1\n#--------------------------------------------------------------------------------------------------\n#  1. TM     : �����ð� (KST)\n#  2. STN    : ���� ������ȣ\n#  3. WD     : ǳ�� (36����)\n#  4. WS     : ǳ�� (m/s)\n#  5. GST_WD : ��ǳ�� (36����)\n#  6. GST_WS : ��ǳ�� (m/s)\n#  7. GST_TM : ��ǳ���� ������ �ð� (�ú�)\n#  8. PA     : ������� (hPa)\n#  9. PS     : �ظ��� (hPa)\n# 10. PT     : ��к�ȭ���� (Code 0200) \n# 11. PR     : ��к�ȭ�� (hPa)\n# 12. TA     : ��� (C)\n# 13. TD     : �̽����µ� (C)\n# 14. HM     : ������ (%)\n# 15. PV     : ������� (hPa)\n# 16. RN     : ������ (mm) : 11��~������3�������� 3�ð�������(3,6,...24�� �ܴ̿� �ڷ�������� ǥ��), 4~10�������� 1�ð� ������\n# 17. RN_DAY : �ϰ����� (mm) : �ش�ð����� ������ ��(���ǥ)\n# 18. RN_JUN : �ϰ����� (mm) : �ش�ð����� ������ ���� �������� �Է��� ��(����)\n# 19. RN_INT : �������� (mm/h) : �����ϴ� ���� ���� ����\n# 20. SD_HR3 : 3�ð� ������ (cm) : 3�ð� ���� ���� �������� ����\n# 21. SD_DAY : �� ������ (cm) : 00��00�к��� �� �����ð����� ���� �������� ����\n# 22. SD_TOT : ���� (cm) : ġ���� �ʰ� �׳� ��� ���̵��� ���� ����� ������ ����\n# 23. WC     : GTS �����ϱ� (Code 4677)\n# 24. WP     : GTS �����ϱ� (Code 4561) .. 3(Ȳ��),4(�Ȱ�),5(������),6(��),7(��),8(�ҳ���),9(����)\n# 25. WW     : ������ �ϱ��ڵ� (���ڿ� 22��) : 2�ڸ��� 11������ ��� ���� (�ڵ�� ������å�� ����)\n# 26. CA_TOT : ��� (1/10)\n# 27. CA_MID : ������� (1/10)\n# 28. CH_MIN : ������� (100m)\n# 29. CT     : ���� (���ڿ� 8��) : 2�ڸ� �ڵ�� 4������ ��� ����\n# 30. CT_TOP : GTS �������� (Code 0509)\n# 31. CT_MID : GTS �������� (Code 0515)\n# 32. CT_LOW : GTS �������� (Code 0513)\n# 33. VS     : ���� (10m)\n# 34. SS     : ���� (hr)\n# 35. SI     "
+    }
+  ]
+}

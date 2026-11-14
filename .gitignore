@@ -1,0 +1,29 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.netrc
+.DS_Store
+# Environments and caches
+.venv/
+.venv-*/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Local datasets and trained binaries
+**/data/
+**/local_original/
+**/artifacts/
+**/artifacts_validated/
+*.joblib
+*.pt
+*.pth
+*.ubj
+*.npz
+*.parquet
+# Automatic sharing runtime
+.git-sync/
+*.log

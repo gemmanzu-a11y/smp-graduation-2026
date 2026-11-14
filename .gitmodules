@@ -1,0 +1,3 @@
+[submodule "v20"]
+	path = v20
+	url = https://github.com/parksiwon22/gradproject.git

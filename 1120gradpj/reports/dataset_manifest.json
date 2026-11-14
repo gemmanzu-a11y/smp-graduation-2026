@@ -1,0 +1,108 @@
+{
+  "at": "2026-11-14T10:45:37.150981+09:00",
+  "fingerprint": "88fb0712634662d9e962bf9b3548082f1a7280dc43396dd200d24bef399e34aa",
+  "feature_count": 406,
+  "lookback_hours": 48,
+  "daily_samples": 1081,
+  "hourly_target_rows": 77832,
+  "splits": {
+    "test": 13104,
+    "train": 51840,
+    "validation": 12888
+  },
+  "origin_counts": {
+    "train": 720,
+    "test": 182,
+    "validation": 179
+  },
+  "target_ranges": {
+    "test": {
+      "first": "2025-07-01 00:00:00+09:00",
+      "last": "2025-12-31 23:00:00+09:00",
+      "origins": 182
+    },
+    "train": {
+      "first": "2023-01-10 00:00:00+09:00",
+      "last": "2024-12-31 23:00:00+09:00",
+      "origins": 720
+    },
+    "validation": {
+      "first": "2025-01-01 00:00:00+09:00",
+      "last": "2025-06-30 23:00:00+09:00",
+      "origins": 179
+    }
+  },
+  "excluded_days": [],
+  "publication_status": "retrospective_with_unverified_release_times",
+  "fuel_used": false,
+  "target_future_realizations_used": false,
+  "config": {
+    "seed": 42,
+    "timezone": "Asia/Seoul",
+    "issue_hour": 23,
+    "horizons_days": [
+      1,
+      2,
+      3
+    ],
+    "lookback_hours": 48,
+    "train_target_end": "2024-12-31",
+    "validation_target_start": "2025-01-01",
+    "validation_target_end": "2025-06-30",
+    "test_target_start": "2025-07-01",
+    "test_target_end": "2025-12-31",
+    "observation_lag_hours": 24,
+    "renewable_lag_hours": 48,
+    "historical_mode": "retrospective_with_unverified_release_times",
+    "n_jobs": 4,
+    "models": {
+      "lstm": {
+        "hidden_size": 48,
+        "layers": 1,
+        "epochs": 80,
+        "batch_size": 32,
+        "learning_rate": 0.001,
+        "patience": 12
+      },
+      "hgb": {
+        "max_iter": 240,
+        "learning_rate": 0.06,
+        "max_leaf_nodes": 23,
+        "l2_regularization": 3.0,
+        "min_samples_leaf": 30
+      },
+      "lightgbm": {
+        "n_estimators": 350,
+        "learning_rate": 0.045,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 30,
+        "reg_lambda": 3.0,
+        "verbosity": -1
+      },
+      "extra_trees": {
+        "n_estimators": 160,
+        "min_samples_leaf": 3,
+        "max_features": 0.7,
+        "max_depth": 24
+      },
+      "linear_regression": {},
+      "random_forest": {
+        "n_estimators": 140,
+        "min_samples_leaf": 5,
+        "max_features": 0.6,
+        "max_depth": 22
+      },
+      "xgboost": {
+        "n_estimators": 350,
+        "learning_rate": 0.045,
+        "max_depth": 5,
+        "min_child_weight": 10,
+        "subsample": 0.9,
+        "colsample_bytree": 0.85,
+        "reg_lambda": 5.0,
+        "tree_method": "hist"
+      }
+    }
+  }
+}

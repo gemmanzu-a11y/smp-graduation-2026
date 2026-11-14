@@ -1,0 +1,37 @@
+[
+  {
+    "model": "linear_regression",
+    "exit_code": 0,
+    "finished_at": "2026-11-14T10:46:12.097060+09:00"
+  },
+  {
+    "model": "hgb",
+    "exit_code": 0,
+    "finished_at": "2026-11-14T10:46:33.736566+09:00"
+  },
+  {
+    "model": "lightgbm",
+    "exit_code": 0,
+    "finished_at": "2026-11-14T10:47:04.906380+09:00"
+  },
+  {
+    "model": "extra_trees",
+    "exit_code": 0,
+    "finished_at": "2026-11-14T10:48:59.580192+09:00"
+  },
+  {
+    "model": "random_forest",
+    "exit_code": 0,
+    "finished_at": "2026-11-14T10:52:33.951425+09:00"
+  },
+  {
+    "model": "xgboost",
+    "exit_code": 0,
+    "finished_at": "2026-11-14T10:52:59.958195+09:00"
+  },
+  {
+    "model": "lstm",
+    "exit_code": 0,
+    "finished_at": "2026-11-14T10:53:18.826416+09:00"
+  }
+]

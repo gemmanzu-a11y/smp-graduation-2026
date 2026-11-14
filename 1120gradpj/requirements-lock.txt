@@ -1,0 +1,11 @@
+numpy==2.4.6
+pandas==3.0.3
+scipy==1.17.1
+scikit-learn==1.8.0
+lightgbm==4.6.0
+xgboost==3.4.1
+torch==2.12.0
+certifi==2026.6.17
+joblib==1.5.3
+holidays==0.108
+matplotlib==3.10.9
