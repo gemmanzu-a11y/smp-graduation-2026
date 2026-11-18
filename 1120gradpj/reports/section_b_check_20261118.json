@@ -45,7 +45,9 @@
       "compared_hours": 25209,
       "mean_absolute_difference_mw": 309.23902508363574,
       "maximum_absolute_difference_mw": 4452.500000000007,
-      "note": "Raw reported reserve retained; differences are flagged, not overwritten by derived values."
+      "note": "Raw reported reserve retained; differences are flagged, not overwritten by derived values.",
+      "hours_with_abs_residual_over_1mw": 7579,
+      "interpretation": "Field labels confirmed on official EPSIS chart; arithmetic discrepancies need source-definition/quality investigation, not automatic correction."
     }
   },
   "api_probes": [
@@ -712,7 +714,197 @@
         "bytes": 135,
         "authenticated": true
       }
+    },
+    {
+      "kind": "solar_forecast_additional_history",
+      "baseDate": "20241230",
+      "predDate": "20241231",
+      "http": 200,
+      "status": "received",
+      "rows": 238,
+      "total": 238,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20241230",
+          "predDate": "20241231",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:39:46.288628+09:00",
+        "sha256": "241c6e2a0ab762aa020be15d82d7d8b531d4543d54d5f3ee9a9670474225536b",
+        "raw": "241c6e2a0ab762aa020be15d82d7d8b531d4543d54d5f3ee9a9670474225536b.raw",
+        "bytes": 86645,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "solar_forecast_additional_history",
+      "baseDate": "20231230",
+      "predDate": "20231231",
+      "http": 200,
+      "status": "normal_empty",
+      "rows": 0,
+      "total": 0,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20231230",
+          "predDate": "20231231",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:39:40.703191+09:00",
+        "sha256": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b",
+        "raw": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b.raw",
+        "bytes": 135,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "solar_forecast_additional_history",
+      "baseDate": "20240701",
+      "predDate": "20240702",
+      "http": 200,
+      "status": "normal_empty",
+      "rows": 0,
+      "total": 0,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20240701",
+          "predDate": "20240702",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:39:43.422466+09:00",
+        "sha256": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b",
+        "raw": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b.raw",
+        "bytes": 135,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "solar_forecast_additional_history",
+      "baseDate": "20230701",
+      "predDate": "20230702",
+      "http": 200,
+      "status": "normal_empty",
+      "rows": 0,
+      "total": 0,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20230701",
+          "predDate": "20230702",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:39:37.932180+09:00",
+        "sha256": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b",
+        "raw": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b.raw",
+        "bytes": 135,
+        "authenticated": true
+      }
     }
   ],
-  "credentials_saved": false
+  "credentials_saved": false,
+  "regional_quality_2023": [
+    {
+      "source_index": 3,
+      "variable": "태양",
+      "regional_rows": 34944,
+      "blank_or_non_numeric_rows": 0,
+      "affected_hours": 0
+    },
+    {
+      "source_index": 3,
+      "variable": "풍력",
+      "regional_rows": 34944,
+      "blank_or_non_numeric_rows": 13104,
+      "affected_hours": 2184
+    },
+    {
+      "source_index": 4,
+      "variable": "태양",
+      "regional_rows": 35328,
+      "blank_or_non_numeric_rows": 0,
+      "affected_hours": 0
+    },
+    {
+      "source_index": 4,
+      "variable": "풍력",
+      "regional_rows": 35328,
+      "blank_or_non_numeric_rows": 0,
+      "affected_hours": 0
+    },
+    {
+      "source_index": 5,
+      "variable": "태양",
+      "regional_rows": 35328,
+      "blank_or_non_numeric_rows": 0,
+      "affected_hours": 0
+    },
+    {
+      "source_index": 5,
+      "variable": "풍력",
+      "regional_rows": 35328,
+      "blank_or_non_numeric_rows": 0,
+      "affected_hours": 0
+    },
+    {
+      "source_index": 6,
+      "variable": "태양",
+      "regional_rows": 22656,
+      "blank_or_non_numeric_rows": 4960,
+      "affected_hours": 763
+    },
+    {
+      "source_index": 6,
+      "variable": "풍력",
+      "regional_rows": 22656,
+      "blank_or_non_numeric_rows": 12516,
+      "affected_hours": 1416
+    }
+  ],
+  "solar_gap_investigation": {
+    "timestamp": "2023-01-10 06:00:00+09:00",
+    "old_file": "all mainland regional solar entries blank",
+    "api_value": 0.0,
+    "compared_day_max_abs_difference": 1105.1119039999999,
+    "old_file_overwritten": false,
+    "note": "API has a reported zero at the missing hour, but same-day totals differ elsewhere; retain source versions rather than silently splice."
+  },
+  "generation_unit_status": "amgo response and embedded official Swagger say generation but do not state unit; retain raw values until unit evidence confirmed",
+  "coal_mapping": {
+    "coal_components": [
+      "유연탄",
+      "무연탄"
+    ],
+    "method": "sum only after common geography/unit confirmed",
+    "LNG": "LNG",
+    "nuclear": "원자력"
+  },
+  "reserve_definition_verified": {
+    "c1": "공급능력(MW)",
+    "c2": "현재부하(MW)",
+    "c5": "공급예비력(MW)",
+    "c6": "공급예비율(%)",
+    "evidence": "EPSIS official chart grid headers"
+  },
+  "regional_blank_interpretation": "Blank regional entries are diagnostics, not automatically missing generation: regions may have no eligible generators or structural non-applicability. No blanket zero fill or invalidation.",
+  "solar_forecast_limitations": [
+    "2023 early/mid/late and 2024 early/mid samples return normal empty; precise earliest coverage remains unconfirmed",
+    "Successful samples provide 06–19 only, 14 hours; absent hours are not automatically certified zero",
+    "Service official notice lists missing 2025-08-24~26 due to upstream forecast errors",
+    "D+1 service does not establish D+2/D+3 forecasts"
+  ]
 }

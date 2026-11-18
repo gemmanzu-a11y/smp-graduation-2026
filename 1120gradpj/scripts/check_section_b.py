@@ -3,6 +3,7 @@ from pathlib import Path
 import concurrent.futures
 import json
 import sys
+import threading
 import numpy as np
 import pandas as pd
 ROOT=Path(__file__).resolve().parents[1]
@@ -10,6 +11,7 @@ sys.path.insert(0,str(ROOT/'src'))
 from smp_forecast.http import Client,items_from,write_json,now
 OUT=ROOT/'data/processed/section_b'
 OUT.mkdir(parents=True,exist_ok=True)
+LIMITED={'generation':threading.Event(),'solar_forecast':threading.Event()}
 EXPECTED=pd.date_range('2023-01-01','2025-12-31 23:00',freq='h',tz='Asia/Seoul')
 
 
@@ -37,6 +39,7 @@ def local_quality():
 
 def probe(t):
     kind,date=t;c=Client()
+    if LIMITED[kind].is_set():return dict(kind=kind,date=date,status='not_attempted_rate_limit')
     try:
         if kind=='generation':
             b,m=c.fetch('section_b_generation','https://apis.data.go.kr/B552115/PvAmountByPwrGen/getPvAmountByPwrGen',dict(tradeYmd=date,numOfRows=1000,pageNo=1,dataType='json'),'KPX_SERVICE_KEY',refresh=True)
@@ -69,6 +72,7 @@ def probe(t):
             result.update(cities=sorted(f.city.unique().tolist()),hours=sorted(f.hh.astype(int).unique().tolist()),mainland_hour_rows=len(hourly),fields=list(f.columns),sample=rows[:1])
         return result
     except Exception as e:
+        if 'HTTP 429' in str(e):LIMITED[kind].set()
         return dict(kind=kind,date=date,status='failed',reason=str(e) if isinstance(e,(RuntimeError,ValueError)) else type(e).__name__)
 
 
