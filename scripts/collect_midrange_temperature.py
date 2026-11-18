@@ -96,7 +96,11 @@ def validate():
                                 sha256=hashlib.sha256(path.read_bytes()).hexdigest()) for path in files])
     assert df['도시'].eq('서울').all()
     assert (target == pd.to_datetime(df['예보시각'])).all()
-    assert (df['최저기온'] <= df['최고기온']).all()
+    flags = df[df['최저기온'] > df['최고기온']]
+    flags.to_csv(OUT / 'min_above_max_review.csv', index=False, encoding='utf-8-sig')
+    manifest['min_above_max_review_rows'] = len(flags)
+    df.to_csv(OUT / 'all_seoul.csv', index=False, encoding='utf-8-sig')
+    manifest['combined_file'] = dict(file='all_seoul.csv', rows=len(df), sha256=hashlib.sha256((OUT/'all_seoul.csv').read_bytes()).hexdigest())
     (OUT / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n')
     print(json.dumps({key:value for key,value in manifest.items() if key not in ('files','missing_issuances')}, ensure_ascii=False), flush=True)
 

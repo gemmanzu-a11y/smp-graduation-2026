@@ -1,0 +1,285 @@
+{
+  "source_page": "https://data.kma.go.kr/data/weatherReport/mrfList.do?pgmNo=646",
+  "city": "서울",
+  "unit": "℃",
+  "rows": 21231,
+  "issued_min": "2023-01-01T06:00:00+09:00",
+  "issued_max": "2026-11-17T18:00:00+09:00",
+  "target_min": "2023-01-04",
+  "target_max": "2026-11-27",
+  "lead_days": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "duplicate_key_rows": 0,
+  "missing_cells_by_column": {
+    "issued_at_kst": 0,
+    "target_date": 0,
+    "발표시각": 0,
+    "지역": 0,
+    "도시": 0,
+    "예보시각": 0,
+    "최저기온": 0,
+    "최고기온": 0,
+    "최저기온하한": 7,
+    "최저기온상한": 5,
+    "최고기온하한": 5,
+    "최고기온상한": 5
+  },
+  "missing_issuances_count": 0,
+  "missing_issuances": [],
+  "target_count_by_issuance_histogram": {
+    "7": 1439,
+    "8": 1394,
+    "6": 1
+  },
+  "files": [
+    {
+      "file": "temperature_2023-01.csv",
+      "rows": 496,
+      "sha256": "2e3ef878999f1cb92da401cd1449c91167a804ab971b38b34567e4d3c5b84106"
+    },
+    {
+      "file": "temperature_2023-02.csv",
+      "rows": 448,
+      "sha256": "47b5b0d45efa2037043a8f43eabf354f906a274ae1bb0668765cb38143c2a91b"
+    },
+    {
+      "file": "temperature_2023-03.csv",
+      "rows": 496,
+      "sha256": "4005b1769f7e6352ea613fae0fda171b65209237f4a44e10df850fea93d2f44e"
+    },
+    {
+      "file": "temperature_2023-04.csv",
+      "rows": 480,
+      "sha256": "ca657f7b2b7af4e6ff0bc43230e98ef85e0a879dab2afe9504ada82da32c2860"
+    },
+    {
+      "file": "temperature_2023-05.csv",
+      "rows": 496,
+      "sha256": "bbafa175c12024dc070920780b25dca294e94134aeeedb6fca7fb9212574d5b6"
+    },
+    {
+      "file": "temperature_2023-06.csv",
+      "rows": 480,
+      "sha256": "5c98cf8274e95e7c080e625dd916aa1a10265623276137064c68450abc269629"
+    },
+    {
+      "file": "temperature_2023-07.csv",
+      "rows": 496,
+      "sha256": "bb9eb69fb281513f88f0b93682ad4247ab6236015811a9125ca4dcfe8d46246f"
+    },
+    {
+      "file": "temperature_2023-08.csv",
+      "rows": 496,
+      "sha256": "0a4fe32a429f56a4dbcc9b194be580ce060f331d29ea4146d18f5ec7c97de5a1"
+    },
+    {
+      "file": "temperature_2023-09.csv",
+      "rows": 480,
+      "sha256": "5e66ccf31fc66551d6a3dfc4ce4bcf46712c61733ab64b32bdeeda3c756a86ef"
+    },
+    {
+      "file": "temperature_2023-10.csv",
+      "rows": 496,
+      "sha256": "74fe4dade64bbadae0fd3810175e715b63b737cf85909c9a54b5229b10f4011c"
+    },
+    {
+      "file": "temperature_2023-11.csv",
+      "rows": 480,
+      "sha256": "6b151f112eabe32c9fcd8ffc741d5eed4bcd647c9427d8d08f24ff4d4451ae01"
+    },
+    {
+      "file": "temperature_2023-12.csv",
+      "rows": 496,
+      "sha256": "9bf6385545c63737fc8b56093fb1e5030e16b4f53ed04052e35fe1ee530dc62d"
+    },
+    {
+      "file": "temperature_2024-01.csv",
+      "rows": 496,
+      "sha256": "336b760c4df8f8867f60422d6fef3222e3a0056a4d1bb12b05ee03b135a2ec83"
+    },
+    {
+      "file": "temperature_2024-02.csv",
+      "rows": 464,
+      "sha256": "ee1e9d8fc16e27f3eb6576ddab9b93ed0b34169db2095c3381d07ed5d268fe69"
+    },
+    {
+      "file": "temperature_2024-03.csv",
+      "rows": 496,
+      "sha256": "709f983a531af36bbad50b058fa374b27f6ff82277ca0d7d75799b9a53736db5"
+    },
+    {
+      "file": "temperature_2024-04.csv",
+      "rows": 480,
+      "sha256": "1f6e2396647c8431d5225b916def142d951dea15dd0e772cfedbe195d10b38a2"
+    },
+    {
+      "file": "temperature_2024-05.csv",
+      "rows": 495,
+      "sha256": "687b7f8c228ebe0d5f5cb03224a0b7926a3842ce7af13c948abcbe8dabc0458f"
+    },
+    {
+      "file": "temperature_2024-06.csv",
+      "rows": 480,
+      "sha256": "3e1c5accb5319384060a68da148199a7d17fa8f50099e628b5735b5f21d95672"
+    },
+    {
+      "file": "temperature_2024-07.csv",
+      "rows": 496,
+      "sha256": "00e849206399058ca7779b2bad93b136e2d9c0c79ba3051853a2cb7e0a639758"
+    },
+    {
+      "file": "temperature_2024-08.csv",
+      "rows": 496,
+      "sha256": "a44525ee27c46f1edc2ea58180d999ae2d5a4527fdb7ae1a1beedcc84f1f8e4e"
+    },
+    {
+      "file": "temperature_2024-09.csv",
+      "rows": 480,
+      "sha256": "20270402fa7f88adc5132adb36345820d21e5afde79e6b352c32a4d7c9d4df96"
+    },
+    {
+      "file": "temperature_2024-10.csv",
+      "rows": 496,
+      "sha256": "d8d5bb049631bf66e5118a07d7073d65e9bfc3dc9209050fc81dcda6cf55d5f7"
+    },
+    {
+      "file": "temperature_2024-11.csv",
+      "rows": 475,
+      "sha256": "5f45f9376361601f4b19292b83ab6c4ee5ca03ed39193a20bc1a4d05e7ca3e2a"
+    },
+    {
+      "file": "temperature_2024-12.csv",
+      "rows": 434,
+      "sha256": "5da30b5c62429f00c1f540cff67a402176643e6072a5f2749c23df1e62334ac8"
+    },
+    {
+      "file": "temperature_2025-01.csv",
+      "rows": 433,
+      "sha256": "19e363bf6bd532abbcda88f6febf755a8dffa2474363f6860a5011a4168ff2c9"
+    },
+    {
+      "file": "temperature_2025-02.csv",
+      "rows": 392,
+      "sha256": "180c4d68ab0e6139cdf54aab3889ffb7f8f507563ea03c534672302cb8d948df"
+    },
+    {
+      "file": "temperature_2025-03.csv",
+      "rows": 434,
+      "sha256": "c8ce38149c364283fc304603f9a0a52472f38f531bacd7683ab8fe01315d1b36"
+    },
+    {
+      "file": "temperature_2025-04.csv",
+      "rows": 420,
+      "sha256": "65e28343a92afe5af57cba014a52087be4cfb142531a14e762851e3af4d1a5c8"
+    },
+    {
+      "file": "temperature_2025-05.csv",
+      "rows": 434,
+      "sha256": "eb90f4ea814d3b017010dfe48411184c8f4873ca186f62b0dc7341c394f7a148"
+    },
+    {
+      "file": "temperature_2025-06.csv",
+      "rows": 420,
+      "sha256": "ea9c074d9bf012f89cbf0b5caaa7682f2838d2b9856a8b0e50bdb74ada04dff7"
+    },
+    {
+      "file": "temperature_2025-07.csv",
+      "rows": 434,
+      "sha256": "532a9d23712e3a25115628f570cab07d1ddcd814ab0ffbacd496536941bc6a5e"
+    },
+    {
+      "file": "temperature_2025-08.csv",
+      "rows": 434,
+      "sha256": "6a3e1275bc3831a512f5f15d67516c9cab57231696b45a42a9683ee2e98f9368"
+    },
+    {
+      "file": "temperature_2025-09.csv",
+      "rows": 420,
+      "sha256": "a28105e070bedb205c108090c2013b0748bf85a5079f832e08bd569299877881"
+    },
+    {
+      "file": "temperature_2025-10.csv",
+      "rows": 434,
+      "sha256": "158e400983fd7c67303edecb613f71e55c8435c975bf14171a2b065fe5ce0a2c"
+    },
+    {
+      "file": "temperature_2025-11.csv",
+      "rows": 420,
+      "sha256": "4cd3c57cd3c674a5fe76efbcb07ce9ca7e497b320aa0ffa10e6529732743232c"
+    },
+    {
+      "file": "temperature_2025-12.csv",
+      "rows": 434,
+      "sha256": "8b3a6a4d08f7f0ee2c38d556cddc6e376d6ad2efa8fc13afa6c33091ad4942f1"
+    },
+    {
+      "file": "temperature_2026-01.csv",
+      "rows": 434,
+      "sha256": "a6b84e5187a1a13327627e27027b12f227ac7f9f6e7c70330f6d25db69053a56"
+    },
+    {
+      "file": "temperature_2026-02.csv",
+      "rows": 392,
+      "sha256": "5223f4e6b2e49d98fed7eb1a4abe9ba0e162ca87e69ef707850d0a43e76c28ab"
+    },
+    {
+      "file": "temperature_2026-03.csv",
+      "rows": 434,
+      "sha256": "6257c1484b9ec7b1f871dfa5df9e7af61610bedba3246e4b19dbc1081be5f3c0"
+    },
+    {
+      "file": "temperature_2026-04.csv",
+      "rows": 420,
+      "sha256": "1f8c9956be610d204bc61dc11fd1596242e03ceea00321b2293d188688a05a93"
+    },
+    {
+      "file": "temperature_2026-05.csv",
+      "rows": 434,
+      "sha256": "8ef13a11cf9cf212614642c5869918c29696d8b6834036453c5c151994744f1d"
+    },
+    {
+      "file": "temperature_2026-06.csv",
+      "rows": 420,
+      "sha256": "e854877e739c714f9115dabd8af27473a0ca01b53692e8cd35d07343146b39c2"
+    },
+    {
+      "file": "temperature_2026-07.csv",
+      "rows": 434,
+      "sha256": "0d7e84296af3d6e15ac9c7bf0f9e34a57d98b43ed52393d471aeab130e0476cf"
+    },
+    {
+      "file": "temperature_2026-08.csv",
+      "rows": 434,
+      "sha256": "11f01859356ebbcd0691e44bd824c9fed0d848a6457704a88dccc743aa70c733"
+    },
+    {
+      "file": "temperature_2026-09.csv",
+      "rows": 420,
+      "sha256": "cf41d81680155ea7302c4cf80617c614ba3e33c028579944f2f3177027a2e693"
+    },
+    {
+      "file": "temperature_2026-10.csv",
+      "rows": 434,
+      "sha256": "dfa414d53848d094dd162facacde7684c7c67a9564cb4a531d362ff16c7f1474"
+    },
+    {
+      "file": "temperature_2026-11.csv",
+      "rows": 238,
+      "sha256": "53633cb6315b2f520c24b747c673ceb02027a03cdcb1821a26db0ff8ddb4a89a"
+    }
+  ],
+  "min_above_max_review_rows": 3,
+  "combined_file": {
+    "file": "all_seoul.csv",
+    "rows": 21231,
+    "sha256": "6b935fba221b864ab3960ce4683d7ecdc2006cce848039924847005cdf7a91af"
+  }
+}

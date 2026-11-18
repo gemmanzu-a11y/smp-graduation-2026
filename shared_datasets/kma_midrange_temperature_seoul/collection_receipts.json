@@ -644,5 +644,252 @@
       "menuNo": "635",
       "fileType": "csv"
     }
+  },
+  {
+    "month": "2025-11",
+    "source_rows": 85260,
+    "seoul_rows": 420,
+    "source_sha256": "7034e6212a14732a6e5d7b441faa6a5e963e29c0d21edfdb18a587ff1d4c088a",
+    "params": {
+      "pgmNo": "646",
+      "elementCds": "WT",
+      "stnIds": "_108",
+      "startDt": "20251101",
+      "endDt": "20251130",
+      "lrgClssCd": "WTF",
+      "mddlClssCd": "WTF04",
+      "serviceSe": "F00102",
+      "dataFormCd": "F00502",
+      "menuNo": "635",
+      "fileType": "csv"
+    }
+  },
+  {
+    "month": "2025-12",
+    "source_rows": 88102,
+    "seoul_rows": 434,
+    "source_sha256": "8490bd57424a2ce4ba1acc3fd88384ac536f1f103996ab05ee2f64c1c4cf4ede",
+    "params": {
+      "pgmNo": "646",
+      "elementCds": "WT",
+      "stnIds": "_108",
+      "startDt": "20251201",
+      "endDt": "20251231",
+      "lrgClssCd": "WTF",
+      "mddlClssCd": "WTF04",
+      "serviceSe": "F00102",
+      "dataFormCd": "F00502",
+      "menuNo": "635",
+      "fileType": "csv"
+    }
+  },
+  {
+    "month": "2026-01",
+    "source_rows": 88102,
+    "seoul_rows": 434,
+    "source_sha256": "bff8d5094543b423e3e09c228c7596789c9f416ece461acefe4f64f50bf558f3",
+    "params": {
+      "pgmNo": "646",
+      "elementCds": "WT",
+      "stnIds": "_108",
+      "startDt": "20260101",
+      "endDt": "20260131",
+      "lrgClssCd": "WTF",
+      "mddlClssCd": "WTF04",
+      "serviceSe": "F00102",
+      "dataFormCd": "F00502",
+      "menuNo": "635",
+      "fileType": "csv"
+    }
+  },
+  {
+    "month": "2026-02",
+    "source_rows": 79576,
+    "seoul_rows": 392,
+    "source_sha256": "105c98dc7edc5751cb0994add76f8a0788b3ad6b9449a84ca9309cfb0e50e2bd",
+    "params": {
+      "pgmNo": "646",
+      "elementCds": "WT",
+      "stnIds": "_108",
+      "startDt": "20260201",
+      "endDt": "20260228",
+      "lrgClssCd": "WTF",
+      "mddlClssCd": "WTF04",
+      "serviceSe": "F00102",
+      "dataFormCd": "F00502",
+      "menuNo": "635",
+      "fileType": "csv"
+    }
+  },
+  {
+    "month": "2026-03",
+    "source_rows": 88102,
+    "seoul_rows": 434,
+    "source_sha256": "8af021242d43aa5f67b35a70511f935ef77ef65315a3acda83916ff0545ac1ea",
+    "params": {
+      "pgmNo": "646",
+      "elementCds": "WT",
+      "stnIds": "_108",
+      "startDt": "20260301",
+      "endDt": "20260331",
+      "lrgClssCd": "WTF",
+      "mddlClssCd": "WTF04",
+      "serviceSe": "F00102",
+      "dataFormCd": "F00502",
+      "menuNo": "635",
+      "fileType": "csv"
+    }
+  },
+  {
+    "month": "2026-04",
+    "source_rows": 85260,
+    "seoul_rows": 420,
+    "source_sha256": "188ac81e0182967668b866a6134a54e7c949dab872593ac3631439ecf332dfb2",
+    "params": {
+      "pgmNo": "646",
+      "elementCds": "WT",
+      "stnIds": "_108",
+      "startDt": "20260401",
+      "endDt": "20260430",
+      "lrgClssCd": "WTF",
+      "mddlClssCd": "WTF04",
+      "serviceSe": "F00102",
+      "dataFormCd": "F00502",
+      "menuNo": "635",
+      "fileType": "csv"
+    }
+  },
+  {
+    "month": "2026-05",
+    "source_rows": 88087,
+    "seoul_rows": 434,
+    "source_sha256": "1f1fcc0ec8daf820036b6c949376f6aa949418eb94397999c1aae25a825e0c12",
+    "params": {
+      "pgmNo": "646",
+      "elementCds": "WT",
+      "stnIds": "_108",
+      "startDt": "20260501",
+      "endDt": "20260531",
+      "lrgClssCd": "WTF",
+      "mddlClssCd": "WTF04",
+      "serviceSe": "F00102",
+      "dataFormCd": "F00502",
+      "menuNo": "635",
+      "fileType": "csv"
+    }
+  },
+  {
+    "month": "2026-06",
+    "source_rows": 85260,
+    "seoul_rows": 420,
+    "source_sha256": "f376b01a34c14c757f58c253d63b5ee009f967316a12475e952f53575f86fb32",
+    "params": {
+      "pgmNo": "646",
+      "elementCds": "WT",
+      "stnIds": "_108",
+      "startDt": "20260601",
+      "endDt": "20260630",
+      "lrgClssCd": "WTF",
+      "mddlClssCd": "WTF04",
+      "serviceSe": "F00102",
+      "dataFormCd": "F00502",
+      "menuNo": "635",
+      "fileType": "csv"
+    }
+  },
+  {
+    "month": "2026-07",
+    "source_rows": 88102,
+    "seoul_rows": 434,
+    "source_sha256": "a7f40e03eca45f9d7d175507674804bdf6231d69485de4d81b756a10dc403381",
+    "params": {
+      "pgmNo": "646",
+      "elementCds": "WT",
+      "stnIds": "_108",
+      "startDt": "20260701",
+      "endDt": "20260731",
+      "lrgClssCd": "WTF",
+      "mddlClssCd": "WTF04",
+      "serviceSe": "F00102",
+      "dataFormCd": "F00502",
+      "menuNo": "635",
+      "fileType": "csv"
+    }
+  },
+  {
+    "month": "2026-08",
+    "source_rows": 88102,
+    "seoul_rows": 434,
+    "source_sha256": "0f8a4594c6936832e140b57a69bae968e91f59a128f741c6b919035ff99a67b3",
+    "params": {
+      "pgmNo": "646",
+      "elementCds": "WT",
+      "stnIds": "_108",
+      "startDt": "20260801",
+      "endDt": "20260831",
+      "lrgClssCd": "WTF",
+      "mddlClssCd": "WTF04",
+      "serviceSe": "F00102",
+      "dataFormCd": "F00502",
+      "menuNo": "635",
+      "fileType": "csv"
+    }
+  },
+  {
+    "month": "2026-09",
+    "source_rows": 85260,
+    "seoul_rows": 420,
+    "source_sha256": "9d208ecde790bbae0c86a16d477be5a1a8684620e1c99e7eeebcd739b6b55316",
+    "params": {
+      "pgmNo": "646",
+      "elementCds": "WT",
+      "stnIds": "_108",
+      "startDt": "20260901",
+      "endDt": "20260930",
+      "lrgClssCd": "WTF",
+      "mddlClssCd": "WTF04",
+      "serviceSe": "F00102",
+      "dataFormCd": "F00502",
+      "menuNo": "635",
+      "fileType": "csv"
+    }
+  },
+  {
+    "month": "2026-10",
+    "source_rows": 88102,
+    "seoul_rows": 434,
+    "source_sha256": "01b4637dd9b5e9ce6e277e72c32bba8d71bc2a813f46fb8343b512a294f87b91",
+    "params": {
+      "pgmNo": "646",
+      "elementCds": "WT",
+      "stnIds": "_108",
+      "startDt": "20261001",
+      "endDt": "20261031",
+      "lrgClssCd": "WTF",
+      "mddlClssCd": "WTF04",
+      "serviceSe": "F00102",
+      "dataFormCd": "F00502",
+      "menuNo": "635",
+      "fileType": "csv"
+    }
+  },
+  {
+    "month": "2026-11",
+    "source_rows": 48314,
+    "seoul_rows": 238,
+    "source_sha256": "204ed91d45460728148cac30df42378cac04225decdf3b2155a1375f9a19a517",
+    "params": {
+      "pgmNo": "646",
+      "elementCds": "WT",
+      "stnIds": "_108",
+      "startDt": "20261101",
+      "endDt": "20261117",
+      "lrgClssCd": "WTF",
+      "mddlClssCd": "WTF04",
+      "serviceSe": "F00102",
+      "dataFormCd": "F00502",
+      "menuNo": "635",
+      "fileType": "csv"
+    }
   }
 ]
