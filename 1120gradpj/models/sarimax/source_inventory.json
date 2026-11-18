@@ -7,23 +7,27 @@
     "rows": 33697,
     "first": "2023-01-01 00:00:00+09:00",
     "last": "2026-11-13 23:00:00+09:00",
-    "state": "기존 파일 존재; 새 공통 정의·품질·출처 검증 필요"
+    "state": "기존 EPSIS 실적 1,095시간 결측 유지; 결측 없는 공식 전국 발전단 후보 별도 확보, 혼합하지 않음"
   },
   {
     "source": "demand_forecast",
     "variable": "하루전 육지 수요예측 mlfd",
     "required_period": "2023-01-01~2025-12-31",
-    "state": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개"
+    "file": "section_a/demand_forecast_mainland_2023_2025.csv",
+    "rows": 26304,
+    "first": "2023-01-01 00:00:00+09:00",
+    "last": "2025-12-31 23:00:00+09:00",
+    "state": "공식 연간 육지 수요예측 26,304시간 확보; 원본 공표 이력은 미검증"
   },
   {
     "source": "holidays",
     "variable": "공식 공휴일",
     "required_period": "2023-01-01~2025-12-31",
-    "file": "holidays.csv",
-    "rows": 102,
+    "file": "section_a/holidays_official_2023_2025.csv",
+    "rows": 57,
     "first": "2023-01-01",
-    "last": "2027-12-27",
-    "state": "기존 대체 달력; 공식 API 자료 연결 필요"
+    "last": "2025-12-25",
+    "state": "2023~2025 공식 API 자료 확보; 새 공통 입력 행렬 연결 필요"
   },
   {
     "source": "calendar",

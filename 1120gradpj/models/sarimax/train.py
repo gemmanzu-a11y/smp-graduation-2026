@@ -19,7 +19,9 @@ from fuel import read_lng, fuel_for_targets
 def audit(cfg, shared):
     issues, bundle = inspect_bundle(shared, cfg)
     local_files = {
-        'demand_actual': 'power_hourly.csv', 'holidays': 'holidays.csv',
+        'demand_actual': 'power_hourly.csv',
+        'demand_forecast': 'section_a/demand_forecast_mainland_2023_2025.csv',
+        'holidays': 'section_a/holidays_official_2023_2025.csv',
         'renewables': 'renewable_hourly.csv', 'reserve': 'power_hourly.csv',
         'weather_actual': 'weather_hourly.csv',
     }
@@ -35,7 +37,9 @@ def audit(cfg, shared):
                 last=str(data[timecol].max()) if timecol else None,
                 state='기존 파일 존재; 새 공통 정의·품질·출처 검증 필요')
             if source == 'reserve': row['state'] = '기존 예비율 있음; 공급예비력 MW 정규화는 미완료'
-            if source == 'holidays': row['state'] = '기존 대체 달력; 공식 API 자료 연결 필요'
+            if source == 'holidays': row['state'] = '2023~2025 공식 API 자료 확보; 새 공통 입력 행렬 연결 필요'
+            if source == 'demand_forecast': row['state'] = '공식 연간 육지 수요예측 26,304시간 확보; 원본 공표 이력은 미검증'
+            if source == 'demand_actual': row['state'] = '기존 EPSIS 실적 1,095시간 결측 유지; 결측 없는 공식 전국 발전단 후보 별도 확보, 혼합하지 않음'
         elif source == 'domestic_lng':
             row['state'] = '아래 지정 엑셀에서 직접 확인'
         elif source == 'calendar':

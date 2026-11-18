@@ -5019,5 +5019,13 @@
     "geography": "EPSIS displayed current load; mainland-only scope not independently established"
   },
   "model_training_performed": false,
-  "credential_values_saved": false
+  "credential_values_saved": false,
+  "superseded_forecast_coverage_by": "section_a_bulk_20261118.json",
+  "quota_diagnosis": {
+    "http_status": 429,
+    "returnReasonCode": "22",
+    "returnAuthMsg": "일일 서비스 요청제한 횟수 초과 에러",
+    "retry_after_header": null,
+    "action": "Stop this API after quota error; use the published official annual export for archival collection."
+  }
 }

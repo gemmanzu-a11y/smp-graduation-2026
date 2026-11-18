@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-18T18:56:06.666876+09:00",
+  "forecast": {
+    "days": 1096,
+    "hours": 26304,
+    "missing_hours": 0,
+    "api_overlap_hours": 2352,
+    "max_absolute_difference_vs_api_mw": 0.0,
+    "source": "KPX official annual download",
+    "historical_publication_vintages_verified": false
+  },
+  "actual_alternative": {
+    "hours": 26304,
+    "missing_hours": 0,
+    "geography": "nationwide incl Jeju",
+    "unit": "MWh",
+    "provisional": true,
+    "indicator": "generation-end demand for demand forecasting",
+    "compared_hours": 25209,
+    "mean_abs_difference_from_5min_average_mw": 89.19600803945679,
+    "max_abs_difference_mw": 4577.1666666666715,
+    "not_spliced_into_original": true,
+    "receipts": [
+      {
+        "year": 2023,
+        "dataset": "15065266",
+        "file_id": "uddi:e0894814-0822-4a76-9558-e035f905fe7f",
+        "sha256": "ebbe4b2e65837bfd392b91e0ba75426e22ba410e14a53fe03c0ff36b7f2a9a12",
+        "nondate_rows": 0
+      },
+      {
+        "year": 2024,
+        "dataset": "15065266",
+        "file_id": "uddi:159ec977-0b24-4550-9308-bc5c851804f2",
+        "sha256": "3106d02f8fb7fd4779ca01a30f8b84352f74c166472e11c73abc830478273a0f",
+        "nondate_rows": 0
+      },
+      {
+        "year": 2025,
+        "dataset": "15065266",
+        "file_id": "uddi:6ade08d2-0014-4d22-b10c-c811e3273c70",
+        "sha256": "03fa147b788a52207d137b47da8a786bf5b2ac05e6126f336d01929e3956425b",
+        "nondate_rows": 1
+      }
+    ]
+  },
+  "rows": 26304,
+  "model_training_performed": false,
+  "original_files_overwritten": false,
+  "credentials_saved": false,
+  "remaining_decisions": [
+    "Choose whether to retain EPSIS current-load average with unresolved gaps or formally adopt nationwide generation-end hourly demand as a whole series; do not mix source definitions.",
+    "Mainland-specific observed demand remains unconfirmed; nationwide candidate includes Jeju."
+  ]
+}
