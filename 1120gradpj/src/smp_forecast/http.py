@@ -14,7 +14,7 @@ class Client:
  def __init__(self,keys=None):
   self.keys={k:v for k,v in (keys or {}).items() if v};self.context=ssl.create_default_context(cafile=certifi.where())
  def fetch(self,name,url,params=None,key_name=None,post=False,refresh=False):
-  params=dict(params or {});safe={k:v for k,v in params.items() if k.lower() not in ('servicekey','authkey')}
+  params=dict(params or {});safe={k:v for k,v in params.items() if k.lower() not in ('servicekey','authkey','api_key','apikey')}
   identity=hashlib.sha256(json.dumps([url,safe],sort_keys=True).encode()).hexdigest()[:16];folder=ROOT/'data/raw'/name;folder.mkdir(parents=True,exist_ok=True);marker=folder/(identity+'.json')
   if marker.exists() and not refresh:
    m=json.loads(marker.read_text());payload=(folder/m['raw']).read_bytes()
@@ -23,12 +23,13 @@ class Client:
   if key_name:
    credential=self.keys.get(key_name) or os.environ.get(key_name)
    if not credential:raise FetchError(name+': missing '+key_name)
-   params['authKey' if key_name=='KMA_APIHUB_AUTH_KEY' else 'serviceKey']=urllib.parse.unquote(credential)
+   auth_param='authKey' if key_name=='KMA_APIHUB_AUTH_KEY' else 'api_key' if key_name=='FRED_API_KEY' else 'serviceKey'
+   params[auth_param]=urllib.parse.unquote(credential)
   q=urllib.parse.urlencode(params);req=urllib.request.Request(url if post else url+('?' if '?' not in url else '&')+q,data=q.encode() if post else None,headers={'User-Agent':'1120gradpj educational research','Content-Type':'application/x-www-form-urlencoded'})
   for attempt in range(3):
    try:
     with urllib.request.urlopen(req,context=self.context,timeout=60) as r:payload=r.read();status=r.status
-    if any(v.encode() in payload for v in list(self.keys.values())+[os.environ.get(k,'') for k in ('KPX_SERVICE_KEY','KMA_APIHUB_AUTH_KEY')] if v):raise FetchError(name+': credential echo suppressed')
+    if any(v.encode() in payload for v in list(self.keys.values())+[os.environ.get(k,'') for k in ('KPX_SERVICE_KEY','KMA_APIHUB_AUTH_KEY','FRED_API_KEY')] if v):raise FetchError(name+': credential echo suppressed')
     digest=hashlib.sha256(payload).hexdigest();raw=digest+'.raw';(folder/raw).write_bytes(payload)
     m=dict(source=url,params=safe,http_status=status,first_received_at=now(),sha256=digest,raw=raw,bytes=len(payload),authenticated=bool(key_name));write_json(marker,m);return payload,m
    except urllib.error.HTTPError as e:

@@ -1,0 +1,293 @@
+{
+  "at": "2026-11-18T20:37:12.021711+09:00",
+  "status": "fuel_values_ready_under_agreed_assumptions",
+  "model_training_performed": false,
+  "credentials_saved": false,
+  "domestic": {
+    "file": "HOME_전력거래_연료비용.xlsx",
+    "sheet": "Sheet1",
+    "column_number": 16,
+    "header_rows": [
+      1,
+      2,
+      3
+    ],
+    "indicator": "연료비단가",
+    "fuel": "LNG",
+    "unit": "원/kWh",
+    "sha256": "295d800831325f19e6a47b0ef2b406494e56da48bbb73e92b949de9736d6bc98",
+    "first_month": "2023-01",
+    "last_month": "2026-10",
+    "months": 46,
+    "historical_required_months": 36,
+    "historical_hourly_rows": 26304,
+    "missing_historical_months": 0,
+    "policy": "target-month LNG; historical disclosure availability unverified",
+    "november_demo_reference_month": "2026-10",
+    "november_demo_value": 164.906245
+  },
+  "international": {
+    "DCOILWTICO": {
+      "feature": "wti_usd_bbl",
+      "unit": "Dollars per Barrel",
+      "frequency": "Daily",
+      "raw_vintage_rows": 1061,
+      "origin_rows": 1096,
+      "missing_values": 0,
+      "maximum_age_days": 33,
+      "receipts": [
+        {
+          "source": "https://api.stlouisfed.org/fred/series/observations",
+          "params": {
+            "file_type": "json",
+            "series_id": "DCOILWTICO",
+            "realtime_start": "2022-12-25",
+            "realtime_end": "2025-12-29",
+            "observation_start": "2022-01-01",
+            "observation_end": "2025-12-29",
+            "output_type": 1,
+            "limit": 100000,
+            "offset": 0
+          },
+          "http_status": 200,
+          "first_received_at": "2026-11-18T20:36:52.572207+09:00",
+          "sha256": "07a04505626dc02dc049b2f8d650607391ff81ecb266f57a2808e39e9d5b28cd",
+          "raw": "07a04505626dc02dc049b2f8d650607391ff81ecb266f57a2808e39e9d5b28cd.raw",
+          "bytes": 101882,
+          "authenticated": true
+        }
+      ]
+    },
+    "DCOILBRENTEU": {
+      "feature": "brent_usd_bbl",
+      "unit": "Dollars per Barrel",
+      "frequency": "Daily",
+      "raw_vintage_rows": 1045,
+      "origin_rows": 1096,
+      "missing_values": 0,
+      "maximum_age_days": 15,
+      "receipts": [
+        {
+          "source": "https://api.stlouisfed.org/fred/series/observations",
+          "params": {
+            "file_type": "json",
+            "series_id": "DCOILBRENTEU",
+            "realtime_start": "2022-12-25",
+            "realtime_end": "2025-12-29",
+            "observation_start": "2022-01-01",
+            "observation_end": "2025-12-29",
+            "output_type": 1,
+            "limit": 100000,
+            "offset": 0
+          },
+          "http_status": 200,
+          "first_received_at": "2026-11-18T20:36:56.379649+09:00",
+          "sha256": "248615c30ba6a169fa491117eca6296fa0552e2d005b7681251322665fce536c",
+          "raw": "248615c30ba6a169fa491117eca6296fa0552e2d005b7681251322665fce536c.raw",
+          "bytes": 100488,
+          "authenticated": true
+        }
+      ]
+    },
+    "PNGASJPUSDM": {
+      "feature": "international_lng_usd_mmbtu",
+      "unit": "U.S. Dollars per Million Metric British Thermal Unit",
+      "frequency": "Monthly",
+      "raw_vintage_rows": 44,
+      "origin_rows": 1096,
+      "missing_values": 0,
+      "maximum_age_days": 210,
+      "receipts": [
+        {
+          "source": "https://api.stlouisfed.org/fred/series/observations",
+          "params": {
+            "file_type": "json",
+            "series_id": "PNGASJPUSDM",
+            "realtime_start": "2022-12-25",
+            "realtime_end": "2025-12-29",
+            "observation_start": "2022-01-01",
+            "observation_end": "2025-12-29",
+            "output_type": 1,
+            "limit": 100000,
+            "offset": 0
+          },
+          "http_status": 200,
+          "first_received_at": "2026-11-18T20:37:00.014837+09:00",
+          "sha256": "d0179b6f56288994a8dcf4eaf3e01cace52b991347de6eebace7b00c46f2c05e",
+          "raw": "d0179b6f56288994a8dcf4eaf3e01cace52b991347de6eebace7b00c46f2c05e.raw",
+          "bytes": 4686,
+          "authenticated": true
+        }
+      ]
+    },
+    "PCOALAUUSDM": {
+      "feature": "international_coal_usd_tonne",
+      "unit": "U.S. Dollars per Metric Ton",
+      "frequency": "Monthly",
+      "raw_vintage_rows": 43,
+      "origin_rows": 1096,
+      "missing_values": 0,
+      "maximum_age_days": 210,
+      "receipts": [
+        {
+          "source": "https://api.stlouisfed.org/fred/series/observations",
+          "params": {
+            "file_type": "json",
+            "series_id": "PCOALAUUSDM",
+            "realtime_start": "2022-12-25",
+            "realtime_end": "2025-12-29",
+            "observation_start": "2022-01-01",
+            "observation_end": "2025-12-29",
+            "output_type": 1,
+            "limit": 100000,
+            "offset": 0
+          },
+          "http_status": 200,
+          "first_received_at": "2026-11-18T20:37:03.299343+09:00",
+          "sha256": "8179871391ba7cda5a8cb20639946ad1840783d570bee0e59bc99cb7e5e4119e",
+          "raw": "8179871391ba7cda5a8cb20639946ad1840783d570bee0e59bc99cb7e5e4119e.raw",
+          "bytes": 4838,
+          "authenticated": true
+        }
+      ]
+    }
+  },
+  "asof_checks_passed": 12,
+  "daily_origins": 1096,
+  "forecast_origins": 1090,
+  "forecast_rows": 78480,
+  "split_origins": {
+    "test": 182,
+    "train": 729,
+    "validation": 179
+  },
+  "latest_input_preview": [
+    {
+      "series": "DCOILWTICO",
+      "feature": "wti_usd_bbl",
+      "unit": "Dollars per Barrel",
+      "reference_origin": "2026-11-18 23:00:00+09:00",
+      "fred_asof_date": "2026-11-16",
+      "value": 89.62,
+      "observation_date": "2026-11-11",
+      "vintage_start": "2026-11-16",
+      "vintage_end": "2026-11-16",
+      "age_days": 5,
+      "receipt": {
+        "source": "https://api.stlouisfed.org/fred/series/observations",
+        "params": {
+          "file_type": "json",
+          "series_id": "DCOILWTICO",
+          "realtime_start": "2026-11-16",
+          "realtime_end": "2026-11-16",
+          "observation_end": "2026-11-16",
+          "sort_order": "desc",
+          "limit": 100
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T20:36:55.530300+09:00",
+        "sha256": "00a121f37e48d3b5a8d19d0b7aededd6e4bc9fd28d9541d927cf07841879a958",
+        "raw": "00a121f37e48d3b5a8d19d0b7aededd6e4bc9fd28d9541d927cf07841879a958.raw",
+        "bytes": 9883,
+        "authenticated": true
+      }
+    },
+    {
+      "series": "DCOILBRENTEU",
+      "feature": "brent_usd_bbl",
+      "unit": "Dollars per Barrel",
+      "reference_origin": "2026-11-18 23:00:00+09:00",
+      "fred_asof_date": "2026-11-16",
+      "value": 92.14,
+      "observation_date": "2026-11-11",
+      "vintage_start": "2026-11-16",
+      "vintage_end": "2026-11-16",
+      "age_days": 5,
+      "receipt": {
+        "source": "https://api.stlouisfed.org/fred/series/observations",
+        "params": {
+          "file_type": "json",
+          "series_id": "DCOILBRENTEU",
+          "realtime_start": "2026-11-16",
+          "realtime_end": "2026-11-16",
+          "observation_end": "2026-11-16",
+          "sort_order": "desc",
+          "limit": 100
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T20:36:58.881486+09:00",
+        "sha256": "47701ab37ada6e8d32b9a1d5dddd5614cb78766e1fe486547778ff32ca6ff700",
+        "raw": "47701ab37ada6e8d32b9a1d5dddd5614cb78766e1fe486547778ff32ca6ff700.raw",
+        "bytes": 9910,
+        "authenticated": true
+      }
+    },
+    {
+      "series": "PNGASJPUSDM",
+      "feature": "international_lng_usd_mmbtu",
+      "unit": "U.S. Dollars per Million Metric British Thermal Unit",
+      "reference_origin": "2026-11-18 23:00:00+09:00",
+      "fred_asof_date": "2026-11-16",
+      "value": 26.637,
+      "observation_date": "2026-09-01",
+      "vintage_start": "2026-11-16",
+      "vintage_end": "2026-11-16",
+      "age_days": 76,
+      "receipt": {
+        "source": "https://api.stlouisfed.org/fred/series/observations",
+        "params": {
+          "file_type": "json",
+          "series_id": "PNGASJPUSDM",
+          "realtime_start": "2026-11-16",
+          "realtime_end": "2026-11-16",
+          "observation_end": "2026-11-16",
+          "sort_order": "desc",
+          "limit": 100
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T20:37:02.538404+09:00",
+        "sha256": "be28db44b3bc26509f9731c5a3456f4da3a67c17547512aee65debb9798ce744",
+        "raw": "be28db44b3bc26509f9731c5a3456f4da3a67c17547512aee65debb9798ce744.raw",
+        "bytes": 10329,
+        "authenticated": true
+      }
+    },
+    {
+      "series": "PCOALAUUSDM",
+      "feature": "international_coal_usd_tonne",
+      "unit": "U.S. Dollars per Metric Ton",
+      "reference_origin": "2026-11-18 23:00:00+09:00",
+      "fred_asof_date": "2026-11-16",
+      "value": 153.84,
+      "observation_date": "2026-09-01",
+      "vintage_start": "2026-11-16",
+      "vintage_end": "2026-11-16",
+      "age_days": 76,
+      "receipt": {
+        "source": "https://api.stlouisfed.org/fred/series/observations",
+        "params": {
+          "file_type": "json",
+          "series_id": "PCOALAUUSDM",
+          "realtime_start": "2026-11-16",
+          "realtime_end": "2026-11-16",
+          "observation_end": "2026-11-16",
+          "sort_order": "desc",
+          "limit": 100
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T20:37:06.449800+09:00",
+        "sha256": "f04fdcecf7c53cd0f8f66201ec7c993f2e90cbffacff3d29f5cd5bb1967609d2",
+        "raw": "f04fdcecf7c53cd0f8f66201ec7c993f2e90cbffacff3d29f5cd5bb1967609d2.raw",
+        "bytes": 10527,
+        "authenticated": true
+      }
+    }
+  ],
+  "limitations": [
+    "Domestic target-month LNG is an explicit future-information exception; not a point-in-time operational accuracy claim",
+    "FRED D-2 date snapshots are a conservative date-level rule, not intraday release timestamps",
+    "Long unchanged monthly values are retained as actually available; age columns expose staleness",
+    "No KPX heat-unit API or two-month domestic lag used",
+    "This prepares C only; A/B/D and overall model gates remain separate"
+  ]
+}
