@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-18T22:08:29.277692+09:00",
+  "at": "2026-11-18T22:09:49.130731+09:00",
   "status": "INCOMPLETE_2024_REQUIRED_FUELS_ABSENT",
   "row_coverage_complete": false,
   "expected_hours": 26304,
@@ -182,19 +182,21 @@
     "2023": {
       "compared_rows": 9216,
       "max_absolute_difference": 829.2589999999982,
-      "mean_absolute_difference": 0.8485594618055754
+      "mean_absolute_difference": 0.8485594618055754,
+      "rows_abs_difference_gt_1": 369
     },
     "2025": {
       "compared_rows": 96,
       "max_absolute_difference": 0.0005000000019208528,
-      "mean_absolute_difference": 0.00021182291676306286
+      "mean_absolute_difference": 0.00021182291676306286,
+      "rows_abs_difference_gt_1": 0
     }
   },
   "api_values_merged_into_annual": false,
   "unit": "MWh",
-  "scope": "市场 정산 기준 송전단 전력거래량. 발전기 입찰량·설비용량·전국 총발전량과 구분. 육지/제주 분리 미확정.",
+  "scope": "전력시장 정산 기준 송전단 전력거래량. 발전기 입찰량·설비용량·전국 총발전량과 구분. 육지/제주 분리 미확정.",
   "blocker": "2024년 공식 연간 첨부파일은 신재생 계열만 포함: LNG·유연탄·무연탄·원자력 4개 모두 없음. 일별 API는 오늘 한도 도달.",
   "resolution": "공식 2024년 전체 연료원 파일 정정/제공 요청 또는 API 일일 트래픽 증설 후 2024년 전체 수집. 키 변경으로 한도 우회하지 않음.",
-  "precision_note": "2023년 공식 파일은 정수 MWh로 표시되어 API 소수값과 차이가 날 수 있음. 서로 다른 정밀도를 시간별로 섞지 않음.",
+  "precision_note": "2023년 공식 파일은 정수 MWh이나 API 차이가 반올림 범위를 넘는 행도 있음. 수정정산 등 원인 미확정으로 버전 선택·품질 확인 필요. 서로 다른 버전을 시간별로 섞지 않음.",
   "model_training_performed": false
 }

@@ -78,14 +78,14 @@ def main():
     comparison={}
     for year,group in compare.groupby(compare.timestamp.dt.year):
         comparison[str(year)]=dict(compared_rows=len(group),max_absolute_difference=float(abs(group.difference).max()),
-                                  mean_absolute_difference=float(abs(group.difference).mean()))
+                                  mean_absolute_difference=float(abs(group.difference).mean()),rows_abs_difference_gt_1=int((abs(group.difference)>1).sum()))
     report=dict(at=now(),status='INCOMPLETE_2024_REQUIRED_FUELS_ABSENT',row_coverage_complete=bool(selected.notna().all().all()),
         expected_hours=26304,by_year=by_year,receipts=receipts,api_comparison=comparison,
         api_values_merged_into_annual=False,unit='MWh',
         scope='전력시장 정산 기준 송전단 전력거래량. 발전기 입찰량·설비용량·전국 총발전량과 구분. 육지/제주 분리 미확정.',
         blocker='2024년 공식 연간 첨부파일은 신재생 계열만 포함: LNG·유연탄·무연탄·원자력 4개 모두 없음. 일별 API는 오늘 한도 도달.',
         resolution='공식 2024년 전체 연료원 파일 정정/제공 요청 또는 API 일일 트래픽 증설 후 2024년 전체 수집. 키 변경으로 한도 우회하지 않음.',
-        precision_note='2023년 공식 파일은 정수 MWh로 표시되어 API 소수값과 차이가 날 수 있음. 서로 다른 정밀도를 시간별로 섞지 않음.',
+        precision_note='2023년 공식 파일은 정수 MWh이나 API 차이가 반올림 범위를 넘는 행도 있음. 수정정산 등 원인 미확정으로 버전 선택·품질 확인 필요. 서로 다른 버전을 시간별로 섞지 않음.',
         model_training_performed=False)
     write_json(ROOT/'reports/generation_annual_collection.json',report)
     lines=['# 5번 발전원별 발전량: 전체 기간 수집 결과','','상태: **2024년 핵심 발전원 미확보로 미완료**','',
@@ -101,7 +101,7 @@ def main():
         '- 일별 API: https://www.data.go.kr/data/15106744/openapi.do',
         '- 공식 문의처: 한국전력거래소 전사AX총괄팀 061-330-8718 (공식 상세 페이지 기준)',
         '- 필요한 자료: 2024-01-01~2024-12-31, 01~24시, LNG·유연탄·무연탄·원자력 전력거래량(MWh), 원본 지역 범위 명시.',
-        '- API 재개: KPX_SERVICE_KEY 환경변수 설정 후 `.venv/bin/python scripts/collect_generation_history.py`. 저장된 일자는 재사용합니다.','',
+        '- API 재개: KPX_SERVICE_KEY 환경변수 설정 후 `.venv/bin/python scripts/collect_generation_history.py --start 2024-01-01 --end 2024-12-31`. 저장된 일자는 재사용합니다.','',
         '## 파일','',
         '- data/processed/section_b/generation_annual/generation_selected_2023_2025.csv: 공통 시간축 후보, 2024년은 NaN 유지',
         '- source_0/1/2.csv: 각각 2025/2024/2023 공식 원본 CSV 파싱본',

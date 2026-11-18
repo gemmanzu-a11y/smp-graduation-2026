@@ -16,7 +16,7 @@
 
 2023년과 2025년 LNG·유연탄·무연탄·원자력은 연간 전체 시간 확보했습니다. 단위는 원본 열의 MWh입니다. 설비용량 MW 열을 발전량으로 사용하지 않았습니다. 원본 세부 연료원은 모두 별도 보존했습니다.
 
-2023년 공식 파일은 정수 MWh로 표시되어 API 소수값과 차이가 날 수 있음. 서로 다른 정밀도를 시간별로 섞지 않음.
+2023년 공식 파일은 정수 MWh이나 API 차이가 반올림 범위를 넘는 행도 있음. 수정정산 등 원인 미확정으로 버전 선택·품질 확인 필요. 서로 다른 버전을 시간별로 섞지 않음.
 API 대조 수치: `generation_annual_collection.json` 및 `annual_vs_cached_api.csv`.
 
 ## 해결 경로
@@ -27,7 +27,7 @@ API 대조 수치: `generation_annual_collection.json` 및 `annual_vs_cached_api
 - 일별 API: https://www.data.go.kr/data/15106744/openapi.do
 - 공식 문의처: 한국전력거래소 전사AX총괄팀 061-330-8718 (공식 상세 페이지 기준)
 - 필요한 자료: 2024-01-01~2024-12-31, 01~24시, LNG·유연탄·무연탄·원자력 전력거래량(MWh), 원본 지역 범위 명시.
-- API 재개: KPX_SERVICE_KEY 환경변수 설정 후 `.venv/bin/python scripts/collect_generation_history.py`. 저장된 일자는 재사용합니다.
+- API 재개: KPX_SERVICE_KEY 환경변수 설정 후 `.venv/bin/python scripts/collect_generation_history.py --start 2024-01-01 --end 2024-12-31`. 저장된 일자는 재사용합니다.
 
 ## 파일
 
@@ -37,3 +37,9 @@ API 대조 수치: `generation_annual_collection.json` 및 `annual_vs_cached_api
 - missing_required_fuel_hours.csv: 부족한 시간·연료원 목록
 
 실제 모델 학습은 실행하지 않았습니다. 2024년을 빼거나 복사·보간하여 완비로 표시하지 않았습니다.
+
+## 검증 결과
+
+발전량 정규화·완비 검사 9개 통과: 시간/연도·열 이름 변형·중복/NaN 차단, 26,304시간 공통 축, 2023/2025 완비, 2024 부재 보존, 석탄 합계 검증. CSV 실수 정밀도 차이에만 1e-9 허용 오차를 적용했습니다.
+
+API 대조: 2023년 9,216개 연료원×시간 쌍 중 절대차 1을 넘는 행 369개, 최대차 약 829.259입니다. 단순 반올림으로 전부 설명하지 않았고 수정정산 등 원인은 미확정입니다. 2025년 표본 96개 쌍은 최대차 약 0.0005입니다. 따라서 연간 파일을 API와 완전히 동일한 버전이라고 선언하지 않았습니다.
