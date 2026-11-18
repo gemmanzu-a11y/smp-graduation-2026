@@ -1,0 +1,776 @@
+{
+  "at": "2026-11-18T23:01:31.057515+09:00",
+  "source_page": "https://www.data.go.kr/data/15065269/fileData.do",
+  "conclusion": "풍력 육지 원본 존재. 2023-12 이후 육지/제주 구분; 그 이전은 시도별 제주 제외 집계.",
+  "unit": "MWh",
+  "explicit_mainland_compared_hours": 18288,
+  "max_difference": 0.0,
+  "records": [
+    {
+      "file": "data/processed/renewable_source_0.csv",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "source_value_column": "전력거래량(MWh)",
+      "regions": [
+        {
+          "region": "육지",
+          "rows": 8760,
+          "numeric_values": 8760,
+          "blank_values": 0,
+          "nonzero_values": 8760,
+          "minimum": 0.492989,
+          "maximum": 1342.110072
+        },
+        {
+          "region": "제주도",
+          "rows": 8760,
+          "numeric_values": 8760,
+          "blank_values": 0,
+          "nonzero_values": 8490,
+          "minimum": 0.0,
+          "maximum": 101.408062
+        }
+      ],
+      "explicit_mainland_rows": 8760,
+      "sample": [
+        {
+          "timestamp": "2025-01-01 00:00:00+09:00",
+          "wind_value": "713.901129"
+        },
+        {
+          "timestamp": "2025-01-01 01:00:00+09:00",
+          "wind_value": "739.374857"
+        }
+      ]
+    },
+    {
+      "file": "data/processed/renewable_source_1.csv",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "source_value_column": "전력거래량(MWh)",
+      "regions": [
+        {
+          "region": "육지",
+          "rows": 8784,
+          "numeric_values": 8784,
+          "blank_values": 0,
+          "nonzero_values": 8784,
+          "minimum": 0.024542,
+          "maximum": 1265.645323
+        },
+        {
+          "region": "제주",
+          "rows": 8784,
+          "numeric_values": 8784,
+          "blank_values": 0,
+          "nonzero_values": 8622,
+          "minimum": 0.0,
+          "maximum": 282.131824
+        }
+      ],
+      "explicit_mainland_rows": 8784,
+      "sample": [
+        {
+          "timestamp": "2024-01-01 00:00:00+09:00",
+          "wind_value": "148.44466"
+        },
+        {
+          "timestamp": "2024-01-01 01:00:00+09:00",
+          "wind_value": "104.653405"
+        }
+      ]
+    },
+    {
+      "file": "data/processed/renewable_source_2.csv",
+      "start": "2023-12-01",
+      "end": "2023-12-31",
+      "source_value_column": "발전량(MWh)",
+      "regions": [
+        {
+          "region": "육지",
+          "rows": 744,
+          "numeric_values": 744,
+          "blank_values": 0,
+          "nonzero_values": 744,
+          "minimum": 0.440169,
+          "maximum": 1160.454074
+        },
+        {
+          "region": "제주",
+          "rows": 744,
+          "numeric_values": 744,
+          "blank_values": 0,
+          "nonzero_values": 744,
+          "minimum": 0.004228,
+          "maximum": 255.986282
+        }
+      ],
+      "explicit_mainland_rows": 744,
+      "sample": [
+        {
+          "timestamp": "2023-12-01 00:00:00+09:00",
+          "wind_value": "706.271491"
+        },
+        {
+          "timestamp": "2023-12-01 01:00:00+09:00",
+          "wind_value": "660.160938"
+        }
+      ]
+    },
+    {
+      "file": "data/processed/renewable_source_3.csv",
+      "start": "2023-09-01",
+      "end": "2023-11-30",
+      "source_value_column": "풍력발전량(Mwh)",
+      "regions": [
+        {
+          "region": "강원도",
+          "rows": 2184,
+          "numeric_values": 2184,
+          "blank_values": 0,
+          "nonzero_values": 2181,
+          "minimum": 0.0,
+          "maximum": 361.38442
+        },
+        {
+          "region": "경기도",
+          "rows": 2184,
+          "numeric_values": 2184,
+          "blank_values": 0,
+          "nonzero_values": 1577,
+          "minimum": 0.0,
+          "maximum": 3.375561
+        },
+        {
+          "region": "경상남도",
+          "rows": 2184,
+          "numeric_values": 2184,
+          "blank_values": 0,
+          "nonzero_values": 2152,
+          "minimum": 0.0,
+          "maximum": 61.630547
+        },
+        {
+          "region": "경상북도",
+          "rows": 2184,
+          "numeric_values": 2184,
+          "blank_values": 0,
+          "nonzero_values": 2184,
+          "minimum": 0.00108,
+          "maximum": 405.596649
+        },
+        {
+          "region": "광주시",
+          "rows": 2184,
+          "numeric_values": 0,
+          "blank_values": 2184,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        },
+        {
+          "region": "대구시",
+          "rows": 2184,
+          "numeric_values": 0,
+          "blank_values": 2184,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        },
+        {
+          "region": "대전시",
+          "rows": 2184,
+          "numeric_values": 0,
+          "blank_values": 2184,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        },
+        {
+          "region": "부산시",
+          "rows": 2184,
+          "numeric_values": 2184,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "서울시",
+          "rows": 2184,
+          "numeric_values": 0,
+          "blank_values": 2184,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        },
+        {
+          "region": "세종시",
+          "rows": 2184,
+          "numeric_values": 0,
+          "blank_values": 2184,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        },
+        {
+          "region": "울산시",
+          "rows": 2184,
+          "numeric_values": 2184,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "인천시",
+          "rows": 2184,
+          "numeric_values": 2184,
+          "blank_values": 0,
+          "nonzero_values": 1867,
+          "minimum": 0.0,
+          "maximum": 28.314095
+        },
+        {
+          "region": "전라남도",
+          "rows": 2184,
+          "numeric_values": 2184,
+          "blank_values": 0,
+          "nonzero_values": 2176,
+          "minimum": 0.0,
+          "maximum": 354.025774
+        },
+        {
+          "region": "전라북도",
+          "rows": 2184,
+          "numeric_values": 2184,
+          "blank_values": 0,
+          "nonzero_values": 1879,
+          "minimum": 0.0,
+          "maximum": 63.396767
+        },
+        {
+          "region": "제주도",
+          "rows": 2184,
+          "numeric_values": 2184,
+          "blank_values": 0,
+          "nonzero_values": 2162,
+          "minimum": 0.0,
+          "maximum": 243.862296
+        },
+        {
+          "region": "충청남도",
+          "rows": 2184,
+          "numeric_values": 2184,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "충청북도",
+          "rows": 2184,
+          "numeric_values": 0,
+          "blank_values": 2184,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        }
+      ],
+      "explicit_mainland_rows": 0,
+      "sample": []
+    },
+    {
+      "file": "data/processed/renewable_source_4.csv",
+      "start": "2023-06-01",
+      "end": "2023-08-31",
+      "source_value_column": "풍력발전량(MWh)",
+      "regions": [
+        {
+          "region": "강원도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 2193,
+          "minimum": 0.0,
+          "maximum": 338.812911
+        },
+        {
+          "region": "경기도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 1535,
+          "minimum": 0.0,
+          "maximum": 2.976423
+        },
+        {
+          "region": "경상남도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 2132,
+          "minimum": 0.0,
+          "maximum": 52.909693
+        },
+        {
+          "region": "경상북도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 2206,
+          "minimum": 0.0,
+          "maximum": 341.757489
+        },
+        {
+          "region": "광주시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "대구시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "대전시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "부산시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "서울시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "세종시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "울산시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "인천시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 1657,
+          "minimum": 0.0,
+          "maximum": 22.920052
+        },
+        {
+          "region": "전라남도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 2188,
+          "minimum": 0.0,
+          "maximum": 302.417813
+        },
+        {
+          "region": "전라북도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 1913,
+          "minimum": 0.0,
+          "maximum": 61.96906
+        },
+        {
+          "region": "제주도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 2193,
+          "minimum": 0.0,
+          "maximum": 205.425545
+        },
+        {
+          "region": "충청남도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "충청북도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      ],
+      "explicit_mainland_rows": 0,
+      "sample": []
+    },
+    {
+      "file": "data/processed/renewable_source_5.csv",
+      "start": "2023-03-01",
+      "end": "2023-05-31",
+      "source_value_column": "풍력 발전량(MWh)",
+      "regions": [
+        {
+          "region": "강원도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 2203,
+          "minimum": 0.0,
+          "maximum": 332.953313
+        },
+        {
+          "region": "경기도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 1789,
+          "minimum": 0.0,
+          "maximum": 3.764323
+        },
+        {
+          "region": "경상남도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 2194,
+          "minimum": 0.0,
+          "maximum": 59.684362
+        },
+        {
+          "region": "경상북도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 2207,
+          "minimum": 0.0,
+          "maximum": 405.679717
+        },
+        {
+          "region": "광주시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "대구시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "대전시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "부산시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "서울시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "세종시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "울산시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        {
+          "region": "인천시",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 1770,
+          "minimum": 0.0,
+          "maximum": 25.973558
+        },
+        {
+          "region": "전라남도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 2207,
+          "minimum": 0.0,
+          "maximum": 322.435219
+        },
+        {
+          "region": "전라북도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 2002,
+          "minimum": 0.0,
+          "maximum": 66.599417
+        },
+        {
+          "region": "제주도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 2202,
+          "minimum": 0.0,
+          "maximum": 231.057439
+        },
+        {
+          "region": "충청남도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 375,
+          "minimum": 0.0,
+          "maximum": 1.5264
+        },
+        {
+          "region": "충청북도",
+          "rows": 2208,
+          "numeric_values": 2208,
+          "blank_values": 0,
+          "nonzero_values": 0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      ],
+      "explicit_mainland_rows": 0,
+      "sample": []
+    },
+    {
+      "file": "data/processed/renewable_source_6.csv",
+      "start": "2023-01-01",
+      "end": "2023-02-28",
+      "source_value_column": "풍력 발전량(MWh)",
+      "regions": [
+        {
+          "region": "강원도",
+          "rows": 1416,
+          "numeric_values": 1416,
+          "blank_values": 0,
+          "nonzero_values": 1413,
+          "minimum": 0.0,
+          "maximum": 324.37
+        },
+        {
+          "region": "경기도",
+          "rows": 1416,
+          "numeric_values": 1084,
+          "blank_values": 332,
+          "nonzero_values": 974,
+          "minimum": 0.0,
+          "maximum": 3.7
+        },
+        {
+          "region": "경상남도",
+          "rows": 1416,
+          "numeric_values": 1401,
+          "blank_values": 15,
+          "nonzero_values": 1401,
+          "minimum": 0.01,
+          "maximum": 66.15
+        },
+        {
+          "region": "경상북도",
+          "rows": 1416,
+          "numeric_values": 1416,
+          "blank_values": 0,
+          "nonzero_values": 1416,
+          "minimum": 0.25,
+          "maximum": 384.41
+        },
+        {
+          "region": "광주시",
+          "rows": 1416,
+          "numeric_values": 0,
+          "blank_values": 1416,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        },
+        {
+          "region": "대구시",
+          "rows": 1416,
+          "numeric_values": 0,
+          "blank_values": 1416,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        },
+        {
+          "region": "대전시",
+          "rows": 1416,
+          "numeric_values": 0,
+          "blank_values": 1416,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        },
+        {
+          "region": "부산시",
+          "rows": 1416,
+          "numeric_values": 0,
+          "blank_values": 1416,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        },
+        {
+          "region": "서울시",
+          "rows": 1416,
+          "numeric_values": 0,
+          "blank_values": 1416,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        },
+        {
+          "region": "세종시",
+          "rows": 1416,
+          "numeric_values": 0,
+          "blank_values": 1416,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        },
+        {
+          "region": "울산시",
+          "rows": 1416,
+          "numeric_values": 0,
+          "blank_values": 1416,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        },
+        {
+          "region": "인천시",
+          "rows": 1416,
+          "numeric_values": 1197,
+          "blank_values": 219,
+          "nonzero_values": 1168,
+          "minimum": 0.0,
+          "maximum": 25.78
+        },
+        {
+          "region": "전라남도",
+          "rows": 1416,
+          "numeric_values": 1415,
+          "blank_values": 1,
+          "nonzero_values": 1414,
+          "minimum": 0.0,
+          "maximum": 304.57
+        },
+        {
+          "region": "전라북도",
+          "rows": 1416,
+          "numeric_values": 1288,
+          "blank_values": 128,
+          "nonzero_values": 1269,
+          "minimum": 0.0,
+          "maximum": 65.67
+        },
+        {
+          "region": "제주도",
+          "rows": 1416,
+          "numeric_values": 1415,
+          "blank_values": 1,
+          "nonzero_values": 1415,
+          "minimum": 0.01,
+          "maximum": 246.03
+        },
+        {
+          "region": "충청남도",
+          "rows": 1416,
+          "numeric_values": 923,
+          "blank_values": 493,
+          "nonzero_values": 900,
+          "minimum": 0.0,
+          "maximum": 1.52
+        },
+        {
+          "region": "충청북도",
+          "rows": 1416,
+          "numeric_values": 0,
+          "blank_values": 1416,
+          "nonzero_values": 0,
+          "minimum": null,
+          "maximum": null
+        }
+      ],
+      "explicit_mainland_rows": 0,
+      "sample": []
+    }
+  ],
+  "model_training_performed": false,
+  "network_api_calls": 0,
+  "limitation": "2023년 일부 시도별 빈칸은 구조적 비해당/관측 누락 구분 필요. 합계 값 존재를 지역 전체 품질 완비로 해석하지 않음."
+}
