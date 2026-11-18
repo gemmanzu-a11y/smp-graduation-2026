@@ -1,0 +1,141 @@
+{
+  "status": "SUITABLE_AS_VERSIONED_RETROSPECTIVE_SUPPLEMENT",
+  "source_commit": "a90141b81ecd841c524eb75a72f4bcc4f39989f5",
+  "annual_source": "1120gradpj/data/raw/team_training_snapshot/a90141b81ecd841c524eb75a72f4bcc4f39989f5/SMP_72H_INPUT_DATA/05_generation_by_fuel_amgo/user_provided_annual_csvs/한국전력거래소_연료원별 시간대별 설비용량 및 전력거래량_20251231.csv",
+  "annual_sha256": "a4cc6ce6d2f2ca80f66e0707414fa0b1a3906c09258a2acff833a5dea844db26",
+  "api_sha256": "c55c0ba9df3aa5ff8591a4e252f8e6205bb4a5396881301bf9ec1c80d7ed1406",
+  "annual_rows": 224928,
+  "annual_all_fuel_types": 26,
+  "selected_fuel_rows": 35040,
+  "coverage": [
+    {
+      "fuel": "LNG",
+      "expected_hours": 8760,
+      "valid_hours": 8760,
+      "missing_hours": 0,
+      "duplicates": 0,
+      "negative_values": 0,
+      "observed_zeros": 0,
+      "minimum_mwh": 4837.769928,
+      "maximum_mwh": 38033.32118,
+      "annual_energy_gwh": 159226.926751345,
+      "capacity_exceedances": 0
+    },
+    {
+      "fuel": "유연탄",
+      "expected_hours": 8760,
+      "valid_hours": 8760,
+      "missing_hours": 0,
+      "duplicates": 0,
+      "negative_values": 0,
+      "observed_zeros": 0,
+      "minimum_mwh": 5383.079118,
+      "maximum_mwh": 30178.68254,
+      "annual_energy_gwh": 163584.44530704498,
+      "capacity_exceedances": 0
+    },
+    {
+      "fuel": "무연탄",
+      "expected_hours": 8760,
+      "valid_hours": 8760,
+      "missing_hours": 0,
+      "duplicates": 0,
+      "negative_values": 0,
+      "observed_zeros": 2905,
+      "minimum_mwh": 0.0,
+      "maximum_mwh": 353.175303,
+      "annual_energy_gwh": 1204.096919621,
+      "capacity_exceedances": 0
+    },
+    {
+      "fuel": "원자력",
+      "expected_hours": 8760,
+      "valid_hours": 8760,
+      "missing_hours": 0,
+      "duplicates": 0,
+      "negative_values": 0,
+      "observed_zeros": 0,
+      "minimum_mwh": 15710.39596,
+      "maximum_mwh": 24415.73246,
+      "annual_energy_gwh": 175549.37198228002,
+      "capacity_exceedances": 0
+    }
+  ],
+  "api_overlap_dates": [
+    20250101
+  ],
+  "api_comparison": [
+    {
+      "fuel": "LNG",
+      "pairs": 24,
+      "mean_absolute_difference_mwh": 0.00019041666693434914,
+      "max_absolute_difference_mwh": 0.0005000000019208528,
+      "outside_tolerance": 0
+    },
+    {
+      "fuel": "유연탄",
+      "pairs": 24,
+      "mean_absolute_difference_mwh": 0.00022920833335623078,
+      "max_absolute_difference_mwh": 0.0005000000001018634,
+      "outside_tolerance": 0
+    },
+    {
+      "fuel": "무연탄",
+      "pairs": 24,
+      "mean_absolute_difference_mwh": 0.00013141666666645346,
+      "max_absolute_difference_mwh": 0.0004249999999501597,
+      "outside_tolerance": 0
+    },
+    {
+      "fuel": "원자력",
+      "pairs": 24,
+      "mean_absolute_difference_mwh": 0.000296250000095218,
+      "max_absolute_difference_mwh": 0.0004900000021734741,
+      "outside_tolerance": 0
+    }
+  ],
+  "hour_offset_comparison": [
+    {
+      "api_timestamp_offset_hours": -1,
+      "pairs": 92,
+      "mae_mwh": 444.08639448913056
+    },
+    {
+      "api_timestamp_offset_hours": 0,
+      "pairs": 96,
+      "mae_mwh": 0.00021182291676306286
+    },
+    {
+      "api_timestamp_offset_hours": 1,
+      "pairs": 96,
+      "mae_mwh": 464.66747227083323
+    }
+  ],
+  "shared_normalized_max_differences": {
+    "LNG": 0.0,
+    "유연탄": 0.0,
+    "무연탄": 0.0,
+    "원자력": 0.0,
+    "coal": 3.637978807091713e-12
+  },
+  "missing_before_per_fuel": 8736,
+  "candidate_missing_per_fuel": 0,
+  "coal_definition": "유연탄 + 무연탄; no IGCC/biomass/oil",
+  "unit": "MWh; net sent-out market-traded energy, NOT installed capacity MW",
+  "geography": "No region field; cannot claim mainland-only or subtract Jeju",
+  "api_full_year_identity_verified": false,
+  "publication_vintage_verified": false,
+  "raw_modified": false,
+  "common_dataset_modified": false,
+  "models_retrained": false,
+  "limitations": [
+    "Only 2025-01-01 overlaps the API; rest of year is internally validated, not independently API-matched",
+    "Both official sources can change after settlement revisions; do not claim identical historical vintages",
+    "Annual source publication and revision timestamps are not historically reconstructed; 72h availability remains an assumption",
+    "2024 source and its gaps are unaffected"
+  ],
+  "official_sources": [
+    "https://www.data.go.kr/data/15127395/fileData.do",
+    "https://www.data.go.kr/data/15106744/openapi.do"
+  ]
+}
