@@ -7,6 +7,7 @@ from pathlib import Path
 import platform
 import sys
 import time
+import warnings
 import numpy as np
 import pandas as pd
 import torch
@@ -98,6 +99,7 @@ def export(frame,directory):
 
 
 def figures(frame,directory,selected=None):
+    os.environ.setdefault('MPLCONFIGDIR',str(ROOT/'data/cache/matplotlib'))
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -105,9 +107,16 @@ def figures(frame,directory,selected=None):
     directory.mkdir(parents=True,exist_ok=True)
     def save(data,path,x='target_timestamp'):
         fig,ax=plt.subplots(figsize=(12,4));ax.plot(data[x],data.actual_smp,label='Actual');ax.plot(data[x],data.predicted_smp,label='LSTM')
-        ax.set_ylabel('SMP (KRW/kWh)');ax.legend();fig.autofmt_xdate();fig.tight_layout();fig.savefig(path.with_suffix('.png'));plt.close(fig)
+        ax.set_ylabel('SMP (KRW/kWh)');ax.legend()
+        if path.name=='selected_72h':
+            for boundary in [24,48]:ax.axvline(data[x].iloc[boundary],color='gray',linestyle='--')
+            ax.set_title('72h forecast — D+1 / D+2 / D+3; conditional on target-month LNG')
+        fig.autofmt_xdate();fig.tight_layout();fig.savefig(path.with_suffix('.png'));plt.close(fig)
         html=go.Figure([go.Scatter(x=data[x],y=data.actual_smp,name='Actual'),go.Scatter(x=data[x],y=data.predicted_smp,name='LSTM')])
-        html.update_layout(title=path.name+' — conditional on target-month LNG',yaxis_title='KRW/kWh');html.write_html(str(path.with_suffix('.html')),include_plotlyjs=True)
+        html.update_layout(title=path.name+' — conditional on target-month LNG',yaxis_title='KRW/kWh')
+        if path.name=='selected_72h':
+            for boundary in [24,48]:html.add_vline(x=data[x].iloc[boundary].to_pydatetime(),line_dash='dash')
+        html.write_html(str(path.with_suffix('.html')),include_plotlyjs=True)
     if selected:
         origin=pd.Timestamp(selected)
         if origin.tzinfo is None:raise ValueError('Selected origin needs timezone')
@@ -146,9 +155,19 @@ def main():
         lookback=candidate['lookback']
         training=contract.arrays(hourly,future,contract.split_origins(cfg,'train'),lookback)
         validation=contract.arrays(hourly,future,contract.split_origins(cfg,'validation'),lookback)
-        model=Estimator(candidate,cfg['seed'],cfg['jobs']).fit(*training,validation)
-        candidates.append(dict(params=candidate,validation_mae=model.validation_mae,best_epoch=model.best_epoch))
+        try:
+            with warnings.catch_warnings(record=True) as captured:
+                warnings.simplefilter('always')
+                model=Estimator(candidate,cfg['seed'],cfg['jobs']).fit(*training,validation)
+            candidates.append(dict(params=candidate,validation_mae=model.validation_mae,best_epoch=model.best_epoch,
+                                   status='ok',warnings=[str(item.message) for item in captured]))
+        except (ValueError,RuntimeError) as exc:
+            candidates.append(dict(params=candidate,status='failed',reason=str(exc)))
+            continue
         if best is None or model.validation_mae<best.validation_mae:best=model
+    if best is None:
+        write_json(HERE/'reports/training_failures.json',candidates)
+        raise RuntimeError('All candidates failed; no final results generated')
     # No test information was passed to fit or preprocessing. No train+validation refit.
     run=HERE/'outputs'/manifest['dataset_version']/pd.Timestamp.now(tz='Asia/Seoul').strftime('%Y%m%dT%H%M%S')
     run.mkdir(parents=True,exist_ok=False);best.save(run/'model.pt')
@@ -157,9 +176,16 @@ def main():
     figures(frame,run/'figures',args.selected_origin)
     write_json(run/'experiment.json',dict(dataset_version=manifest['dataset_version'],config=cfg,candidates=candidates,
         history_features=contract.HISTORY,future_features=contract.FUTURE,manifest_sha256=hashlib.sha256((shared/'manifest.json').read_bytes()).hexdigest(),
-        python=platform.python_version(),torch=torch.__version__,elapsed_seconds=time.perf_counter()-started,
+        python=platform.python_version(),torch=str(torch.__version__),numpy=np.__version__,pandas=pd.__version__,plotly=plotly.__version__,elapsed_seconds=time.perf_counter()-started,
         model_training_performed=True,test_refit=False,limitation=state['limitation']))
     (run/'final_evaluation_report.md').write_text('# LSTM 조건부 과거 평가\n\n'+state['limitation']+'\n\n'+metrics['overall'].to_string(index=False)+'\n')
     print('완료:',run);return 0
 
-if __name__=='__main__':raise SystemExit(main())
+if __name__=='__main__':
+    try:
+        raise SystemExit(main())
+    except Exception as exc:
+        (HERE/'reports').mkdir(exist_ok=True)
+        write_json(HERE/'reports/execution_failure.json',dict(at=now(),status='FAILED',error_type=type(exc).__name__,reason=str(exc)))
+        print('FAILED: reports/execution_failure.json 확인; 최종 결과로 사용하지 마세요')
+        raise SystemExit(1)
