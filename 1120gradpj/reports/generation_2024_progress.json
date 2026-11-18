@@ -1,13 +1,30 @@
 {
-  "at": "2026-11-19T00:03:00.895193+09:00",
-  "saved_2024_days": 200,
-  "expected_2024_days": 366,
-  "rows_2024": 38400,
-  "remaining_2024_days": 166,
-  "added_days_today": 100,
+  "at": "2026-11-19T00:08:38.100626+09:00",
+  "received_2024_days": 299,
+  "complete_required_fuel_days": 268,
+  "partial_days": 31,
+  "unreceived_days": 67,
+  "need_completion_days": 98,
+  "received_rows": 55176,
+  "fuel_rows": {
+    "LNG": 7176,
+    "무연탄": 6432,
+    "수력": 7176,
+    "신재생·기타": 7176,
+    "양수": 7176,
+    "원자력": 6432,
+    "유연탄": 7176,
+    "유전": 6432
+  },
+  "added_response_days_this_run": 99,
+  "added_complete_days_this_run": 68,
   "quota_reached": true,
   "normal_empty_dates": [
     "20240229"
+  ],
+  "partial_range": [
+    "20240801",
+    "20240831"
   ],
   "credentials_saved": false,
   "model_training_performed": false

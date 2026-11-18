@@ -33,13 +33,17 @@ def validate(rows,date):
     return frame
 
 
+def required_complete(frame):
+    return all(frame.loc[frame.fuelTpCd.eq(fuel),'tradeNo'].astype(int).nunique()==24 for fuel in ['LNG','원자력','유연탄','무연탄'])
+
+
 def fetch(date):
     # Validated daily checkpoints are immutable unless explicitly refreshed in a separate run.
     output=OUT/'daily'/f'{date}.csv'
     if output.exists():
         try:
             frame=validate(pd.read_csv(output,dtype={'tradeYmd':str,'tradeNo':str}).to_dict('records'),date)
-            if len(frame):return dict(date=date,status='cached',rows=len(frame))
+            if len(frame):return dict(date=date,status='cached' if required_complete(frame) else 'partial_cached',rows=len(frame))
         except (ValueError,KeyError):pass
     if STOP.is_set():return dict(date=date,status='not_attempted_quota')
     try:
@@ -58,7 +62,7 @@ def fetch(date):
         if frame.empty:return dict(date=date,status='normal_empty',rows=0)
         frame.to_csv(output,index=False)
         write_json(OUT/'receipts'/f'{date}.json',dict(date=date,receipts=receipts))
-        return dict(date=date,status='received',rows=len(frame),fuels=sorted(frame.fuelTpCd.unique()))
+        return dict(date=date,status='received' if required_complete(frame) else 'partial_received',rows=len(frame),fuels=sorted(frame.fuelTpCd.unique()))
     except FetchError as exc:
         if '429' in str(exc) or 'resultCode=22' in str(exc):STOP.set();return dict(date=date,status='quota',reason=str(exc))
         return dict(date=date,status='failed',reason=str(exc))
@@ -118,13 +122,19 @@ def main():
             frame.to_csv(output,index=False)
             write_json(OUT/'receipts'/f'{date}.json',dict(date=date,receipts=[record],imported_existing_cache=True))
         except (RuntimeError,ValueError,KeyError):continue
-    missing=[date for date in dates if not (OUT/'daily'/f'{date}.csv').exists()]
+    complete=[];partial=[]
+    for date in dates:
+        checkpoint=OUT/'daily'/f'{date}.csv'
+        if not checkpoint.exists():continue
+        frame=pd.read_csv(checkpoint,dtype={'tradeYmd':str,'tradeNo':str})
+        (complete if required_complete(frame) else partial).append(date)
+    missing=[date for date in dates if date not in complete]
     pd.DataFrame({'tradeYmd':missing}).to_csv(OUT/'pending_dates.csv',index=False)
     write_json(OUT/'collection_plan.json',dict(start=args.start,end=args.end,total_days=len(dates),
-        cached_days=len(dates)-len(missing),pending_days=len(missing),estimated_minimum_requests=len(missing),
+        cached_days=len(complete),partial_days=len(partial),not_received_days=len(missing)-len(partial),pending_days=len(missing),estimated_minimum_requests=len(missing)-len(partial),
         no_new_api_calls=args.plan_only,reset_timestamp_verified=False))
     if args.plan_only:
-        print(f'PLAN: {len(dates)} days, {len(dates)-len(missing)} cached, {len(missing)} pending; no network calls')
+        print(f'PLAN: {len(dates)} days, {len(complete)} required-complete, {len(partial)} partial, {len(missing)} need completion; no network calls')
         return
     # Only four requests may be in flight. Do not enqueue the whole range after a quota signal.
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:

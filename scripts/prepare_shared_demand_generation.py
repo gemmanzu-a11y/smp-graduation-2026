@@ -54,14 +54,16 @@ def main():
             rows,total=items_from((marker.parent/record['raw']).read_bytes())
             if len(rows)!=total:continue
             parsed=validate(rows,date)
-            if len(parsed)!=192 or date in seen:continue
+            if not len(parsed) or date in seen:continue
             seen.add(date);api.append(parsed)
         except (RuntimeError,ValueError,KeyError):continue
     api=pd.concat(api,ignore_index=True).sort_values(['timestamp','fuelTpCd'])
     api.to_csv(generation/'api_generation_partial_2023_2025.csv',index=False,encoding='utf-8-sig')
     subset=api[api.tradeYmd.astype(str).str.startswith('2024')]
     subset.to_csv(generation/'api_generation_2024_partial.csv',index=False,encoding='utf-8-sig')
-    available=set(subset.tradeYmd.astype(str))
+    received=set(subset.tradeYmd.astype(str))
+    required={'LNG','원자력','유연탄','무연탄'}
+    available={str(day) for day,rows in subset.groupby('tradeYmd') if all(rows[rows.fuelTpCd.eq(fuel)].tradeNo.astype(int).nunique()==24 for fuel in required)}
     missing=[date for date in pd.date_range('2024-01-01','2024-12-31').strftime('%Y%m%d') if date not in available]
     pd.DataFrame({'tradeYmd':missing}).to_csv(generation/'pending_dates_2024.csv',index=False,encoding='utf-8-sig')
     report=json.loads((PROJECT/'reports/generation_annual_collection.json').read_text())
@@ -69,7 +71,7 @@ def main():
         annual_unit='MWh',api_unit='not independently confirmed; original amgo preserved',
         annual_source_page='https://www.data.go.kr/data/15127395/fileData.do',
         api_source_page='https://www.data.go.kr/data/15106744/openapi.do',
-        api_days=len(seen),api_2024_days=len(available),pending_2024_days=len(missing),
+        api_days=len(seen),api_2024_days=len(received),api_2024_complete_days=len(available),api_2024_partial_days=len(received-available),pending_2024_days=len(missing),
         api_and_annual_versions_spliced=False,api_comparison=report['api_comparison'],
         annual_source_receipts=report['receipts'],
         scope='market settlement generation; mainland/Jeju separation not verified',

@@ -5,9 +5,11 @@
   "api_unit": "not independently confirmed; original amgo preserved",
   "annual_source_page": "https://www.data.go.kr/data/15127395/fileData.do",
   "api_source_page": "https://www.data.go.kr/data/15106744/openapi.do",
-  "api_days": 297,
-  "api_2024_days": 200,
-  "pending_2024_days": 166,
+  "api_days": 396,
+  "api_2024_days": 299,
+  "api_2024_complete_days": 268,
+  "api_2024_partial_days": 31,
+  "pending_2024_days": 98,
   "api_and_annual_versions_spliced": false,
   "api_comparison": {
     "2023": {
@@ -178,21 +180,21 @@
     },
     {
       "file": "api_generation_2024_partial.csv",
-      "rows": 38400,
-      "bytes": 2262179,
-      "sha256": "a1ee2fb0368d16efaf2a3f7fefd67400883cf7d668e04c953e14ab629032e652"
+      "rows": 55176,
+      "bytes": 3244558,
+      "sha256": "7f4a686aaa7fa21e065d8fbaf9b7a57d191822d59ed2e585a95466f193035b95"
     },
     {
       "file": "api_generation_partial_2023_2025.csv",
-      "rows": 57024,
-      "bytes": 3361980,
-      "sha256": "f78f6a9e3fa0414b2f2209ecf107531a810b95ccc505dbe0dc37b3e428cf3658"
+      "rows": 73800,
+      "bytes": 4344359,
+      "sha256": "4e7cacc9a9f1507ba37fa0ac3d200b05244037eb382c9d37e43f648972ad23ea"
     },
     {
       "file": "pending_dates_2024.csv",
-      "rows": 166,
-      "bytes": 1506,
-      "sha256": "b5bef51c26dd0d75053d9273c85df49f02f945550a256b19fcc8bbddd8dae321"
+      "rows": 98,
+      "bytes": 894,
+      "sha256": "b369742ab425fb4e52b3d25d0417687e32e7ec41f0c163de534a81f347cca72c"
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-19T00:07:12.608958+09:00",
+  "date": "20240229",
+  "rows": 0,
+  "total": 0,
+  "status": "normal_empty",
+  "receipt": {
+    "source": "https://apis.data.go.kr/B552115/PvAmountByPwrGen/getPvAmountByPwrGen",
+    "params": {
+      "tradeYmd": "20240229",
+      "numOfRows": 1000,
+      "pageNo": 1,
+      "dataType": "json"
+    },
+    "http_status": 200,
+    "first_received_at": "2026-11-19T00:07:12.584079+09:00",
+    "sha256": "e15e8777cac01f19d8dd0502cbbcf5bec2b173d37b01c5de6fd19ba7fe89facb",
+    "raw": "e15e8777cac01f19d8dd0502cbbcf5bec2b173d37b01c5de6fd19ba7fe89facb.raw",
+    "bytes": 255,
+    "authenticated": true
+  }
+}

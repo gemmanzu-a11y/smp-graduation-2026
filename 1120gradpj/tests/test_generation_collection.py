@@ -25,6 +25,16 @@ class GenerationNormalizationTest(unittest.TestCase):
         frame=self.frame();frame[' 전력거래량(MWh) ']=float('nan')
         with self.assertRaisesRegex(ValueError,'Nonfinite'):module.normalize(frame,2024)
 
+class RequiredFuelCompletenessTest(unittest.TestCase):
+    def test_partial_response_is_not_complete(self):
+        spec=importlib.util.spec_from_file_location('generation_daily_collector',ROOT/'scripts/collect_generation_history.py')
+        daily=importlib.util.module_from_spec(spec);spec.loader.exec_module(daily)
+        rows=pd.DataFrame([dict(fuelTpCd=fuel,tradeNo=hour) for fuel in ['LNG','원자력','유연탄','무연탄'] for hour in range(1,25)])
+        self.assertTrue(daily.required_complete(rows))
+        self.assertFalse(daily.required_complete(rows[~rows.fuelTpCd.eq('원자력')]))
+        self.assertFalse(daily.required_complete(rows.iloc[:-1]))
+
+
 class CollectedGenerationTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
