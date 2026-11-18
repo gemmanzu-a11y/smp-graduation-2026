@@ -1,0 +1,42 @@
+{
+  "results": [
+    {
+      "date": "20230101",
+      "issued_at": "2023010120",
+      "target_at": "2023010121",
+      "http": 200,
+      "bytes": 341297,
+      "numeric_values": 39721,
+      "valid_count": 11319,
+      "min": -27.0,
+      "max": 11.0,
+      "first_valid": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "date": "20250101",
+      "issued_at": "2025010120",
+      "target_at": "2025010121",
+      "http": 200,
+      "bytes": 341297,
+      "numeric_values": 39721,
+      "valid_count": 11319,
+      "min": -23.0,
+      "max": 10.0,
+      "first_valid": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    }
+  ],
+  "scope": "single issuance, single target hour, TMP grid; not full historical collection",
+  "credential_values_saved": false
+}
