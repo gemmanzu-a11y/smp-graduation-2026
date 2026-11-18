@@ -1,11 +1,10 @@
 {
-  "at": "2026-11-18T23:56:38.601130+09:00",
-  "scope": "2024 generation API collection",
-  "saved_2024_days": 100,
+  "at": "2026-11-19T00:03:00.895193+09:00",
+  "saved_2024_days": 200,
   "expected_2024_days": 366,
-  "rows_2024": 19200,
-  "remaining_2024_days": 266,
-  "added_days_this_run": 98,
+  "rows_2024": 38400,
+  "remaining_2024_days": 166,
+  "added_days_today": 100,
   "quota_reached": true,
   "normal_empty_dates": [
     "20240229"

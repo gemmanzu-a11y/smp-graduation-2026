@@ -1,46 +1,46 @@
 {
-  "at": "2026-11-18T23:56:38.601130+09:00",
+  "at": "2026-11-19T00:03:00.895193+09:00",
   "source": "https://apis.data.go.kr/B552115/PvAmountByPwrGen/getPvAmountByPwrGen",
   "source_page": "https://www.data.go.kr/data/15106744/openapi.do",
   "expected_days": 1096,
   "expected_hours": 26304,
   "expected_fuel_hour_rows": 210432,
-  "collected_days": 196,
+  "collected_days": 296,
   "row_coverage_complete": false,
   "ready_for_model": false,
   "status": "INCOMPLETE",
   "counts": {
     "LNG": {
-      "valid_hours": 4704,
-      "missing_hours": 21600
+      "valid_hours": 7104,
+      "missing_hours": 19200
     },
     "무연탄": {
-      "valid_hours": 4704,
-      "missing_hours": 21600
+      "valid_hours": 7104,
+      "missing_hours": 19200
     },
     "수력": {
-      "valid_hours": 4704,
-      "missing_hours": 21600
+      "valid_hours": 7104,
+      "missing_hours": 19200
     },
     "신재생·기타": {
-      "valid_hours": 4704,
-      "missing_hours": 21600
+      "valid_hours": 7104,
+      "missing_hours": 19200
     },
     "양수": {
-      "valid_hours": 4704,
-      "missing_hours": 21600
+      "valid_hours": 7104,
+      "missing_hours": 19200
     },
     "원자력": {
-      "valid_hours": 4704,
-      "missing_hours": 21600
+      "valid_hours": 7104,
+      "missing_hours": 19200
     },
     "유연탄": {
-      "valid_hours": 4704,
-      "missing_hours": 21600
+      "valid_hours": 7104,
+      "missing_hours": 19200
     },
     "유전": {
-      "valid_hours": 4704,
-      "missing_hours": 21600
+      "valid_hours": 7104,
+      "missing_hours": 19200
     }
   },
   "quota_reached": true,
@@ -52,873 +52,293 @@
     },
     {
       "date": "20240102",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240103",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240104",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240105",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240106",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240107",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240108",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240109",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240110",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240111",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240112",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240113",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240114",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240115",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240116",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240117",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240118",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240119",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240120",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240121",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240122",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240123",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240124",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240125",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240126",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240127",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240128",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240129",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240130",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240131",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240201",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240202",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240203",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240204",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240205",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240206",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240207",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240208",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240209",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240210",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240211",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240212",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240213",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240214",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240215",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240216",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240217",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240218",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240219",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240220",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240221",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240222",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240223",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240224",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240225",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240226",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240227",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240228",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240229",
@@ -927,591 +347,211 @@
     },
     {
       "date": "20240301",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240302",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240303",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240304",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240305",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240306",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240307",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240308",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240309",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240310",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240311",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240312",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240313",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240314",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240315",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240316",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240317",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240318",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240319",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240320",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240321",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240322",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240323",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240324",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240325",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240326",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240327",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240328",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240329",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240330",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240331",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240401",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240402",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240403",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240404",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240405",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240406",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240407",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240408",
-      "status": "received",
-      "rows": 192,
-      "fuels": [
-        "LNG",
-        "무연탄",
-        "수력",
-        "신재생·기타",
-        "양수",
-        "원자력",
-        "유연탄",
-        "유전"
-      ]
+      "status": "cached",
+      "rows": 192
     },
     {
       "date": "20240409",
+      "status": "cached",
+      "rows": 192
+    },
+    {
+      "date": "20240410",
+      "status": "cached",
+      "rows": 192
+    },
+    {
+      "date": "20240411",
       "status": "received",
       "rows": 192,
       "fuels": [
@@ -1526,424 +566,1494 @@
       ]
     },
     {
-      "date": "20240410",
-      "status": "quota",
-      "reason": "section_b_generation: HTTP 429"
-    },
-    {
-      "date": "20240411",
-      "status": "quota",
-      "reason": "section_b_generation: HTTP 429"
-    },
-    {
       "date": "20240412",
-      "status": "quota",
-      "reason": "section_b_generation: HTTP 429"
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
     },
     {
       "date": "20240413",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240414",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240415",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240416",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240417",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240418",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240419",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240420",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240421",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240422",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240423",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240424",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240425",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240426",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240427",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240428",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240429",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240430",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240501",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240502",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240503",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240504",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240505",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240506",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240507",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240508",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240509",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240510",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240511",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240512",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240513",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240514",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240515",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240516",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240517",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240518",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240519",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240520",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240521",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240522",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240523",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240524",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240525",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240526",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240527",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240528",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240529",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240530",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240531",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240601",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240602",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240603",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240604",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240605",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240606",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240607",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240608",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240609",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240610",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240611",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240612",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240613",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240614",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240615",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240616",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240617",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240618",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240619",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240620",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240621",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240622",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240623",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240624",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240625",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240626",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240627",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240628",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240629",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240630",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240701",
+      "status": "cached",
+      "rows": 192
+    },
+    {
+      "date": "20240702",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240703",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240704",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240705",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240706",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240707",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240708",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240709",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240710",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240711",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240712",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240713",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240714",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240715",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240716",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240717",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240718",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20240719",
       "status": "quota",
       "reason": "section_b_generation: HTTP 429"
     },
     {
-      "date": "20240414",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240415",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240416",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240417",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240418",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240419",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240420",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240421",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240422",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240423",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240424",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240425",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240426",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240427",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240428",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240429",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240430",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240501",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240502",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240503",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240504",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240505",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240506",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240507",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240508",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240509",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240510",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240511",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240512",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240513",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240514",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240515",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240516",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240517",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240518",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240519",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240520",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240521",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240522",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240523",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240524",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240525",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240526",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240527",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240528",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240529",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240530",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240531",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240601",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240602",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240603",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240604",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240605",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240606",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240607",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240608",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240609",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240610",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240611",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240612",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240613",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240614",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240615",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240616",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240617",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240618",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240619",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240620",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240621",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240622",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240623",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240624",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240625",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240626",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240627",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240628",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240629",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240630",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240701",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240702",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240703",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240704",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240705",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240706",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240707",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240708",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240709",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240710",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240711",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240712",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240713",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240714",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240715",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240716",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240717",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240718",
-      "status": "not_attempted_quota"
-    },
-    {
-      "date": "20240719",
-      "status": "not_attempted_quota"
-    },
-    {
       "date": "20240720",
-      "status": "not_attempted_quota"
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
     },
     {
       "date": "20240721",
-      "status": "not_attempted_quota"
+      "status": "quota",
+      "reason": "section_b_generation: HTTP 429"
     },
     {
       "date": "20240722",
-      "status": "not_attempted_quota"
+      "status": "quota",
+      "reason": "section_b_generation: HTTP 429"
     },
     {
       "date": "20240723",
