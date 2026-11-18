@@ -1,0 +1,33 @@
+{
+  "blending": {
+    "baseline": "baseline_weekly",
+    "alpha": 0.4
+  },
+  "correction": {
+    "mode": "none",
+    "bias_by_day": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "policy": "Jan-Apr OOF fit, May-Jun validation; >=1% MAE improvement and neither month worsens; selected bias refitted on all OOF"
+  },
+  "parameters": {
+    "order": [
+      2,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      24
+    ],
+    "validation_mae": 12.980431528135416
+  },
+  "final_fit_end": "2025-06-30",
+  "split_models": "not used; shared architecture/order retained",
+  "selection_based_on": "Validation and chronological OOF only",
+  "test_metric_used": false
+}

@@ -1,0 +1,5 @@
+{
+  "checkpoint": "models/final_model.pt",
+  "checkpoint_sha256": "dccc4256830bb852e196206119a3b7976bcf5ff51a870c616a1c09ca06c71234",
+  "adopted_experiment": "E3"
+}

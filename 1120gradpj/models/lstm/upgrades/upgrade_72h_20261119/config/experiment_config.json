@@ -1,0 +1,46 @@
+{
+  "model": "lstm",
+  "dataset_version": "v3_a90141b81ecd_lag72",
+  "steps": [
+    "baseline blend on Validation",
+    "chronological OOF calibration before final fit",
+    "Train+Validation fixed-setting refit",
+    "frozen Test evaluation"
+  ],
+  "source_project": "provided locally by --source-project; contains the frozen v3 inputs",
+  "original_run": "models/lstm/outputs/v3_a90141b81ecd_lag72/20261119T012219",
+  "original_selected": {
+    "params": {
+      "lookback": 48,
+      "hidden_size": 32,
+      "layers": 1,
+      "dropout": 0.0,
+      "learning_rate": 0.001,
+      "batch_size": 32,
+      "epochs": 100,
+      "patience": 10
+    },
+    "best_epoch": 22,
+    "validation_mae": 12.881725311279297
+  },
+  "folds": [
+    [
+      "2025-01-01",
+      "2025-03-01"
+    ],
+    [
+      "2025-03-01",
+      "2025-05-01"
+    ],
+    [
+      "2025-05-01",
+      "2025-07-01"
+    ]
+  ],
+  "bias_min_improvement": 0.01,
+  "unchanged_imputation": "original Train-only common imputation; scaling refitted on model fit period only",
+  "input_group_count": 12,
+  "publication_reaudit": false,
+  "test_reused": true,
+  "other_models_modified": false
+}
