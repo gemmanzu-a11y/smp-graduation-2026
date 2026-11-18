@@ -1,0 +1,13 @@
+{
+  "shared_directory": "../SMP_SHARED_DATA/versions/v2",
+  "train_start": "2023-01-01", "train_end": "2024-12-31",
+  "validation_start": "2025-01-01", "validation_end": "2025-06-30",
+  "test_start": "2025-07-01", "test_end": "2025-12-31",
+  "lookbacks": [48, 168], "seed": 42, "jobs": 2,
+  "fuel_policy": "historical_target_month_lng_krw_kwh; november_demo_uses_2026_10",
+  "candidates": [
+    {"lookback": 48, "hidden_size": 32, "layers": 1, "learning_rate": 0.001, "batch_size": 32, "epochs": 100, "patience": 10},
+    {"lookback": 168, "hidden_size": 64, "layers": 1, "learning_rate": 0.001, "batch_size": 32, "epochs": 100, "patience": 10},
+    {"lookback": 168, "hidden_size": 32, "layers": 2, "dropout": 0.1, "learning_rate": 0.0005, "batch_size": 32, "epochs": 100, "patience": 10}
+  ]
+}

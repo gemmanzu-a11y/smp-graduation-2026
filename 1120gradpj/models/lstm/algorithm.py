@@ -1,45 +1,77 @@
-"""One recurrent encoder, condition-aware 72-output head; identical raw X to tabular models."""
+"""Past-only encoder plus 72 target contexts. Direct output, no teacher forcing."""
 import copy
 import numpy as np
 import torch
 from torch import nn
+
+
 class Network(nn.Module):
- def __init__(self,n_variables,n_context,hidden_size=48,layers=1):
-  super().__init__();self.encoder=nn.LSTM(n_variables,hidden_size,num_layers=layers,batch_first=True);self.head=nn.Sequential(nn.Linear(hidden_size+n_context,64),nn.ReLU(),nn.Linear(64,1))
- def forward(self,seq,context):
-  _,(h,_)=self.encoder(seq);embedding=h[-1].unsqueeze(1).expand(-1,context.shape[1],-1);return self.head(torch.cat([embedding,context],dim=-1)).squeeze(-1)
+    def __init__(self,n_history,n_context,hidden_size=32,layers=1,dropout=0.0):
+        super().__init__()
+        self.encoder=nn.LSTM(n_history,hidden_size,num_layers=layers,batch_first=True,
+                             dropout=dropout if layers>1 else 0.0)
+        self.head=nn.Sequential(nn.Linear(hidden_size+n_context,hidden_size),nn.ReLU(),nn.Linear(hidden_size,1))
+    def forward(self,history,context):
+        _,(hidden,_)=self.encoder(history)
+        state=hidden[-1].unsqueeze(1).expand(-1,72,-1)
+        return self.head(torch.cat((state,context),dim=-1)).squeeze(-1)
+
+
 class Estimator:
- def __init__(self,params,lookback=48,n_variables=8,seed=42,jobs=4):
-  self.params=params;self.lookback=lookback;self.n_variables=n_variables;self.seed=seed;torch.set_num_threads(jobs)
- def unpack(self,x):
-  n=len(x)//72
-  if n*72!=len(x):raise ValueError('LSTM requires full origin x 72 target blocks')
-  x=x.reshape(n,72,-1);size=self.lookback*self.n_variables
-  return torch.from_numpy(np.ascontiguousarray(x[:,0,:size].reshape(n,self.lookback,self.n_variables),dtype='float32')),torch.from_numpy(np.ascontiguousarray(x[:,:,size:],dtype='float32'))
- def fit(self,x,y,x_val,y_val):
-  torch.manual_seed(self.seed);np.random.seed(self.seed);seq,context=self.unpack(x);vseq,vcontext=self.unpack(x_val)
-  self.y_mean=float(np.mean(y));self.y_scale=max(float(np.std(y)),1e-6);yt=torch.tensor((y.reshape(-1,72)-self.y_mean)/self.y_scale,dtype=torch.float32)
-  p=self.params;self.net=Network(self.n_variables,context.shape[-1],p['hidden_size'],p['layers']);opt=torch.optim.Adam(self.net.parameters(),lr=p['learning_rate']);best=float('inf');best_state=None;wait=0;self.history=[]
-  generator=torch.Generator().manual_seed(self.seed)
-  for epoch in range(1,p['epochs']+1):
-   self.net.train();permutation=torch.randperm(len(seq),generator=generator);losses=[]
-   for idx in permutation.split(p['batch_size']):
-    opt.zero_grad();pred=self.net(seq[idx],context[idx]);loss=nn.functional.mse_loss(pred,yt[idx]);loss.backward();nn.utils.clip_grad_norm_(self.net.parameters(),1.0);opt.step();losses.append(float(loss.detach()))
-   self.net.eval()
-   with torch.no_grad():vpred=self.net(vseq,vcontext).numpy().reshape(-1)*self.y_scale+self.y_mean
-   score=float(np.mean(np.abs(vpred-y_val)));self.history.append(dict(epoch=epoch,train_scaled_mse=float(np.mean(losses)),validation_mae=score))
-   if epoch==1 or epoch%5==0:print('LSTM epoch',epoch,'validation MAE',round(score,4),flush=True)
-   if score<best-1e-4:best=score;self.best_epoch=epoch;best_state=copy.deepcopy(self.net.state_dict());wait=0
-   else:wait+=1
-   if wait>=p['patience']:break
-  self.net.load_state_dict(best_state);return self
- def predict(self,x):
-  seq,c=self.unpack(x);self.net.eval();out=[]
-  with torch.no_grad():
-   for i in range(0,len(seq),128):out.append(self.net(seq[i:i+128],c[i:i+128]).numpy())
-  return np.concatenate(out).reshape(-1)*self.y_scale+self.y_mean
- def save(self,path):
-  torch.save(dict(state_dict=self.net.state_dict(),params=self.params,lookback=self.lookback,n_variables=self.n_variables,n_context=self.net.head[0].in_features-self.params['hidden_size'],y_mean=self.y_mean,y_scale=self.y_scale,best_epoch=self.best_epoch),path)
- @classmethod
- def load(cls,path,jobs=4):
-  b=torch.load(path,map_location='cpu',weights_only=True);m=cls(b['params'],b['lookback'],b['n_variables'],jobs=jobs);m.net=Network(m.n_variables,b['n_context'],b['params']['hidden_size'],b['params']['layers']);m.net.load_state_dict(b['state_dict']);m.y_mean=b['y_mean'];m.y_scale=b['y_scale'];m.best_epoch=b['best_epoch'];return m
+    def __init__(self,params,seed=42,jobs=2):
+        self.params=dict(params);self.seed=seed;torch.set_num_threads(jobs)
+    @staticmethod
+    def check(history,context,y=None):
+        if history.ndim!=3 or context.ndim!=3 or context.shape[1]!=72 or len(history)!=len(context) or not len(history):
+            raise ValueError('Expected history [N,L,H] and context [N,72,F]')
+        if y is not None and y.shape!=(len(history),72):raise ValueError('Expected labels [N,72]')
+        if any(not np.isfinite(x).all() for x in [history,context]+([] if y is None else [y])):
+            raise ValueError('Nonfinite model input')
+    def transform(self,history,context):
+        self.check(history,context)
+        return (torch.tensor((history-self.history_mean)/self.history_scale,dtype=torch.float32),
+                torch.tensor((context-self.context_mean)/self.context_scale,dtype=torch.float32))
+    def fit(self,history,context,y,validation):
+        self.check(history,context,y);vh,vc,vy=validation;self.check(vh,vc,vy)
+        torch.manual_seed(self.seed);np.random.seed(self.seed);torch.use_deterministic_algorithms(True)
+        self.history_mean=history.mean(axis=(0,1));self.history_scale=np.maximum(history.std(axis=(0,1)),1e-6)
+        self.context_mean=context.mean(axis=(0,1));self.context_scale=np.maximum(context.std(axis=(0,1)),1e-6)
+        self.y_mean=float(y.mean());self.y_scale=max(float(y.std()),1e-6)
+        self.dimensions=(history.shape[2],context.shape[2]);self.lookback=history.shape[1]
+        self.net=Network(*self.dimensions,self.params['hidden_size'],self.params['layers'],self.params.get('dropout',0))
+        optimizer=torch.optim.Adam(self.net.parameters(),lr=self.params['learning_rate'],weight_decay=self.params.get('weight_decay',0))
+        h,c=self.transform(history,context);targets=torch.tensor((y-self.y_mean)/self.y_scale,dtype=torch.float32)
+        best=float('inf');state=None;wait=0;self.history=[]
+        generator=torch.Generator().manual_seed(self.seed)
+        for epoch in range(1,self.params['epochs']+1):
+            self.net.train();total=0
+            for idx in torch.randperm(len(h),generator=generator).split(self.params['batch_size']):
+                optimizer.zero_grad();loss=nn.functional.mse_loss(self.net(h[idx],c[idx]),targets[idx])
+                if not torch.isfinite(loss):raise ValueError('Nonfinite training loss')
+                loss.backward();nn.utils.clip_grad_norm_(self.net.parameters(),1.0);optimizer.step()
+                total+=float(loss.detach())*len(idx)
+            score=float(np.abs(self.predict(vh,vc)-vy).mean())
+            self.history.append(dict(epoch=epoch,train_scaled_mse=total/len(h),validation_mae=score))
+            if score<best-self.params.get('min_delta',1e-4):
+                best=score;state=copy.deepcopy(self.net.state_dict());self.best_epoch=epoch;wait=0
+            else:wait+=1
+            if wait>=self.params['patience']:break
+        self.net.load_state_dict(state);self.validation_mae=best
+        return self
+    def predict(self,history,context):
+        h,c=self.transform(history,context);self.net.eval();parts=[]
+        with torch.no_grad():
+            for i in range(0,len(h),128):parts.append(self.net(h[i:i+128],c[i:i+128]).numpy())
+        return np.concatenate(parts)*self.y_scale+self.y_mean
+    def save(self,path):
+        state={key:getattr(self,key) for key in ['params','seed','dimensions','lookback','y_mean','y_scale','best_epoch','validation_mae','history']}
+        for key in ['history_mean','history_scale','context_mean','context_scale']:state[key]=getattr(self,key).tolist()
+        state['state_dict']=self.net.state_dict();torch.save(state,path)
+    @classmethod
+    def load(cls,path,jobs=2):
+        state=torch.load(path,map_location='cpu',weights_only=True)
+        model=cls(state['params'],seed=state['seed'],jobs=jobs)
+        for key,value in state.items():
+            if key!='state_dict':setattr(model,key,np.asarray(value,dtype='float32') if key.endswith(('_mean','_scale')) and isinstance(value,list) else value)
+        model.net=Network(*model.dimensions,model.params['hidden_size'],model.params['layers'],model.params.get('dropout',0))
+        model.net.load_state_dict(state['state_dict']);return model
