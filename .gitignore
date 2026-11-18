@@ -30,3 +30,5 @@ __pycache__/
 /SMP_SHARED_DATA/
 /1120gradpj/models/lstm/outputs/
 /1120gradpj/models/sarimax/outputs/
+/1120gradpj/models/xgboost/outputs/
+/1120gradpj/models/lightgbm/outputs/
