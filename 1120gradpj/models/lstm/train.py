@@ -10,6 +10,7 @@ sys.path.insert(0,str(ROOT/'src'))
 from smp_forecast import common_v3 as contract
 from algorithm import Estimator
 from train_v2 import export,figures
+from visualize_v3 import extras
 
 
 def main():
@@ -53,6 +54,7 @@ def main():
         frames.append(frame[columns])
     frame=pd.concat(frames,ignore_index=True);metrics=export(frame,run)
     figures(frame,run/'figures',args.selected_origin)
+    extras(frame,run/'figures',args.selected_origin)
     elapsed=time.perf_counter()-start
     contract.dump(run/'experiment.json',dict(config=config,selected=best.params,best_epoch=best.best_epoch,seconds=elapsed,python=platform.python_version(),torch=str(torch.__version__),numpy=np.__version__,pandas=pd.__version__,training_performed=True,history_features=manifest['history_features'],context_features=manifest['context_features']))
     overall=metrics['overall'];days=metrics['forecast_days']

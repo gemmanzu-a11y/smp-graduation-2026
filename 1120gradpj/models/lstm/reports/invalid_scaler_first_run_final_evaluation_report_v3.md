@@ -1,3 +1,7 @@
+# 무효 실행 — 상수 특성 표준화 오류
+
+이 결과는 최종 성능으로 사용하지 않습니다. numerical_correction_v3.md와 수정 후 final_evaluation_report_v3.md를 확인하세요.
+
 # LSTM 72시간 최종 평가 — 공통 v3
 
 실제 PyTorch 학습·Validation 선택·Final Test 평가를 실행했습니다.

@@ -7,6 +7,7 @@
 1120gradpj/.venv/bin/python 1120gradpj/scripts/fetch_team_training_snapshot.py
 # 기존 EPSIS 수요·SMP 및 shared_datasets/kma_midrange 원본도 필요
 PYTHONPATH=1120gradpj/src 1120gradpj/.venv/bin/python -m smp_forecast.common_v3
+1120gradpj/.venv/bin/python 1120gradpj/scripts/audit_common_v3.py
 1120gradpj/.venv/bin/python 1120gradpj/models/lstm/train.py --audit-only
 1120gradpj/.venv/bin/python 1120gradpj/models/lstm/train.py
 ```

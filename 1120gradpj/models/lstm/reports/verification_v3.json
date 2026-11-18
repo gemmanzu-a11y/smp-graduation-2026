@@ -1,0 +1,8 @@
+{
+  "checkpoint_prediction_roundtrip": true,
+  "stored_targets_match": true,
+  "no_duplicate_prediction_keys": true,
+  "future_actual_mutation_invariant_inputs": true,
+  "val_rows": 12888,
+  "test_rows": 13104
+}

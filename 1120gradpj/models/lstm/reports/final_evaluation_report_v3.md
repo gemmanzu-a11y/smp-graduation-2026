@@ -139,3 +139,9 @@ PYTHONPATH=1120gradpj/src 1120gradpj/.venv/bin/python -m smp_forecast.common_v3
 ```
 
 결과 CSV는 모든 평가 발행일의 72시간 값을 보존합니다. 월별·발행일별·horizon별 지표와 선택일 PNG/HTML은 위 결과 경로에 저장되어 있습니다.
+
+## 수치 오류 수정 및 최종 검증
+
+첫 실행의 상수 플래그 표준화 오류와 재실행은 numerical_correction_v3.md에 공개했습니다. 수정 후 Test를 보고 후보·입력·epoch를 추가 조정하지 않았습니다. 최종 모델 저장/재로딩 예측 일치 및 미래 실측값을 변경해도 기존 발행일 입력이 바뀌지 않는 검사를 통과했습니다. 전체 예측 행은 25,992행입니다.
+
+추가 검사 재현: `1120gradpj/.venv/bin/python 1120gradpj/scripts/audit_common_v3.py`. 공유 가능한 선택일·월별 PNG는 이 보고서와 같은 폴더의 selected_72h_v3.png 및 monthly_mae_v3.png입니다.
