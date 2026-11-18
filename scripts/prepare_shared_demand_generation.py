@@ -47,7 +47,7 @@ def main():
         assert len(rows)==8760 and not rows.isna().any().any()
         rows.to_csv(generation/f'annual_generation_{year}.csv',index=False,encoding='utf-8-sig')
     api=[];seen=set()
-    for marker in (PROJECT/'data/raw/section_b_generation').glob('*.json'):
+    for marker in list((PROJECT/'data/raw/section_b_generation').glob('*.json'))+list((PROJECT/'data/raw/generation_2024_new_approval_probe').glob('*.json')):
         record=json.loads(marker.read_text());date=str(record.get('params',{}).get('tradeYmd',''))
         if not '20230101'<=date<='20251231' or record.get('params',{}).get('pageNo')!=1:continue
         try:
