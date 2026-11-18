@@ -1,174 +1,113 @@
-"""SARIMAX entry: audit first, stop on any missing agreed input, then select by validation."""
+"""Shared v3 constrained SARIMAX, causal state filtering and 145h bridge forecast."""
+import argparse,hashlib,json,platform,sys,time
 from pathlib import Path
-import argparse
-import hashlib
-import json
-import sys
-import time
 import numpy as np
 import pandas as pd
-HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[1]
-sys.path.insert(0, str(ROOT/'src'))
-from smp_forecast.http import write_json, now
-from algorithm import Estimator
-from contract import FEATURES, SOURCES, inspect_bundle, origins
-from fuel import read_lng, fuel_for_targets
+import statsmodels
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1]
+sys.path.insert(0,str(ROOT/'src'))
+from smp_forecast import common_v3 as contract
+from algorithm_v3 import Estimator
+# Generic score/CSV export without importing the other model's algorithm module.
+import importlib.util
+spec=importlib.util.spec_from_file_location('lstm_export_helpers',ROOT/'models/lstm/train_v2.py')
+# The helper module imports algorithm.Estimator; preserve SARIMAX's own module namespace.
+from algorithm import Estimator as LegacyEstimator
+helpers=importlib.util.module_from_spec(spec);spec.loader.exec_module(helpers)
+export=helpers.export
 
 
-def audit(cfg, shared):
-    issues, bundle = inspect_bundle(shared, cfg)
-    local_files = {
-        'demand_actual': 'power_hourly.csv',
-        'demand_forecast': 'section_a/demand_forecast_mainland_2023_2025.csv',
-        'holidays': 'section_a/holidays_official_2023_2025.csv',
-        'renewables': 'renewable_hourly.csv', 'reserve': 'power_hourly.csv',
-        'weather_actual': 'weather_hourly.csv',
-        'oil': 'section_c/international_fuel_by_origin_2023_2025.csv',
-        'international_fuel': 'section_c/international_fuel_by_origin_2023_2025.csv',
-    }
-    inventory = []
-    for source, label in SOURCES.items():
-        filename = local_files.get(source)
-        path = ROOT/'data/processed'/filename if filename else None
-        row = dict(source=source, variable=label, required_period='2023-01-01~2025-12-31')
-        if path is not None and path.is_file():
-            data = pd.read_csv(path)
-            timecol = next((c for c in ['timestamp','date','month'] if c in data), None)
-            row.update(file=filename, rows=len(data), first=str(data[timecol].min()) if timecol else None,
-                last=str(data[timecol].max()) if timecol else None,
-                state='기존 파일 존재; 새 공통 정의·품질·출처 검증 필요')
-            if source in ['oil','international_fuel']: row['state'] = 'FRED 과거 빈티지로 1,096개 발행일 입력 확보; 새 공통 행렬 연결 필요'
-            if source == 'reserve': row['state'] = '기존 예비율 있음; 공급예비력 MW 정규화는 미완료'
-            if source == 'holidays': row['state'] = '2023~2025 공식 API 자료 확보; 새 공통 입력 행렬 연결 필요'
-            if source == 'demand_forecast': row['state'] = '공식 연간 육지 수요예측 26,304시간 확보; 원본 공표 이력은 미검증'
-            if source == 'demand_actual': row['state'] = '기존 EPSIS 실적 1,095시간 결측 유지; 결측 없는 공식 전국 발전단 후보 별도 확보, 혼합하지 않음'
-        elif source == 'domestic_lng':
-            row['state'] = '아래 지정 엑셀에서 직접 확인'
-        elif source == 'calendar':
-            row['state'] = '시간축에서 생성 가능; 공통 행렬 미생성'
-        else:
-            row['state'] = '전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개'
-        inventory.append(row)
-    write_json(HERE/'source_inventory.json', inventory)
-    # Always inspect the actual supplied workbook; never silently use the old fuel CSV.
-    workbooks = list(ROOT.parent.glob('HOME_*.xlsx'))
-    if len(workbooks) != 1:
-        issues.append(dict(variable='domestic_lng', reason='지정 HOME 엑셀 파일을 유일하게 찾을 수 없음', action='원본 파일 경로 확인'))
-    else:
-        monthly, evidence = read_lng(workbooks[0])
-        expected = pd.period_range(cfg['train_start'][:7], cfg['test_end'][:7], freq='M').astype(str)
-        missing = sorted(set(expected)-set(monthly.month))
-        if missing: issues.append(dict(variable='domestic_lng', reason='월 누락: '+','.join(missing), action='동일 원본 표의 누락월 확보'))
-        (ROOT/'data/processed').mkdir(parents=True, exist_ok=True)
-        monthly.to_csv(ROOT/'data/processed/lng_workbook_monthly.csv', index=False)
-        write_json(HERE/'data_audit_fuel.json', dict(**evidence, first=monthly.month.min(), last=monthly.month.max(), rows=len(monthly), november_demo_ready='2026-10' in set(monthly.month)))
-        if bundle is not None:
-            history, future, _ = bundle
-            actual = fuel_for_targets(monthly, history.index, pd.Timestamp('2025-12-31 23:00', tz='Asia/Seoul'))
-            if not np.allclose(history.domestic_lng_cost_krw_kwh, actual):
-                issues.append(dict(variable='domestic_lng', reason='학습 입력의 동월 파일 값 불일치', action='지정 파일 값으로 병합'))
-            for origin, block in future.groupby('forecast_origin'):
-                expected_fuel = fuel_for_targets(monthly, pd.DatetimeIndex(block.target_timestamp), origin)
-                if not np.allclose(block.domestic_lng_cost_krw_kwh, expected_fuel):
-                    issues.append(dict(variable='domestic_lng', reason='예측 입력의 대상월 매핑 불일치', action='동월 값 연결'))
-                    break
-    if bundle is None:
-        for row in inventory:
-            if row['source'] not in ['calendar','domestic_lng']:
-                issues.append(dict(variable=row['variable'], reason=row['state'], action='2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정'))
-    status = dict(at=now(), status='BLOCKED' if issues else 'READY', can_train=not issues,
-        model='sarimax', shared_directory=str(shared), issues=issues, required_sources=SOURCES,
-        limitation='동월 LNG 제공 조건부 실험; 실제 운영 공개시각 검증 아님')
-    write_json(HERE/'data_status.json', status)
-    lines = ['# SARIMAX 데이터 상태', '', '상태: '+status['status'], '',
-        '| 항목 | 차단 원인 | 조치 |', '|---|---|---|']
-    lines += ['| '+r['variable']+' | '+r['reason'].replace('|','/')+' | '+r['action']+' |' for r in issues]
-    lines += ['', '공통 입력 미생성은 API 오류를 의미하지 않습니다. 기존 일부 자료만으로는 새 필수 변수 전체를 충족하지 못합니다.',
-        '필요 기간: 2023-01-01~2025-12-31. 원자료 미수집·과거 조회 불가·인증 실패 여부는 별도 실제 수집 진단으로 구분해야 합니다.']
-    (HERE/'DATA_STATUS.md').write_text('\n'.join(lines)+'\n')
-    return status, bundle
+def prepare(bundle):
+    history,future,manifest=bundle
+    hourly=future.sort_values('forecast_origin').drop_duplicates('target_timestamp',keep='last').set_index('target_timestamp').sort_index()
+    features=manifest['context_features']
+    if not (hourly.index.to_series().diff().iloc[1:]==pd.Timedelta(hours=1)).all():raise ValueError('Hourly exog grid is not continuous')
+    train=hourly[hourly.split=='train']
+    return hourly,features,train
 
 
-def backtest(model, hourly, future, begin, end):
-    rows = []
-    for origin in origins(begin, end):
-        recent = hourly[(hourly.index > model.last_timestamp) & (hourly.index <= origin)]
-        if len(recent): model.update(recent.smp, recent[FEATURES], origin)
-        block = future[future.forecast_origin == origin].set_index('target_timestamp')[FEATURES]
-        forecast = model.predict72(block, origin)
-        target = forecast.index
-        forecast['actual_smp'] = hourly.smp.reindex(target).to_numpy()
-        forecast['forecast_origin'] = origin
-        forecast['target_timestamp'] = target
-        forecast['horizon'] = np.arange(1,73)
-        forecast['forecast_day'] = np.repeat([1,2,3],24)
-        forecast['baseline_origin_day'] = hourly.smp.reindex(origin.normalize()+pd.to_timedelta(target.hour,unit='h')).to_numpy()
-        forecast['baseline_weekly'] = hourly.smp.reindex(target-pd.Timedelta(days=7)).to_numpy()
-        rows.append(forecast.reset_index(drop=True))
-    return pd.concat(rows, ignore_index=True)
+def evaluate(model,bundle,hourly,features,split):
+    _,future,manifest=bundle;data=future[future.split==split].sort_values(['forecast_origin','horizon']);frames=[]
+    first=data.forecast_origin.iloc[0];cutoff=first-pd.Timedelta(hours=72)
+    prefix=hourly[hourly.index<cutoff]
+    model.reset(prefix.actual_smp.to_numpy(),prefix[features].to_numpy(),prefix.index[-1])
+    for n,(origin,block) in enumerate(data.groupby('forecast_origin',sort=True),1):
+        cutoff=origin-pd.Timedelta(hours=72)
+        observed=hourly[(hourly.index>model.last_timestamp)&(hourly.index<cutoff)]
+        if len(observed):model.update(observed.actual_smp.to_numpy(),observed[features].to_numpy(),observed.index,cutoff)
+        # No observed y is supplied across the bridge or future forecast range.
+        bridge=hourly.loc[(hourly.index>=cutoff)&(hourly.index<=origin)]
+        if (bridge.forecast_origin>origin).any():raise ValueError('Future issue in bridge')
+        x=np.vstack([bridge[features].to_numpy(),block[features].to_numpy()])
+        pred,ci,steps=model.predict(x,origin,cutoff)
+        frame=block[['split','forecast_origin','observed_cutoff','target_timestamp','horizon','forecast_day','actual_smp','baseline_origin_day','baseline_weekly']].copy()
+        frame['dataset_version']=contract.VERSION;frame['model_name']='SARIMAX';frame['predicted_smp']=pred
+        frame['lower_95']=ci[:,0];frame['upper_95']=ci[:,1];frame['bridge_hours']=steps
+        frame['absolute_error']=np.abs(pred-frame.actual_smp);frame['forecast_date']=frame.target_timestamp.dt.strftime('%Y-%m-%d')
+        frame['prediction_status']='ok';frame['fuel_input_policy']=manifest['fuel_policy'];frames.append(frame)
+        if n%40==0:print(split,'origins completed',n,'/',data.forecast_origin.nunique(),flush=True)
+    return pd.concat(frames,ignore_index=True)
 
 
-def metrics(frame):
-    result = []
-    for split, data in frame.groupby('split'):
-        for horizon, g in [('all', data)]+[(str(k),g) for k,g in data.groupby('forecast_day')]:
-            for model, col in [('sarimax','predicted_smp'),('origin_day','baseline_origin_day'),('weekly','baseline_weekly')]:
-                error = g.actual_smp-g[col]
-                result.append(dict(split=split, forecast_day=horizon, model=model, rows=len(g), MAE=float(abs(error).mean()), RMSE=float(np.sqrt((error**2).mean()))))
-    return pd.DataFrame(result)
+def figures(frame,directory,origin='2025-07-01T23:00:00+09:00'):
+    import os
+    os.environ.setdefault('MPLCONFIGDIR',str(ROOT/'data/cache/matplotlib'))
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    import plotly.graph_objects as go
+    directory.mkdir(parents=True,exist_ok=True)
+    selected=frame[frame.forecast_origin==pd.Timestamp(origin)].sort_values('horizon')
+    def comparison(z,name,title):
+        fig,ax=plt.subplots(figsize=(12,4));ax.plot(z.target_timestamp,z.actual_smp,label='Actual');ax.plot(z.target_timestamp,z.predicted_smp,label='SARIMAX')
+        if name=='selected_72h':
+            for k in [24,48]:ax.axvline(z.target_timestamp.iloc[k],color='gray',linestyle='--')
+        ax.legend();ax.set_ylabel('SMP (KRW/kWh)');ax.set_title(title);fig.autofmt_xdate();fig.tight_layout();fig.savefig(directory/(name+'.png'));plt.close(fig)
+        chart=go.Figure([go.Scatter(x=z.target_timestamp,y=z.actual_smp,name='Actual'),go.Scatter(x=z.target_timestamp,y=z.predicted_smp,name='SARIMAX')]);chart.update_layout(title=title,yaxis_title='SMP (KRW/kWh)')
+        if name=='selected_72h':
+            for k in [24,48]:chart.add_vline(x=z.target_timestamp.iloc[k].to_pydatetime(),line_dash='dash')
+        chart.write_html(str(directory/(name+'.html')),include_plotlyjs=True)
+    comparison(selected,'selected_72h',f'72h SARIMAX — MAE {selected.absolute_error.mean():.2f} KRW/kWh; conditional LNG')
+    for (split,day),z in frame.groupby(['split','forecast_day']):comparison(z.sort_values('target_timestamp'),f'{split}_D{day}_hourly',f'{split} D+{day}; conditional LNG')
+    monthly=frame.assign(month=frame.target_timestamp.dt.strftime('%Y-%m')).groupby(['month','forecast_day']).absolute_error.mean().unstack()
+    ax=monthly.plot.bar(figsize=(12,4),ylabel='MAE (KRW/kWh)',title='Validation Jan–Jun | Final Test Jul–Dec');ax.axvline(5.5,color='gray',linestyle='--');ax.figure.tight_layout();ax.figure.savefig(directory/'monthly_mae.png');plt.close(ax.figure)
+    for column in ['horizon','forecast_day','target_hour']:
+        z=frame.assign(target_hour=frame.target_timestamp.dt.hour).groupby(['split',column]).absolute_error.mean().unstack(0)
+        z.to_csv(directory.parent/(column+'_mae.csv'));ax=z.plot(figsize=(10,4),ylabel='MAE (KRW/kWh)');ax.figure.tight_layout();ax.figure.savefig(directory/(column+'_mae.png'));plt.close(ax.figure)
+    ax=frame.plot.scatter(x='actual_smp',y='predicted_smp',s=3,alpha=.2);ax.figure.tight_layout();ax.figure.savefig(directory/'scatter.png');plt.close(ax.figure)
 
 
 def main():
-    parser=argparse.ArgumentParser()
-    parser.add_argument('--audit-only',action='store_true')
-    parser.add_argument('--shared-dir',type=Path)
-    args=parser.parse_args()
-    cfg=json.loads((ROOT/'configs/sarimax.json').read_text())
-    shared=args.shared_dir or (ROOT/cfg['shared_directory']).resolve()
-    status,bundle=audit(cfg,shared)
-    print(json.dumps(status,ensure_ascii=False,indent=2))
-    if not status['can_train']: return 2
-    if args.audit_only: return 0
-    hourly,future,manifest=bundle
-    out=HERE/'artifacts';out.mkdir(exist_ok=True)
-    train=hourly.loc[cfg['train_start']:cfg['train_end']]
-    trials=[];best=float('inf');winner=None
-    for i, candidate in enumerate(cfg['candidates']):
-        started=time.monotonic()
+    parser=argparse.ArgumentParser();parser.add_argument('--audit-only',action='store_true');args=parser.parse_args()
+    bundle=contract.load();hourly,features,train=prepare(bundle)
+    if bundle[2]['all_groups']!=list(range(1,13)):raise ValueError('Input group contract mismatch')
+    print('Training hourly samples',len(train),'exog',len(features),flush=True)
+    if args.audit_only:return
+    run=HERE/'outputs'/contract.VERSION/pd.Timestamp.now(tz=contract.TZ).strftime('%Y%m%dT%H%M%S');run.mkdir(parents=True,exist_ok=False)
+    candidates=[dict(order=(1,0,0),seasonal_order=(1,0,0,24)),dict(order=(1,0,1),seasonal_order=(1,0,0,24)),dict(order=(2,0,0),seasonal_order=(1,0,0,24))]
+    contract.dump(run/'config_before_training.json',dict(candidates=candidates,maxiter=100,selection='Validation MAE',beta_estimator='Train-only min-norm OLS, rcond=1e-10; fixed in conditional SARIMAX MLE',features=features,seed='deterministic numerical fit'))
+    best=None;results=[];start=time.perf_counter()
+    for n,params in enumerate(candidates,1):
+        print('CANDIDATE',n,params,flush=True);ts=time.perf_counter()
         try:
-            model=Estimator(**candidate,maxiter=cfg['maxiter']).fit(train.smp,train[FEATURES])
-            candidate_dir=out/f'candidate_{i}'
-            model.save(candidate_dir)  # Save train-end state before validation updates.
-            validation=backtest(model,hourly,future,cfg['validation_start'],cfg['validation_end'])
-            mae=float(abs(validation.actual_smp-validation.predicted_smp).mean())
-            trials.append(dict(candidate=i,**candidate,validation_MAE=mae,seconds=time.monotonic()-started,status='completed',warnings=model.fit_warnings))
-            if mae<best:best,winner=mae,i
-        except (RuntimeError,ValueError,np.linalg.LinAlgError) as exc:
-            trials.append(dict(candidate=i,**candidate,status='failed',reason=str(exc),seconds=time.monotonic()-started))
-        write_json(out/'search.json',trials)
-    if winner is None:raise RuntimeError('All candidates failed; no final test result produced')
-    selected=out/f'candidate_{winner}'
-    val=backtest(Estimator.load(selected),hourly,future,cfg['validation_start'],cfg['validation_end']);val['split']='validation'
-    test=backtest(Estimator.load(selected),hourly,future,cfg['test_start'],cfg['test_end']);test['split']='test'
-    frame=pd.concat([val,test],ignore_index=True);frame['model_name']='SARIMAX';frame['absolute_error']=abs(frame.actual_smp-frame.predicted_smp)
-    frame['forecast_date']=frame.target_timestamp.dt.date
-    frame['fuel_input_policy']='target_month_LNG_conditional'
-    frame.to_csv(out/'predictions.csv',index=False)
-    metrics(frame).to_csv(out/'metrics.csv',index=False)
-    frame.groupby(['split','forecast_origin','forecast_day']).absolute_error.mean().to_csv(out/'daily_mae.csv')
-    frame.assign(month=frame.target_timestamp.dt.strftime('%Y-%m')).groupby(['split','month','forecast_day']).absolute_error.mean().to_csv(out/'monthly_mae.csv')
-    # Verify persisted train-end state makes identical forecasts after the same causal update.
-    a,b=Estimator.load(selected),Estimator.load(selected)
-    first=origins(cfg['validation_start'],cfg['validation_end'])[0]
-    fx=future[future.forecast_origin==first].set_index('target_timestamp')[FEATURES]
-    np.testing.assert_allclose(a.predict72(fx,first),b.predict72(fx,first))
-    write_json(out/'run.json',dict(at=now(),status='completed',winner=winner,validation_MAE=best,
-        test_used_for_selection=False,source_manifest=manifest,fuel_policy=cfg['fuel_policy'],
-        forecast_intervals='conditional Gaussian 95%; not calibrated and exclude exog uncertainty',
-        bundle_sha256={p:hashlib.sha256((shared/p).read_bytes()).hexdigest() for p in ['hourly.csv','forecast_inputs.csv','manifest.json']}))
-    print(metrics(frame).to_string(index=False))
-    return 0
+            model=Estimator(**params,maxiter=100).fit(train.actual_smp.to_numpy(),train[features].to_numpy())
+            print('FITTED',n,'rank',model.rank,'seconds',time.perf_counter()-ts,flush=True)
+            validation=evaluate(model,bundle,hourly,features,'validation');mae=float(validation.absolute_error.mean())
+            results.append(dict(params=params,validation_mae=mae,rank=int(model.rank),constant_features=[features[i] for i in model.constant_indices],converged=model.converged,warnings=model.warnings,seconds=time.perf_counter()-ts,status='ok'))
+            if best is None or mae<best[0]:best=(mae,model,validation)
+        except (ValueError,RuntimeError,np.linalg.LinAlgError) as exc:
+            results.append(dict(params=params,status='failed',reason=str(exc)))
+        contract.dump(run/'candidate_results.json',results);print('CANDIDATE DONE',results[-1],flush=True)
+    if best is None:raise RuntimeError('All SARIMAX candidates failed; no final evaluation')
+    mae,model,validation=best;model.save(run/'model.npz')
+    contract.dump(run/'selected_before_test.json',dict(order=model.order,seasonal_order=model.seasonal_order,validation_mae=mae))
+    test=evaluate(model,bundle,hourly,features,'test');frame=pd.concat([validation,test],ignore_index=True)
+    metrics=export(frame,run);figures(frame,run/'figures')
+    reports=HERE/'reports';reports.mkdir(exist_ok=True)
+    for name in ['overall','forecast_days','monthly','horizons','daily']:metrics[name].to_csv(reports/('v3_'+name+'_metrics.csv'),index=False)
+    experiment=dict(dataset_version=contract.VERSION,source_commit=contract.SHA,order=model.order,seasonal_order=model.seasonal_order,beta_estimator='two-stage fixed OLS; conditional MLE ARIMA',rank=int(model.rank),features=features,python=platform.python_version(),statsmodels=statsmodels.__version__,numpy=np.__version__,pandas=pd.__version__,seconds=time.perf_counter()-start,manifest_sha256=hashlib.sha256((contract.OUT/'manifest.json').read_bytes()).hexdigest(),source_code_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [HERE/'train.py',HERE/'algorithm_v3.py']},training_performed=True,test_refit=False)
+    contract.dump(run/'experiment.json',experiment)
+    contract.dump(reports/'latest_run_v3.json',dict(path=str(run),metrics=metrics['overall'].to_dict('records'),experiment=experiment))
+    print(metrics['overall'].to_string(index=False),flush=True);print('RESULTS',run,flush=True)
 
-if __name__=='__main__':
-    raise SystemExit(main())
+if __name__=='__main__':main()

@@ -29,3 +29,4 @@ __pycache__/
 *.log
 /SMP_SHARED_DATA/
 /1120gradpj/models/lstm/outputs/
+/1120gradpj/models/sarimax/outputs/
