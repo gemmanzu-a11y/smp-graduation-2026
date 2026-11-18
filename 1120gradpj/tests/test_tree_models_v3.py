@@ -19,6 +19,14 @@ class TreeV3Test(unittest.TestCase):
         _,f,m=c.load();one=f[f.split=='validation'].iloc[:72].copy();one.loc[one.index[0],m['context_features'][0]]=np.nan
         with self.assertRaises(ValueError):tree.matrices(one,m,'validation')
     def test_early_stopping_checkpoint_roundtrip_both_models(self):
+        # Match production's separate processes: macOS native OpenMP conflicts
+        # when this test fits XGBoost after the full suite has trained PyTorch.
+        import os,subprocess
+        if os.environ.get('SMP_TREE_NATIVE_CHILD')!='1':
+            env=dict(os.environ,SMP_TREE_NATIVE_CHILD='1',MPLCONFIGDIR=str(ROOT/'data/cache/matplotlib'))
+            result=subprocess.run([sys.executable,__file__,'TreeV3Test.test_early_stopping_checkpoint_roundtrip_both_models'],env=env,capture_output=True,text=True,timeout=60)
+            self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+            return
         import xgboost,lightgbm
         rng=np.random.default_rng(42);x=rng.normal(size=(240,4)).astype('float32');y=(100+10*x[:,0]).astype('float32')
         for name in ['xgboost','lightgbm']:

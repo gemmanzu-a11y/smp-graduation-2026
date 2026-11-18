@@ -19,3 +19,5 @@
 
 - [LightGBM 보고서](../../models/lightgbm/reports/v3_common/final_evaluation_report.md)
 - [XGBoost 보고서](../../models/xgboost/reports/v3_common/final_evaluation_report.md)
+
+전체 자동 테스트89개 통과. native 라이브러리 검사 실행 방식은 [검증 메모](verification_notes.md)에 기록했습니다.

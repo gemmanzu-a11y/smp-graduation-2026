@@ -10,3 +10,5 @@
 발전량 보완 v4는 후속 실험 기록으로 보존했습니다. v3는 2025년 발전량 대부분을 대체한 기존 조건이며, 입력 문제를 해결한 결과로 해석하지 않습니다. 두 버전의 하반기 결과를 본 뒤 v3로 복원한 선택이라는 이력도 남깁니다.
 
 현재 모델 위치·데이터 버전: models/lstm/CURRENT_RUN.json 및 models/sarimax/CURRENT_RUN.json.
+
+추가로 동일한 v3 입력의 LightGBM·XGBoost 학습을 완료했습니다. 네 모델 비교는 [four_models_v3/README.md](four_models_v3/README.md)를 확인하세요. LSTM·SARIMAX 선택 모델은 변경하지 않았습니다.
