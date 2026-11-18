@@ -1,0 +1,101 @@
+{
+  "at": "2026-11-18T20:39:41.078897+09:00",
+  "status": "BLOCKED",
+  "can_train": false,
+  "model": "sarimax",
+  "shared_directory": "/Users/mj/Library/Mobile Documents/com~apple~CloudDocs/26-1/26-1 졸업설계/gradpj/SMP_SHARED_DATA",
+  "issues": [
+    {
+      "variable": "manifest.json",
+      "reason": "공통 입력 파일 미생성",
+      "action": "README 형식으로 공통 데이터 준비; 부분 입력으로 학습하지 않음"
+    },
+    {
+      "variable": "hourly.csv",
+      "reason": "공통 입력 파일 미생성",
+      "action": "README 형식으로 공통 데이터 준비; 부분 입력으로 학습하지 않음"
+    },
+    {
+      "variable": "forecast_inputs.csv",
+      "reason": "공통 입력 파일 미생성",
+      "action": "README 형식으로 공통 데이터 준비; 부분 입력으로 학습하지 않음"
+    },
+    {
+      "variable": "전력수요 실적",
+      "reason": "기존 EPSIS 실적 1,095시간 결측 유지; 결측 없는 공식 전국 발전단 후보 별도 확보, 혼합하지 않음",
+      "action": "2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정"
+    },
+    {
+      "variable": "하루전 육지 수요예측 mlfd",
+      "reason": "공식 연간 육지 수요예측 26,304시간 확보; 원본 공표 이력은 미검증",
+      "action": "2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정"
+    },
+    {
+      "variable": "공식 공휴일",
+      "reason": "2023~2025 공식 API 자료 확보; 새 공통 입력 행렬 연결 필요",
+      "action": "2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정"
+    },
+    {
+      "variable": "LNG·석탄·원자력 발전량",
+      "reason": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개",
+      "action": "2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정"
+    },
+    {
+      "variable": "태양광·풍력 실적",
+      "reason": "기존 파일 존재; 새 공통 정의·품질·출처 검증 필요",
+      "action": "2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정"
+    },
+    {
+      "variable": "하루전 시장 태양광 예측 solgenKpx",
+      "reason": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개",
+      "action": "2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정"
+    },
+    {
+      "variable": "공급예비력·예비율",
+      "reason": "기존 예비율 있음; 공급예비력 MW 정규화는 미완료",
+      "action": "2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정"
+    },
+    {
+      "variable": "FRED WTI·Brent",
+      "reason": "FRED 과거 빈티지로 1,096개 발행일 입력 확보; 새 공통 행렬 연결 필요",
+      "action": "2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정"
+    },
+    {
+      "variable": "FRED 국제 LNG·석탄",
+      "reason": "FRED 과거 빈티지로 1,096개 발행일 입력 확보; 새 공통 행렬 연결 필요",
+      "action": "2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정"
+    },
+    {
+      "variable": "ASOS 기온·일사·풍속",
+      "reason": "기존 파일 존재; 새 공통 정의·품질·출처 검증 필요",
+      "action": "2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정"
+    },
+    {
+      "variable": "기상청 과거 기온·풍속 예보",
+      "reason": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개",
+      "action": "2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정"
+    },
+    {
+      "variable": "동서발전 일사·기온·풍속 예측",
+      "reason": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개",
+      "action": "2023~2025 공통 입력 정규화·근거 확인; 수집 오류 원인 미확정"
+    }
+  ],
+  "required_sources": {
+    "demand_actual": "전력수요 실적",
+    "demand_forecast": "하루전 육지 수요예측 mlfd",
+    "holidays": "공식 공휴일",
+    "calendar": "달력",
+    "generation": "LNG·석탄·원자력 발전량",
+    "renewables": "태양광·풍력 실적",
+    "solar_forecast": "하루전 시장 태양광 예측 solgenKpx",
+    "reserve": "공급예비력·예비율",
+    "domestic_lng": "파일 LNG 연료비단가 원/kWh",
+    "oil": "FRED WTI·Brent",
+    "international_fuel": "FRED 국제 LNG·석탄",
+    "weather_actual": "ASOS 기온·일사·풍속",
+    "weather_forecast": "기상청 과거 기온·풍속 예보",
+    "solar_weather_forecast": "동서발전 일사·기온·풍속 예측"
+  },
+  "limitation": "동월 LNG 제공 조건부 실험; 실제 운영 공개시각 검증 아님"
+}

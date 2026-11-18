@@ -24,6 +24,11 @@ class ConditionalSARIMAXTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'Incorrect fixed origin cutoff'):self.model.predict(future,origin,origin)
         with self.assertRaisesRegex(ValueError,'Unreleased interval'):
             self.model.update([100],np.zeros((1,3)),[cutoff],cutoff)
+        # The successful daily update must retain the last predicted state/covariance.
+        next_cutoff=cutoff+pd.Timedelta(hours=24)
+        self.model.update(np.full(24,100.),np.zeros((24,3)),pd.date_range(cutoff,periods=24,freq='h'),next_cutoff)
+        next_prediction,_,_=self.model.predict(future,origin+pd.Timedelta(hours=24),next_cutoff)
+        self.assertTrue(np.isfinite(next_prediction).all())
     def test_save_load_identical_fixed_parameters(self):
         import tempfile
         with tempfile.TemporaryDirectory() as d:

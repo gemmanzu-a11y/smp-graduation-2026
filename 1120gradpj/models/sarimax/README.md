@@ -7,6 +7,7 @@
 1120gradpj/.venv/bin/python -m unittest discover -s 1120gradpj/tests -p 'test_sarimax_v3.py' -q
 1120gradpj/.venv/bin/python 1120gradpj/models/sarimax/train.py
 1120gradpj/.venv/bin/python 1120gradpj/models/sarimax/report_v3.py
+1120gradpj/.venv/bin/python 1120gradpj/models/sarimax/verify_v3.py
 ```
 
 ## 알고리즘
@@ -35,3 +36,5 @@ Train 계수는 2024년 말까지의 학습 정답으로 추정합니다. 이는
 동월 LNG 제공 조건부 실험·실측72시간 지연 가정·2025년 발전량 대규모 대체값이라는 공통 한계가 그대로 적용됩니다. 95% 구간은 고정 beta와 모형을 조건으로 한 모델 구간이며, 대체값·연료·예보 불확실성과 beta 추정 불확실성을 모두 반영한 보정된 확률구간이 아닙니다.
 
 모든 원본과 LSTM 결과는 보존합니다. 전체 예측과 모델은 로컬 `outputs/<version>/<run>/`에 보존하고, 코드·지표·보고서·작은 PNG만 기존 GitHub 공유에 반영합니다. 최신 결과 위치는 `reports/latest_run_v3.json`, 최종 설명은 `reports/final_evaluation_report_v3.md`입니다.
+
+계수별 표준오차는 계산하지 않습니다(`cov_type=none`). 이는 예측을 위한 상태 공분산·혁신분산을 제거한다는 뜻이 아닙니다.

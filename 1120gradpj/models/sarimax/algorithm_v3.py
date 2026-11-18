@@ -7,7 +7,7 @@ import warnings
 import numpy as np
 import pandas as pd
 from statsmodels.tsa.statespace.sarimax import SARIMAX
-from statsmodels.tsa.statespace.kalman_filter import MEMORY_CONSERVE, MEMORY_NO_FORECAST
+from statsmodels.tsa.statespace.kalman_filter import MEMORY_CONSERVE, MEMORY_NO_FORECAST, MEMORY_NO_PREDICTED
 
 
 def standardized(x,mean,scale):
@@ -33,7 +33,11 @@ class Estimator:
         coefficients={model.param_names[k]:float(self.beta[k]) for k in range(x.shape[1])}
         with warnings.catch_warnings(record=True) as caught:
             warnings.simplefilter('always')
-            result=model.fit_constrained(coefficients,disp=False,maxiter=self.maxiter,low_memory=True)
+            iteration=[0]
+            def progress(params):
+                iteration[0]+=1
+                if iteration[0]%5==0:print('optimizer iteration',iteration[0],flush=True)
+            result=model.fit_constrained(coefficients,disp=False,maxiter=self.maxiter,low_memory=True,cov_type='none',callback=progress)
         self.warnings=[str(w.message) for w in caught]
         self.converged=bool(result.mle_retvals.get('converged',False));self.retvals=result.mle_retvals
         if not self.converged:raise RuntimeError('Conditional SARIMAX optimizer did not converge')
@@ -43,7 +47,7 @@ class Estimator:
     def reset(self,y,x,last_timestamp):
         # Refilter only the available prefix; never retain end-of-Train future state.
         model=self.specification((np.asarray(y)-self.y_mean)/self.y_scale,standardized(np.asarray(x),self.mean,self.scale))
-        self.state=model.filter(self.params,conserve_memory=MEMORY_CONSERVE & ~MEMORY_NO_FORECAST);self.last_timestamp=pd.Timestamp(last_timestamp)
+        self.state=model.filter(self.params,cov_type='none',conserve_memory=MEMORY_CONSERVE & ~(MEMORY_NO_FORECAST | MEMORY_NO_PREDICTED));self.last_timestamp=pd.Timestamp(last_timestamp)
     def update(self,y,x,timestamps,cutoff):
         timestamps=pd.DatetimeIndex(timestamps)
         if not len(timestamps):return
