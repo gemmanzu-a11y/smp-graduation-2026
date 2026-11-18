@@ -1,0 +1,50 @@
+{
+  "input_number": 2,
+  "unit": "MW",
+  "scope": "mainland",
+  "complete_2023_2025": true,
+  "source_page": "https://new.kpx.or.kr/pssInland.es?mid=a10606090100&device=pc",
+  "original_file_sha256": "91ddfa1b3acea1ac056f104ea359435ed5436d2f57744e7abee112e9fed914d0",
+  "source_metadata_by_year": [
+    {
+      "year": "2023",
+      "rows": 8760,
+      "historical_published_at": null,
+      "retrieved_or_validated_at": "2026-11-18T18:56:05.910608+09:00",
+      "source": "KPX official annual mainland day-ahead load forecast",
+      "source_sha256": "ddbcfcc787a1a2d80948943253772ed53c9e24870280644c4334bf3eee9469b9",
+      "source_url": "https://new.kpx.or.kr/xlsxdownload.es?act=pssinland&gubun=year"
+    },
+    {
+      "year": "2024",
+      "rows": 8784,
+      "historical_published_at": null,
+      "retrieved_or_validated_at": "2026-11-18T18:56:05.910608+09:00",
+      "source": "KPX official annual mainland day-ahead load forecast",
+      "source_sha256": "c6512724e69a7ca7d2a916f02c5b5cf9c015f08f6f32494476112706b85e4a62",
+      "source_url": "https://new.kpx.or.kr/xlsxdownload.es?act=pssinland&gubun=year"
+    },
+    {
+      "year": "2025",
+      "rows": 8760,
+      "historical_published_at": null,
+      "retrieved_or_validated_at": "2026-11-18T18:56:05.910608+09:00",
+      "source": "KPX official annual mainland day-ahead load forecast",
+      "source_sha256": "f51acf7b014f1f9051a7117ec7d6a92045ba4b8eff3000ddcd5f7d26f9694e6b",
+      "source_url": "https://new.kpx.or.kr/xlsxdownload.es?act=pssinland&gubun=year"
+    }
+  ],
+  "field_mapping": {
+    "demand_forecast_mw": "mlfd: verified against 2352 overlapping API hours"
+  },
+  "historical_first_publication_verified": false,
+  "d2_d3_rule_resolved": false,
+  "files": [
+    {
+      "file": "mainland_demand_forecast_2023_2025.csv",
+      "rows": 26304,
+      "bytes": 1489530,
+      "sha256": "5d93658f3e9055e8546bf3a764edb6b9beca8e55bffcde4d8a81b3dbb207beeb"
+    }
+  ]
+}
