@@ -1,0 +1,4 @@
+split,origins,smp_missing_last,demand_actual_missing_last,demand_forecast_history_missing_last,generation_lng_missing_last,generation_coal_missing_last,generation_nuclear_missing_last,solar_actual_missing_last,wind_actual_missing_last,reserve_mw_missing_last,reserve_pct_missing_last,temperature_c_missing_last,irradiance_mj_m2_missing_last,wind_ms_missing_last
+test,182,0.0,0.07692307692307693,0.0,1.0,1.0,1.0,0.0,0.0,0.06043956043956044,0.06043956043956044,0.0,1.0,0.0
+train,718,0.0,0.01532033426183844,0.0,0.37604456824512533,0.4192200557103064,0.4192200557103064,0.0,0.0,0.006963788300835654,0.006963788300835654,0.002785515320334262,1.0,0.002785515320334262
+validation,179,0.0,0.07262569832402235,0.0,0.9720670391061452,0.9720670391061452,0.9720670391061452,0.0,0.0,0.0335195530726257,0.0335195530726257,0.0,1.0,0.0
