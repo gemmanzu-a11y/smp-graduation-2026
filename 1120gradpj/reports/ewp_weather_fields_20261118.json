@@ -1,0 +1,243 @@
+{
+  "at": "2026-11-18T20:56:25.200988+09:00",
+  "results": [
+    {
+      "baseDate": "20230101",
+      "predDate": "20230102",
+      "http": 200,
+      "rows": 0,
+      "total": 0,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20230101",
+          "predDate": "20230102",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T20:56:15.157055+09:00",
+        "sha256": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b",
+        "raw": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b.raw",
+        "bytes": 135,
+        "authenticated": true
+      },
+      "status": "normal_empty"
+    },
+    {
+      "baseDate": "20250101",
+      "predDate": "20250102",
+      "http": 200,
+      "rows": 238,
+      "total": 238,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20250101",
+          "predDate": "20250102",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T20:56:18.660035+09:00",
+        "sha256": "73187d9090f086f66ba3d2f6d1726728cd9d44fe353804054985acc43eaf953b",
+        "raw": "73187d9090f086f66ba3d2f6d1726728cd9d44fe353804054985acc43eaf953b.raw",
+        "bytes": 86620,
+        "authenticated": true
+      },
+      "fields": {
+        "icsrPred": {
+          "present": true,
+          "valid_values": 238
+        },
+        "temp": {
+          "present": true,
+          "valid_values": 238
+        },
+        "ws": {
+          "present": true,
+          "valid_values": 238
+        }
+      },
+      "cities": [
+        "강원",
+        "경기",
+        "경남",
+        "경북",
+        "광주",
+        "대구",
+        "대전",
+        "부산",
+        "서울",
+        "세종",
+        "울산",
+        "인천",
+        "전남",
+        "전북",
+        "제주",
+        "충남",
+        "충북"
+      ],
+      "hours": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sample": [
+        {
+          "baseDate": "20250101",
+          "baseTime": "1400",
+          "predDate": "20250102",
+          "hh": "08",
+          "city": "서울",
+          "icsrPred": "-0.01",
+          "temp": "-3",
+          "ws": "0.9"
+        },
+        {
+          "baseDate": "20250101",
+          "baseTime": "1400",
+          "predDate": "20250102",
+          "hh": "17",
+          "city": "서울",
+          "icsrPred": "0.43",
+          "temp": "5",
+          "ws": "2.1"
+        }
+      ]
+    },
+    {
+      "baseDate": "20261117",
+      "predDate": "20261118",
+      "http": 200,
+      "rows": 238,
+      "total": 238,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20261117",
+          "predDate": "20261118",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T20:56:22.480062+09:00",
+        "sha256": "26badb049376b9ddfac1f78b87b76dc9a91421a727579422d749f2b23b82277a",
+        "raw": "26badb049376b9ddfac1f78b87b76dc9a91421a727579422d749f2b23b82277a.raw",
+        "bytes": 86757,
+        "authenticated": true
+      },
+      "fields": {
+        "icsrPred": {
+          "present": true,
+          "valid_values": 238
+        },
+        "temp": {
+          "present": true,
+          "valid_values": 238
+        },
+        "ws": {
+          "present": true,
+          "valid_values": 238
+        }
+      },
+      "cities": [
+        "강원",
+        "경기",
+        "경남",
+        "경북",
+        "광주",
+        "대구",
+        "대전",
+        "부산",
+        "서울",
+        "세종",
+        "울산",
+        "인천",
+        "전남",
+        "전북",
+        "제주",
+        "충남",
+        "충북"
+      ],
+      "hours": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sample": [
+        {
+          "baseDate": "20261117",
+          "baseTime": "1400",
+          "predDate": "20261118",
+          "hh": "12",
+          "city": "서울",
+          "icsrPred": "0.7",
+          "temp": "6",
+          "ws": "2.5"
+        },
+        {
+          "baseDate": "20261117",
+          "baseTime": "1400",
+          "predDate": "20261118",
+          "hh": "14",
+          "city": "서울",
+          "icsrPred": "0.72",
+          "temp": "9",
+          "ws": "4.5"
+        }
+      ]
+    },
+    {
+      "baseDate": "20261118",
+      "predDate": "20261119",
+      "http": 200,
+      "rows": 0,
+      "total": 0,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20261118",
+          "predDate": "20261119",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T20:56:25.199979+09:00",
+        "sha256": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b",
+        "raw": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b.raw",
+        "bytes": 135,
+        "authenticated": true
+      },
+      "status": "normal_empty"
+    }
+  ],
+  "model_training_performed": false,
+  "credentials_saved": false
+}
