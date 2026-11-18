@@ -1,5 +1,9 @@
 # LSTM — 공통 v3 72시간 육지 SMP 연구
 
+## 최신 실행: 발전량 보완 v4
+
+`reports/v4_generation_update/`에서 새 결과를 확인하세요. `CURRENT_RUN.json`이 현재 실행 위치를 가리킵니다. 재현 명령은 `1120gradpj/.venv/bin/python 1120gradpj/models/lstm/train.py --dataset-version v4`입니다. 아래 v3 설명과 이전 결과는 보존했습니다.
+
 최신 실행기는 `train.py`, 이전 엄격 차단 v2 실행기는 `train_v2.py`로 보존했습니다. 공통 전처리기는 `src/smp_forecast/common_v3.py`에 한 번만 구현했습니다. 모델별 수집기를 만들지 않았습니다.
 
 ```sh

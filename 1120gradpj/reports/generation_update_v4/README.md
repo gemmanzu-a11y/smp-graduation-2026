@@ -78,3 +78,9 @@ PYTHONPATH=1120gradpj/src 1120gradpj/.venv/bin/python -m smp_forecast.common_v4
 1120gradpj/.venv/bin/python 1120gradpj/scripts/compare_generation_update_v4.py
 ```
 
+
+## 검증 결과
+
+자동 테스트86개 통과. 두 모델 저장/재로딩 예측 일치 및 미래 실측 변경에 대한 입력/예측 불변 검사를 통과했습니다. 평가 행25,992개는 두 모델과 보완 전 버전에서 동일합니다. 학습용 수치 입력은 유한하며 LSTM의 Test 표준화값 최대절대치는 context약11.93,history약8.72로 이전 상수열 확대 오류가 재발하지 않았습니다. 이 검사들이 예측 정확도를 보증하는 것은 아닙니다.
+
+![선택일 72시간 모델 비교](selected_72h_comparison.png)
