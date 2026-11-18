@@ -1,0 +1,325 @@
+{
+  "source_filename": "FCT_MEDM_20261118001247.csv",
+  "source_encoding": "CP949",
+  "source_sha256": "27f45518ddd1935c2ff605d23ee283c8848a41440629bc3f825f06f7ce65558e",
+  "source_page": "https://data.kma.go.kr/data/weatherReport/mrfList.do?pgmNo=646",
+  "timezone": "Asia/Seoul",
+  "rows": 325220,
+  "issued_min": "2023-01-01T06:00:00+09:00",
+  "issued_max": "2026-11-17T18:00:00+09:00",
+  "target_min": "2023-01-04",
+  "target_max": "2026-11-27",
+  "regions": [
+    "강원영동",
+    "강원영서",
+    "경상남도",
+    "경상북도",
+    "서울.인천.경기",
+    "전라남도",
+    "전라북도",
+    "전북자치도",
+    "제주도",
+    "충청남도",
+    "충청북도"
+  ],
+  "lead_days": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "duplicate_key_rows": 0,
+  "missing_cells": 0,
+  "files": [
+    {
+      "file": "forecast_2023-01.csv",
+      "rows": 8060,
+      "bytes": 547168,
+      "sha256": "bff52aecd642fb2ced0fd715527ee3e3c022453b91e9384db20404d2738f357f"
+    },
+    {
+      "file": "forecast_2023-02.csv",
+      "rows": 7280,
+      "bytes": 494067,
+      "sha256": "c633591fa569050fd261625f1b5e30f99607f7735ceda85b5f833eaa6c746af8"
+    },
+    {
+      "file": "forecast_2023-03.csv",
+      "rows": 8060,
+      "bytes": 545480,
+      "sha256": "8901f44a1f81e68c6d952277cffafc1051a4e28eb4f38098aa79ed8a4942a628"
+    },
+    {
+      "file": "forecast_2023-04.csv",
+      "rows": 7800,
+      "bytes": 530537,
+      "sha256": "fb11e8b9579cd1a9bae8f0410ac5f63a96686fdf973c49b0f97d07a679c1e894"
+    },
+    {
+      "file": "forecast_2023-05.csv",
+      "rows": 8060,
+      "bytes": 550047,
+      "sha256": "67176a6dafba068739e9dc9e2ac9bd37fa9e4e339e608e11132235ffb40aadfd"
+    },
+    {
+      "file": "forecast_2023-06.csv",
+      "rows": 7800,
+      "bytes": 534547,
+      "sha256": "95518f90cbfe146002ef7ecdb29ef940f1a29dc4450a6d87b2c079668e82ac40"
+    },
+    {
+      "file": "forecast_2023-07.csv",
+      "rows": 8060,
+      "bytes": 559792,
+      "sha256": "c53f2fdb27136afb37aa90fa838f6e12c7162afad46ad315abd0e27423c289a8"
+    },
+    {
+      "file": "forecast_2023-08.csv",
+      "rows": 8060,
+      "bytes": 557729,
+      "sha256": "18900125cf2fd03f6ead16d71f83c742bad2f0ca129b456077eb35f3ac911051"
+    },
+    {
+      "file": "forecast_2023-09.csv",
+      "rows": 7800,
+      "bytes": 533497,
+      "sha256": "5f43df6d340e5584d778b01658f1a5627ba3d7ec34fbbb72aee124962156a188"
+    },
+    {
+      "file": "forecast_2023-10.csv",
+      "rows": 8060,
+      "bytes": 542721,
+      "sha256": "43d2a2829463eb04f25489f93ed206b7c58c9ab96ad0a44b98a575c41861abe2"
+    },
+    {
+      "file": "forecast_2023-11.csv",
+      "rows": 7800,
+      "bytes": 527265,
+      "sha256": "a3ad0ce1e75b3e5cec39ff3d2d9c7937321637c9df88296c3df00ef5e45f461b"
+    },
+    {
+      "file": "forecast_2023-12.csv",
+      "rows": 8060,
+      "bytes": 549618,
+      "sha256": "7df5c99e339837447f1de794256bc40b65f3bc2db6121889d5057f0fcdb9f0e9"
+    },
+    {
+      "file": "forecast_2024-01.csv",
+      "rows": 8060,
+      "bytes": 544990,
+      "sha256": "8b9582b40a7fbc9395d97b8f09ea48558fa8ea471287340a6b7a729b6d61a522"
+    },
+    {
+      "file": "forecast_2024-02.csv",
+      "rows": 7540,
+      "bytes": 517950,
+      "sha256": "01c568acc035d4292d765841c1f097a6195ffdb069c34d7671656a4a50d5ea2c"
+    },
+    {
+      "file": "forecast_2024-03.csv",
+      "rows": 8060,
+      "bytes": 549575,
+      "sha256": "81b85f1bd1fb9d10fcd55a59a444979e163cf6fc0b4a7d4f6870971c30d6f7de"
+    },
+    {
+      "file": "forecast_2024-04.csv",
+      "rows": 7800,
+      "bytes": 534788,
+      "sha256": "26e5ce72fe7e482568ff6da74e8795a97ba5f014645929482f910928c8039625"
+    },
+    {
+      "file": "forecast_2024-05.csv",
+      "rows": 8060,
+      "bytes": 550225,
+      "sha256": "8af83c3c4f5505900e50fd3c26aa0c9ac3394188029b84c459b7953059de0835"
+    },
+    {
+      "file": "forecast_2024-06.csv",
+      "rows": 7800,
+      "bytes": 541602,
+      "sha256": "f4a68aa19e7c0a6db03ecf9892ebe83b5ce3f42302f91baa5e85ad60e75ff3e8"
+    },
+    {
+      "file": "forecast_2024-07.csv",
+      "rows": 8060,
+      "bytes": 572826,
+      "sha256": "29086468f0259742f202daae2f3ae7343ceefc7e7f881b4ae5f651944ee1522f"
+    },
+    {
+      "file": "forecast_2024-08.csv",
+      "rows": 8060,
+      "bytes": 564928,
+      "sha256": "67c46665d16d5a62a337ee0ff8e13d81fa7561a6df6fb1cdb947ad90497dbebf"
+    },
+    {
+      "file": "forecast_2024-09.csv",
+      "rows": 7800,
+      "bytes": 536663,
+      "sha256": "4fe3002c2115c63b484d1818088f8f24d1ed25129e636290fd8cf392a1f9edaf"
+    },
+    {
+      "file": "forecast_2024-10.csv",
+      "rows": 8060,
+      "bytes": 552928,
+      "sha256": "04ac405cc5a1cdb0792400207f95ebab73c94456f0264f7fc1c34971cda9cc4d"
+    },
+    {
+      "file": "forecast_2024-11.csv",
+      "rows": 7620,
+      "bytes": 524088,
+      "sha256": "297e04a1b866cc4a3c7c116fed7a6db2834a6bf2a55ef9f402fe07a6bca79590"
+    },
+    {
+      "file": "forecast_2024-12.csv",
+      "rows": 6200,
+      "bytes": 426160,
+      "sha256": "13e4039835980871459d2f10c86a9ae479282c1a430a8ae2359af676e1cfd3ec"
+    },
+    {
+      "file": "forecast_2025-01.csv",
+      "rows": 6200,
+      "bytes": 428678,
+      "sha256": "1d6961a824c0a2565ce21c49f08614e8714de341bd9e3990b9bb9185d60d46c4"
+    },
+    {
+      "file": "forecast_2025-02.csv",
+      "rows": 5600,
+      "bytes": 383523,
+      "sha256": "b57220902526580b152ed7614bddb1b1a8bef1d83e3983c4f659cc00e85ff935"
+    },
+    {
+      "file": "forecast_2025-03.csv",
+      "rows": 6200,
+      "bytes": 423164,
+      "sha256": "71a61957abeffcd35e37272caaab32d81d28f0650a7e1a72d67a1c51c28d45f2"
+    },
+    {
+      "file": "forecast_2025-04.csv",
+      "rows": 6000,
+      "bytes": 411229,
+      "sha256": "2c432a7135ea6ebcb57303a3264906bc2a319651cbcb6dee321a7b55ae491d0e"
+    },
+    {
+      "file": "forecast_2025-05.csv",
+      "rows": 6200,
+      "bytes": 425593,
+      "sha256": "09de6e86c88f895fcd2534f2df668d2c69879b61f012bb974d0c202e11c2b16f"
+    },
+    {
+      "file": "forecast_2025-06.csv",
+      "rows": 6000,
+      "bytes": 414435,
+      "sha256": "63a75db14ad70ef9d44a9de85560110f2ef9aa187040f560cd909e4d5d6f16f5"
+    },
+    {
+      "file": "forecast_2025-07.csv",
+      "rows": 6200,
+      "bytes": 429943,
+      "sha256": "b2c33b4b6eefa07e54c87250a88644dc730c4e1e3b5c2a218ba4f3b00084224d"
+    },
+    {
+      "file": "forecast_2025-08.csv",
+      "rows": 6200,
+      "bytes": 433511,
+      "sha256": "2d12d5ac15418026a9c86a766af76916b9ceca2d994cce8cef98a8c5fd6de9b5"
+    },
+    {
+      "file": "forecast_2025-09.csv",
+      "rows": 6000,
+      "bytes": 416420,
+      "sha256": "fbdcf952e937d2e03798a65470db635153694a443e05528f4c53795ccd115d91"
+    },
+    {
+      "file": "forecast_2025-10.csv",
+      "rows": 6200,
+      "bytes": 427315,
+      "sha256": "586ea0943a811c4ab4ced7c3a826ce513121d2b55f29807b220031b1ef485ecb"
+    },
+    {
+      "file": "forecast_2025-11.csv",
+      "rows": 6000,
+      "bytes": 409618,
+      "sha256": "53bd8400141b7c821a768926fcca79b0915fa3cbea7e7fdb8f8550cf2ac4eb4b"
+    },
+    {
+      "file": "forecast_2025-12.csv",
+      "rows": 6200,
+      "bytes": 421717,
+      "sha256": "e6ec7f0b5583db37e2dfb6f6ed9ddc59f44eef181391bb89a38a1c8975e33681"
+    },
+    {
+      "file": "forecast_2026-01.csv",
+      "rows": 6200,
+      "bytes": 424895,
+      "sha256": "2fa229327002a087fddb7fb80633d8540034f9bf97d6e8c57c35c1bbcd3199c0"
+    },
+    {
+      "file": "forecast_2026-02.csv",
+      "rows": 5600,
+      "bytes": 383999,
+      "sha256": "ebafc7f628688da2b75e7193873e26bf7af67dee6d9e7689b81d544eca0b0b54"
+    },
+    {
+      "file": "forecast_2026-03.csv",
+      "rows": 6200,
+      "bytes": 425347,
+      "sha256": "d74695e8a6e85ce3a45150aa7190c3e5f9c7f4bbed1f43d81c8a85e0aa34722d"
+    },
+    {
+      "file": "forecast_2026-04.csv",
+      "rows": 6000,
+      "bytes": 413918,
+      "sha256": "b0a87498bc1d1e4d688f40ea6b90847ad91e10596b6ac416ca2cd18b1ad0ba7f"
+    },
+    {
+      "file": "forecast_2026-05.csv",
+      "rows": 6200,
+      "bytes": 428138,
+      "sha256": "bb1ea1f76dacc128f64aa87cf72c0d7132cafa5f2bed120b41379a8d83c1283e"
+    },
+    {
+      "file": "forecast_2026-06.csv",
+      "rows": 6000,
+      "bytes": 418917,
+      "sha256": "8a4e9e3c6923e023f537fbd5e47096dfb146127a36860307a2c54f5cbf937751"
+    },
+    {
+      "file": "forecast_2026-07.csv",
+      "rows": 6200,
+      "bytes": 429174,
+      "sha256": "10e1e7abdd30369b247b85869e8ce5052cd53bd743fb6ac1e098b6a1c447410f"
+    },
+    {
+      "file": "forecast_2026-08.csv",
+      "rows": 6200,
+      "bytes": 435629,
+      "sha256": "14524bf588fb1fcfed9fdd4a1519feee1058b481c13d88e2421a3217f7ab9f17"
+    },
+    {
+      "file": "forecast_2026-09.csv",
+      "rows": 6000,
+      "bytes": 420452,
+      "sha256": "9a2efc0c543062893cb382fe2b3520ee04d3cfe8f7792530bf7e4928354ed7d0"
+    },
+    {
+      "file": "forecast_2026-10.csv",
+      "rows": 6200,
+      "bytes": 421649,
+      "sha256": "0e6d2cb608451b8ece6eb81949747e2a1f222f2815f44137067ea9a38640f18e"
+    },
+    {
+      "file": "forecast_2026-11.csv",
+      "rows": 3400,
+      "bytes": 232217,
+      "sha256": "ae116e9f38ee06d8847a9cb55ebac23e34c40964eae73bef90acbc3c09c24ca3"
+    }
+  ],
+  "contains_temperature": false,
+  "contains_hourly_forecast": false,
+  "imputation_performed": false,
+  "historical_completeness_guaranteed": false
+}
