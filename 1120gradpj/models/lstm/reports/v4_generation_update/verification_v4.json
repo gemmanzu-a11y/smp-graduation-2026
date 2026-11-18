@@ -1,0 +1,10 @@
+{
+  "saved_model_roundtrip": true,
+  "saved_actuals_match": true,
+  "future_actual_mutation_invariant": true,
+  "rows": 25992,
+  "max_absolute_standardized_context": 11.933931350708008,
+  "max_absolute_standardized_history": 8.722419738769531,
+  "constant_scale_policy": "unit scale for Train constants",
+  "tests_passed": 86
+}

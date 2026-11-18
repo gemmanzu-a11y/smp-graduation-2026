@@ -9,7 +9,14 @@ from algorithm_v3 import Estimator
 
 
 def main():
-    latest=json.loads((HERE/'reports/latest_run_v3.json').read_text());run=Path(latest['path'])
+    global contract
+    import argparse,train as runner
+    parser=argparse.ArgumentParser();parser.add_argument('--dataset-version',choices=['v3','v4'],default='v3');args=parser.parse_args();tag=args.dataset_version
+    if tag=='v4':
+        from smp_forecast import common_v4 as contract
+        runner.contract=contract
+    reports=HERE/'reports'/('v4_generation_update' if tag=='v4' else '')
+    latest=json.loads((reports/f'latest_run_{tag}.json').read_text());run=Path(latest['path'])
     bundle=contract.load();hourly,features,_=prepare(bundle)
     saved=pd.read_csv(run/'predictions.csv');keys=['split','forecast_origin','target_timestamp','horizon']
     for c in ['forecast_origin','target_timestamp','observed_cutoff']:saved[c]=contract.times(saved[c])
@@ -20,7 +27,7 @@ def main():
     for c in ['forecast_origin','target_timestamp']:expected[c]=contract.times(expected[c])
     a=saved[keys].sort_values(keys).reset_index(drop=True);b=expected[keys].sort_values(keys).reset_index(drop=True)
     pd.testing.assert_frame_equal(a,b)
-    lstm=Path(json.loads((HERE.parent/'lstm/reports/latest_run_v3.json').read_text())['path'])
+    lstm=Path(json.loads((HERE.parent/'lstm/reports'/('v4_generation_update' if tag=='v4' else '')/f'latest_run_{tag}.json').read_text())['path'])
     lf=pd.read_csv(lstm/'predictions.csv')
     for c in ['forecast_origin','target_timestamp']:lf[c]=contract.times(lf[c])
     pd.testing.assert_frame_equal(a,lf[keys].sort_values(keys).reset_index(drop=True))
@@ -35,7 +42,7 @@ def main():
     np.testing.assert_array_equal(original.predicted_smp.to_numpy(),again.predicted_smp.to_numpy())
     assert not np.array_equal(original.actual_smp.to_numpy(),again.actual_smp.to_numpy())
     checks=dict(saved_model_reproduces_predictions=True,all_25992_keys_match_common_targets=True,all_evaluation_keys_match_lstm=True,future_actual_mutation_invariant=True,all_bridges_73_hours=True,all_predictions_finite=True)
-    contract.dump(HERE/'reports/verification_v3.json',checks)
+    contract.dump(reports/f'verification_{tag}.json',checks)
     print('PASS',checks)
 
 if __name__=='__main__':main()

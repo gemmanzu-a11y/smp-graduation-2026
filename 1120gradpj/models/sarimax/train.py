@@ -78,7 +78,11 @@ def figures(frame,directory,origin='2025-07-01T23:00:00+09:00'):
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--audit-only',action='store_true');args=parser.parse_args()
+    global contract
+    parser=argparse.ArgumentParser();parser.add_argument('--dataset-version',choices=['v3','v4'],default='v3');parser.add_argument('--audit-only',action='store_true');args=parser.parse_args()
+    if args.dataset_version=='v4':
+        from smp_forecast import common_v4 as contract
+    tag=args.dataset_version
     bundle=contract.load();hourly,features,train=prepare(bundle)
     if bundle[2]['all_groups']!=list(range(1,13)):raise ValueError('Input group contract mismatch')
     print('Training hourly samples',len(train),'exog',len(features),flush=True)
@@ -103,11 +107,11 @@ def main():
     contract.dump(run/'selected_before_test.json',dict(order=model.order,seasonal_order=model.seasonal_order,validation_mae=mae))
     test=evaluate(model,bundle,hourly,features,'test');frame=pd.concat([validation,test],ignore_index=True)
     metrics=export(frame,run);figures(frame,run/'figures')
-    reports=HERE/'reports';reports.mkdir(exist_ok=True)
-    for name in ['overall','forecast_days','monthly','horizons','daily']:metrics[name].to_csv(reports/('v3_'+name+'_metrics.csv'),index=False)
+    reports=HERE/'reports'/('v4_generation_update' if tag=='v4' else '');reports.mkdir(parents=True,exist_ok=True)
+    for name in ['overall','forecast_days','monthly','horizons','daily']:metrics[name].to_csv(reports/(tag+'_'+name+'_metrics.csv'),index=False)
     experiment=dict(dataset_version=contract.VERSION,source_commit=contract.SHA,order=model.order,seasonal_order=model.seasonal_order,beta_estimator='two-stage fixed OLS; conditional MLE ARIMA',rank=int(model.rank),features=features,python=platform.python_version(),statsmodels=statsmodels.__version__,numpy=np.__version__,pandas=pd.__version__,seconds=time.perf_counter()-start,manifest_sha256=hashlib.sha256((contract.OUT/'manifest.json').read_bytes()).hexdigest(),source_code_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [HERE/'train.py',HERE/'algorithm_v3.py']},training_performed=True,test_refit=False)
     contract.dump(run/'experiment.json',experiment)
-    contract.dump(reports/'latest_run_v3.json',dict(path=str(run),metrics=metrics['overall'].to_dict('records'),experiment=experiment))
+    contract.dump(reports/f'latest_run_{tag}.json',dict(path=str(run),metrics=metrics['overall'].to_dict('records'),experiment=experiment))
     print(metrics['overall'].to_string(index=False),flush=True);print('RESULTS',run,flush=True)
 
 if __name__=='__main__':main()

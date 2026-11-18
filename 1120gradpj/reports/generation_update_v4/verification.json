@@ -1,0 +1,18 @@
+{
+  "lstm": {
+    "before_run": "/Users/mj/Library/Mobile Documents/com~apple~CloudDocs/26-1/26-1 졸업설계/gradpj/1120gradpj/models/lstm/outputs/v3_a90141b81ecd_lag72/20261119T012219",
+    "after_run": "/Users/mj/Library/Mobile Documents/com~apple~CloudDocs/26-1/26-1 졸업설계/gradpj/1120gradpj/models/lstm/outputs/v4_a90141b81ecd_generation_911281bf_lag72/20261119T024506",
+    "same_25992_evaluation_rows": true,
+    "same_targets_and_baselines": true,
+    "same_candidate_grid": true,
+    "model_sha256": "00bfb2b8e084afef1d6a3f32ca55842d589c6bd7e62c9bbde4c4c8517ea24728"
+  },
+  "sarimax": {
+    "before_run": "/Users/mj/Library/Mobile Documents/com~apple~CloudDocs/26-1/26-1 졸업설계/gradpj/1120gradpj/models/sarimax/outputs/v3_a90141b81ecd_lag72/20261119T013549",
+    "after_run": "/Users/mj/Library/Mobile Documents/com~apple~CloudDocs/26-1/26-1 졸업설계/gradpj/1120gradpj/models/sarimax/outputs/v4_a90141b81ecd_generation_911281bf_lag72/20261119T024504",
+    "same_25992_evaluation_rows": true,
+    "same_targets_and_baselines": true,
+    "same_candidate_grid": true,
+    "model_sha256": "d995f9c4685ed07f0173bd45c08445ea59d914c3375595ddf7315f46fed5165d"
+  }
+}

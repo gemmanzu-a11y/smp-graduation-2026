@@ -8,6 +8,11 @@ from smp_forecast import common_v3 as c
 
 
 def main():
+    global c
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--dataset-version',choices=['v3','v4'],default='v3');args=parser.parse_args()
+    if args.dataset_version=='v4':
+        from smp_forecast import common_v4 as c
     h,f,m=c.load();raw=pd.read_csv(c.OUT/'hourly.csv');raw.index=c.times(raw.pop('timestamp'))
     quality=json.loads((c.OUT/'quality_report.json').read_text())
     state=[];summaries=[]

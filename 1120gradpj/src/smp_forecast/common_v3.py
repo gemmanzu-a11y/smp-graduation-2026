@@ -63,7 +63,9 @@ def night_flag(index):
     elevation=np.arcsin(np.sin(lat)*np.sin(decl)+np.cos(lat)*np.cos(decl)*np.cos(angle))
     return (elevation<0).astype(float)
 
-def build():
+def build(generation_path=None, output_dir=None, dataset_version=None):
+    OUT=Path(output_dir) if output_dir is not None else globals()['OUT']
+    VERSION=dataset_version or globals()['VERSION']
     OUT.mkdir(parents=True,exist_ok=True)
     grid=pd.date_range('2023-01-01','2025-12-31 23:00',freq='h',tz=TZ)
     raw=pd.DataFrame(index=grid);raw.index.name='timestamp'
@@ -80,12 +82,20 @@ def build():
     raw['demand_forecast_history']=d.demand_forecast_mw.reindex(grid)
     holidays=read(3,'03_kasi_holidays.csv')
     holiday_dates=set(pd.to_datetime(holidays.loc[holidays.isHoliday=='Y','locdate'].astype(str),format='%Y%m%d').dt.strftime('%Y-%m-%d'))
-    g=read(5,'api_generation_partial_2023_2025_merged_20261119.csv')
-    g['t']=pd.to_datetime(g.tradeYmd.astype(str),format='%Y%m%d').dt.tz_localize(TZ)+pd.to_timedelta(pd.to_numeric(g.tradeNo)-1,unit='h')
-    if g.duplicated(['t','fuelTpCd']).any():raise ValueError('Duplicate generation keys')
-    wide=g.pivot(index='t',columns='fuelTpCd',values='amgo').reindex(grid)
-    raw['generation_lng']=wide['LNG'];raw['generation_nuclear']=wide['원자력']
-    raw['generation_coal']=wide[['유연탄','무연탄']].sum(axis=1,min_count=2)
+    if generation_path is not None:
+        generation_path=Path(generation_path);provenance.append(generation_path)
+        generation=pd.read_csv(generation_path);generation.index=times(generation.timestamp)
+        if not generation.index.equals(grid):raise ValueError('Replacement generation grid differs')
+        for source,key in [('lng_generation_mwh','generation_lng'),('coal_generation_mwh','generation_coal'),('nuclear_generation_mwh','generation_nuclear')]:
+            raw[key]=pd.to_numeric(generation[source],errors='raise').reindex(grid)
+            if not np.array_equal(raw[key].isna().astype(int),generation[source+'_missing']):raise ValueError('Generation mask mismatch')
+    else:
+        g=read(5,'api_generation_partial_2023_2025_merged_20261119.csv')
+        g['t']=pd.to_datetime(g.tradeYmd.astype(str),format='%Y%m%d').dt.tz_localize(TZ)+pd.to_timedelta(pd.to_numeric(g.tradeNo)-1,unit='h')
+        if g.duplicated(['t','fuelTpCd']).any():raise ValueError('Duplicate generation keys')
+        wide=g.pivot(index='t',columns='fuelTpCd',values='amgo').reindex(grid)
+        raw['generation_lng']=wide['LNG'];raw['generation_nuclear']=wide['원자력']
+        raw['generation_coal']=wide[['유연탄','무연탄']].sum(axis=1,min_count=2)
     renew=[]
     for path in sorted((next(SOURCE.glob('06_*'))/'team_shared_originals').glob('renewable_source_*.csv')):
         provenance.append(path)
@@ -214,6 +224,10 @@ def build():
     hashes={str(p.relative_to(WORK)):hashlib.sha256(p.read_bytes()).hexdigest() for p in provenance}
     quality={'raw_missing':{c:int(raw[c].isna().sum()) for c in raw},'raw_rows':len(raw),'split_origins':pd.DataFrame(origins).groupby('split').size().to_dict(),'excluded_origins':len(excluded),'forecast_missing':{c:float(future[c+'_missing'].mean()) for c in ['mid_tmin','mid_tmax','mid_rain']},'checks':{'fixed_origin_cutoff':True,'issued_before_origin':True,'finite_model_arrays':True,'target_split_blocks':True},'generation_missing_by_year':raw[[c for c in raw if c.startswith('generation_')]].isna().groupby(raw.index.year).mean().to_dict()}
     manifest={'dataset_version':VERSION,'source_commit':SHA,'source_repository':'parksiwon22/gradproject','source_branch':'codex/smp-72h-data','history_features':list(history),'context_features':context,'all_groups':list(range(1,13)),'source_sha256':hashes,'weather_categories':vocabulary,'imputation':imputer,'observed_delay_hours':72,'smp_policy':'72h delay assumption, interval end <= cutoff','fuel_policy':'target-month LNG supplied conditional retrospective experiment','amgo_unit':'MWh; KPX AMGO definition and primary study DOI 10.7836/kses.2019.39.6.113; original API table does not label unit; annual CSV is NOT merged','reserve_aggregation':'mean only when 12 unique 5min rows; otherwise NaN','weather_time':'ASOS timestamps treated as interval end; label shifted -1h; TA/WS are end observations; SI accumulated hour','night_policy':'NOAA approximate solar elevation at interval midpoint <0; flag only; never turns missing SI to zero','fred_policy':'vintage intervals reconstructed asof origin calendar date minus 2 days'}
+    if generation_path is not None:
+        manifest['generation_override']=str(generation_path.relative_to(WORK))
+        manifest['generation_policy']='2023/2025 whole annual market-energy CSVs; 2024 API; no within-year source splice; 2024 gaps retained'
+        manifest['experiment_status']='follow-up after observing original 2025H2 test; no longer an untouched final holdout'
     dump(OUT/'manifest.json',manifest);dump(OUT/'quality_report.json',quality)
     features=[]
     units=['KRW/kWh','MW','MW','MWh','MWh','MWh','MWh','MWh','MW','%','degC','MJ/m2','m/s']
