@@ -101,9 +101,31 @@ def summarize(results):
 
 def main():
     (OUT/'daily').mkdir(parents=True,exist_ok=True);(OUT/'receipts').mkdir(exist_ok=True)
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--start',default='2023-01-01');parser.add_argument('--end',default='2025-12-31');args=parser.parse_args()
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--start',default='2024-01-01');parser.add_argument('--end',default='2024-12-31');parser.add_argument('--plan-only',action='store_true');args=parser.parse_args()
     if args.start<'2023-01-01' or args.end>'2025-12-31' or args.start>args.end:raise ValueError('Use a range inside 2023–2025')
     dates=pd.date_range(args.start,args.end,freq='D').strftime('%Y%m%d').tolist();results=[]
+    # Import existing raw receipts before planning; this consumes no network/API allowance.
+    for marker in (ROOT/'data/raw/section_b_generation').glob('*.json'):
+        record=json.loads(marker.read_text());date=str(record.get('params',{}).get('tradeYmd',''))
+        if date not in dates or record.get('params',{}).get('pageNo')!=1:continue
+        output=OUT/'daily'/f'{date}.csv'
+        if output.exists():continue
+        try:
+            rows,total=items_from((marker.parent/record['raw']).read_bytes())
+            if len(rows)!=total:continue
+            frame=validate(rows,date)
+            if len(frame)!=192 or set(frame.fuelTpCd)!=set(FUELS):continue
+            frame.to_csv(output,index=False)
+            write_json(OUT/'receipts'/f'{date}.json',dict(date=date,receipts=[record],imported_existing_cache=True))
+        except (RuntimeError,ValueError,KeyError):continue
+    missing=[date for date in dates if not (OUT/'daily'/f'{date}.csv').exists()]
+    pd.DataFrame({'tradeYmd':missing}).to_csv(OUT/'pending_dates.csv',index=False)
+    write_json(OUT/'collection_plan.json',dict(start=args.start,end=args.end,total_days=len(dates),
+        cached_days=len(dates)-len(missing),pending_days=len(missing),estimated_minimum_requests=len(missing),
+        no_new_api_calls=args.plan_only,reset_timestamp_verified=False))
+    if args.plan_only:
+        print(f'PLAN: {len(dates)} days, {len(dates)-len(missing)} cached, {len(missing)} pending; no network calls')
+        return
     # Only four requests may be in flight. Do not enqueue the whole range after a quota signal.
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         for index in range(0,len(dates),4):
