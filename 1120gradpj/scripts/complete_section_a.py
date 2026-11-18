@@ -8,6 +8,7 @@ import json
 import re
 import sys
 import time
+import threading
 import numpy as np
 import pandas as pd
 ROOT=Path(__file__).resolve().parents[1]
@@ -46,10 +47,15 @@ def old_raw(day):
 
 
 def collect_forecasts():
-    client=Client();statuses=[];frames=[];days=pd.date_range('2023-01-01','2025-12-31',freq='D')
+    client=Client();limited=threading.Event();statuses=[];frames=[];days=pd.date_range('2023-01-01','2025-12-31',freq='D')
     def one(day):
         date=day.strftime('%Y%m%d')
         params=dict(date=date,numOfRows=100,pageNo=1,dataType='json')
+        endpoint='https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand'
+        identity=hashlib.sha256(json.dumps([endpoint,params],sort_keys=True).encode()).hexdigest()[:16]
+        cached=(ROOT/'data/raw/section_a_forecast'/(identity+'.json')).exists()
+        if limited.is_set() and not cached:
+            return dict(date=date,status='not_attempted_rate_limit'),None
         try:
             body,receipt=client.fetch('section_a_forecast','https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand',params,'KPX_SERVICE_KEY')
             rows,total=items_from(body)
@@ -72,6 +78,7 @@ def collect_forecasts():
             f['historical_published_at']=pd.NA
             return dict(date=date,status='complete',rows=24,sha256=receipt['sha256']),f
         except Exception as exc:
+            if 'HTTP 429' in str(exc):limited.set()
             return dict(date=date,status='failed',reason=str(exc) if isinstance(exc,(RuntimeError,ValueError)) else type(exc).__name__),None
     with futures.ThreadPoolExecutor(max_workers=3) as pool:
         for i,(status,frame) in enumerate(pool.map(one,days),1):
@@ -156,6 +163,6 @@ def main():
         forecast_result=forecast.result();actual_result=actual.result()
     result=dict(at=now(),seconds=time.monotonic()-started,status='complete' if forecast_result['missing_hours']==0 and actual_result['remaining_missing_hours']==0 else 'partial_remaining_source_gaps',forecast=forecast_result,actual=actual_result,model_training_performed=False,credential_values_saved=False)
     write_json(REPORT,result)
-    print('FINAL',json.dumps(result,ensure_ascii=False),flush=True)
+    print('FINAL',json.dumps(dict(status=result['status'],forecast_complete_days=forecast_result['complete_days'],forecast_missing_hours=forecast_result['missing_hours'],actual_recovered_hours=actual_result['recovered_hours'],actual_remaining_missing_hours=actual_result['remaining_missing_hours']),ensure_ascii=False),flush=True)
 
 if __name__=='__main__':main()
