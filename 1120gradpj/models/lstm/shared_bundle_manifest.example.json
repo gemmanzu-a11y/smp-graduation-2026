@@ -1,0 +1,165 @@
+{
+  "schema_version": "smp-common-v2",
+  "dataset_version": "REPLACE_WITH_VALIDATED_VERSION",
+  "fuel_policy": "historical_target_month_lng_krw_kwh; november_demo_uses_2026_10",
+  "history_features": [
+    "smp",
+    "demand_actual",
+    "generation_lng",
+    "generation_coal",
+    "generation_nuclear",
+    "solar_actual",
+    "wind_actual",
+    "reserve_mw",
+    "reserve_pct",
+    "temperature_c",
+    "irradiance_mj_m2",
+    "wind_ms"
+  ],
+  "future_features": [
+    "demand_forecast",
+    "hour_sin",
+    "hour_cos",
+    "weekday",
+    "month",
+    "season",
+    "is_weekend",
+    "is_holiday",
+    "domestic_lng_cost_krw_kwh",
+    "wti_usd_bbl",
+    "brent_usd_bbl",
+    "international_lng_usd_mmbtu",
+    "international_coal_usd_tonne",
+    "weather_code",
+    "precip_probability_pct",
+    "temperature_min_c",
+    "temperature_max_c"
+  ],
+  "decisions": {
+    "demand_actual_definition": {
+      "status": "pending",
+      "rule": "",
+      "evidence": ""
+    },
+    "midrange_72h_mapping": {
+      "status": "pending",
+      "rule": "",
+      "evidence": ""
+    },
+    "demand_forecast_72h_mapping": {
+      "status": "pending",
+      "rule": "",
+      "evidence": ""
+    },
+    "baseline_origin_day": {
+      "status": "pending",
+      "rule": "",
+      "evidence": ""
+    }
+  },
+  "sources": {
+    "demand_actual": {
+      "status": "pending",
+      "evidence_file": "",
+      "unit": "",
+      "scope": "",
+      "mapping": "",
+      "availability_rule": ""
+    },
+    "demand_forecast": {
+      "status": "pending",
+      "evidence_file": "",
+      "unit": "",
+      "scope": "",
+      "mapping": "",
+      "availability_rule": ""
+    },
+    "holidays": {
+      "status": "pending",
+      "evidence_file": "",
+      "unit": "",
+      "scope": "",
+      "mapping": "",
+      "availability_rule": ""
+    },
+    "calendar": {
+      "status": "pending",
+      "evidence_file": "",
+      "unit": "",
+      "scope": "",
+      "mapping": "",
+      "availability_rule": ""
+    },
+    "generation": {
+      "status": "pending",
+      "evidence_file": "",
+      "unit": "",
+      "scope": "",
+      "mapping": "",
+      "availability_rule": ""
+    },
+    "renewables": {
+      "status": "pending",
+      "evidence_file": "",
+      "unit": "",
+      "scope": "",
+      "mapping": "",
+      "availability_rule": ""
+    },
+    "reserve": {
+      "status": "pending",
+      "evidence_file": "",
+      "unit": "",
+      "scope": "",
+      "mapping": "",
+      "availability_rule": ""
+    },
+    "domestic_lng": {
+      "status": "pending",
+      "evidence_file": "",
+      "unit": "",
+      "scope": "",
+      "mapping": "",
+      "availability_rule": ""
+    },
+    "oil": {
+      "status": "pending",
+      "evidence_file": "",
+      "unit": "",
+      "scope": "",
+      "mapping": "",
+      "availability_rule": ""
+    },
+    "international_fuel": {
+      "status": "pending",
+      "evidence_file": "",
+      "unit": "",
+      "scope": "",
+      "mapping": "",
+      "availability_rule": ""
+    },
+    "weather_actual": {
+      "status": "pending",
+      "evidence_file": "",
+      "unit": "",
+      "scope": "",
+      "mapping": "",
+      "availability_rule": ""
+    },
+    "midrange_forecast": {
+      "status": "pending",
+      "evidence_file": "",
+      "unit": "",
+      "scope": "",
+      "mapping": "",
+      "availability_rule": ""
+    }
+  },
+  "file_hashes": {
+    "hourly.csv": "",
+    "forecast_inputs.csv": "",
+    "evaluation_origins.csv": "",
+    "evaluation_targets.csv": "",
+    "feature_manifest.csv": ""
+  }
+}

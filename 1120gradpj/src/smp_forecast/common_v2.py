@@ -19,7 +19,7 @@ SPLITS = ['train','validation','test']
 def timestamps(values):
     if not values.astype(str).str.contains(r'(?:Z|[+-]\d{2}:?\d{2})$',regex=True).all():
         raise ValueError('All timestamps need an explicit timezone offset')
-    return pd.to_datetime(values,utc=True).dt.tz_convert('Asia/Seoul')
+    return pd.to_datetime(values,utc=True,format="mixed").dt.tz_convert('Asia/Seoul')
 
 
 def split_origins(cfg, split):
@@ -82,8 +82,13 @@ def inspect(shared,cfg):
             actual=hashlib.sha256((shared/file).read_bytes()).hexdigest()
             if manifest.get('file_hashes',{}).get(file)!=actual: issue(file,'공통 파일 SHA-256 불일치')
         if issues:return issues,None
+        features=pd.read_csv(shared/'feature_manifest.csv')
+        fields=['feature','unit','scope','source_field','availability_rule','missing_rule','transform','role']
+        if not set(fields).issubset(features):raise ValueError('Incomplete feature manifest schema')
+        if features.feature.duplicated().any() or set(features.feature)!=set(HISTORY+FUTURE):raise ValueError('Feature inventory differs from model inputs')
+        if features[fields].isna().any().any() or (features[fields].astype(str).map(str.strip)=='').any().any():raise ValueError('Missing feature mapping metadata')
         hourly=pd.read_csv(shared/'hourly.csv');future=pd.read_csv(shared/'forecast_inputs.csv')
-        for col in ['timestamp','available_at']:hourly[col]=timestamps(hourly[col])
+        for col in ['timestamp','available_at','smp_available_at']:hourly[col]=timestamps(hourly[col])
         for col in ['forecast_origin','target_timestamp','latest_nonfuel_source_timestamp']:
             future[col]=timestamps(future[col])
         hourly=hourly.sort_values('timestamp').set_index('timestamp')
@@ -108,6 +113,16 @@ def inspect(shared,cfg):
             expected_keys={(origin,target) for origin in chosen for target in pd.date_range(origin+pd.Timedelta(hours=1),periods=72,freq='h')}
             actual_keys=set(zip(targets.loc[targets.split==split,'forecast_origin'],targets.loc[targets.split==split,'target_timestamp']))
             if expected_keys!=actual_keys:raise ValueError('Common evaluation rows differ: '+split)
+        # Baselines must be the actual agreed patterns with source availability proof.
+        if 'baseline_origin_day_latest_available_at' not in future:raise ValueError('Missing baseline publication provenance')
+        known=timestamps(future.baseline_origin_day_latest_available_at)
+        if not (known<=future.forecast_origin).all():raise ValueError('Origin-day baseline unavailable')
+        origin_targets=future.forecast_origin.dt.normalize()+pd.to_timedelta(future.target_timestamp.dt.hour,unit='h')
+        weekly_targets=future.target_timestamp-pd.Timedelta(days=7)
+        if not (hourly.smp_available_at.reindex(origin_targets).to_numpy()<=future.forecast_origin.to_numpy()).all():raise ValueError('Origin-day SMP baseline contains unavailable value')
+        if not (hourly.smp_available_at.reindex(weekly_targets).to_numpy()<=future.forecast_origin.to_numpy()).all():raise ValueError('Weekly SMP baseline contains unavailable value')
+        if not np.allclose(hourly.smp.reindex(origin_targets),future.baseline_origin_day):raise ValueError('Origin-day baseline mismatch')
+        if not np.allclose(hourly.smp.reindex(weekly_targets),future.baseline_weekly):raise ValueError('Weekly baseline mismatch')
         # Verify that the actual common tables follow the declared fuel policy.
         monthly=pd.read_csv(shared/manifest['sources']['domestic_lng']['evidence_file'])
         if not {'month','value'}.issubset(monthly):raise ValueError('LNG evidence needs month,value columns, 원/kWh')

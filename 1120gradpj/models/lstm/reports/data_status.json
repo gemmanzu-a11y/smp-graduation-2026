@@ -1,0 +1,95 @@
+{
+  "at": "2026-11-18T21:53:35.121551+09:00",
+  "model": "LSTM",
+  "status": "BLOCKED",
+  "can_train": false,
+  "model_training_performed": false,
+  "shared_directory": "/Users/mj/Library/Mobile Documents/com~apple~CloudDocs/26-1/26-1 졸업설계/gradpj/1120gradpj/../SMP_SHARED_DATA/versions/v2",
+  "issues": [
+    {
+      "variable": "manifest.json",
+      "reason": "공통 버전 파일 없음",
+      "action": "공통 데이터 정의·근거·정규화 보완 후 재검사"
+    },
+    {
+      "variable": "hourly.csv",
+      "reason": "공통 버전 파일 없음",
+      "action": "공통 데이터 정의·근거·정규화 보완 후 재검사"
+    },
+    {
+      "variable": "forecast_inputs.csv",
+      "reason": "공통 버전 파일 없음",
+      "action": "공통 데이터 정의·근거·정규화 보완 후 재검사"
+    },
+    {
+      "variable": "evaluation_origins.csv",
+      "reason": "공통 버전 파일 없음",
+      "action": "공통 데이터 정의·근거·정규화 보완 후 재검사"
+    },
+    {
+      "variable": "evaluation_targets.csv",
+      "reason": "공통 버전 파일 없음",
+      "action": "공통 데이터 정의·근거·정규화 보완 후 재검사"
+    },
+    {
+      "variable": "feature_manifest.csv",
+      "reason": "공통 버전 파일 없음",
+      "action": "공통 데이터 정의·근거·정규화 보완 후 재검사"
+    },
+    {
+      "variable": "demand_actual_definition",
+      "reason": "확정된 공통 manifest 없음",
+      "action": "팀 공통 선택·규칙과 근거를 manifest에 기록"
+    },
+    {
+      "variable": "midrange_72h_mapping",
+      "reason": "확정된 공통 manifest 없음",
+      "action": "팀 공통 선택·규칙과 근거를 manifest에 기록"
+    },
+    {
+      "variable": "demand_forecast_72h_mapping",
+      "reason": "확정된 공통 manifest 없음",
+      "action": "팀 공통 선택·규칙과 근거를 manifest에 기록"
+    },
+    {
+      "variable": "baseline_origin_day",
+      "reason": "확정된 공통 manifest 없음",
+      "action": "팀 공통 선택·규칙과 근거를 manifest에 기록"
+    }
+  ],
+  "required_sources": [
+    "demand_actual",
+    "demand_forecast",
+    "holidays",
+    "calendar",
+    "generation",
+    "renewables",
+    "reserve",
+    "domestic_lng",
+    "oil",
+    "international_fuel",
+    "weather_actual",
+    "midrange_forecast"
+  ],
+  "inventory": {
+    "demand_actual": "EPSIS 결측 1,095시간; 공식 전국 수요 후보와 공통 선택 미확정",
+    "demand_forecast": "2023~2025 공식 연간 자료 확보; D+2/3 사용 규칙 필요",
+    "holidays": "공식 API 자료 확보; 공통 버전 연결 필요",
+    "calendar": "날짜에서 생성; 공통 인코딩 연결 필요",
+    "generation": "표본 API 성공; 전체 기간·단위·범위 검증 필요",
+    "renewables": "2023~2025 수집본 존재; 태양광 1시간 결측·버전 차이 검토 필요",
+    "reserve": "1,095시간 결측 및 공급능력·수요·예비력 관계 검토 필요",
+    "domestic_lng": "지정 HOME 파일과 section_c 정규화본 존재; 동월 값 조건부 정책",
+    "oil": "FRED 과거 기록 수집본 존재; D−2·72시간 고정값 사용",
+    "international_fuel": "과거 기록 수집본 존재; 오래된 관측값 경과일 보존",
+    "weather_actual": "ASOS 이력 존재; 일사량 결측/야간 구분 및 지역 정의 필요",
+    "midrange_forecast": "공유 CSV 확보; 일 최저·최고기온 및 날씨·강수확률의 72시간 연결 미확정"
+  },
+  "excluded": [
+    "EWP solgenKpx",
+    "EWP icsrPred/temp/ws",
+    "KMA short-range forecast",
+    "KPX calorific fuel cost"
+  ],
+  "limitation": "동월 LNG 제공 조건부 과거 실험; 운영 공개시각 검증 아님"
+}
