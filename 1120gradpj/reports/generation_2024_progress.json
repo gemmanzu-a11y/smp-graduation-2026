@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-18T23:56:38.601130+09:00",
+  "scope": "2024 generation API collection",
+  "saved_2024_days": 100,
+  "expected_2024_days": 366,
+  "rows_2024": 19200,
+  "remaining_2024_days": 266,
+  "added_days_this_run": 98,
+  "quota_reached": true,
+  "normal_empty_dates": [
+    "20240229"
+  ],
+  "credentials_saved": false,
+  "model_training_performed": false
+}
