@@ -1,0 +1,8 @@
+{
+  "dataset_version": "v3_a90141b81ecd_lag72",
+  "same_25992_keys_as_active_lstm_sarimax": true,
+  "saved_model_reproduces_validation_and_test": true,
+  "future_truth_mutation_invariant": true,
+  "all_83_common_features": true,
+  "model_sha256": "2cb93f27c2dbd190007e5ad9965df491f9e74b936e4c5c2c5e16c127f3d21143"
+}

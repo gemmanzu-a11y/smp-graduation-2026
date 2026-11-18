@@ -1,5 +1,16 @@
 # SMP 예측 XGBoost 구현·검증 설명
 
+## 현재 실행: 발전량 보완 전 공통 v3
+
+`train.py`는 LSTM·SARIMAX와 같은 공통v3 입력83개를 사용합니다. 결과는 `reports/v3_common/final_evaluation_report.md`, 현재 실행 위치는 `CURRENT_RUN.json`입니다. 기존 실행기는 `train_legacy.py`로 보존했습니다.
+
+```sh
+1120gradpj/.venv/bin/python 1120gradpj/models/xgboost/train.py
+1120gradpj/.venv/bin/python 1120gradpj/scripts/report_tree_models_v3.py
+```
+
+아래 기존 설명·과거 산출물은 이전 실험 기록이며 현재 공통v3 결과와 구분합니다.
+
 ## 실행
 
 1120gradpj 폴더 터미널에서:
