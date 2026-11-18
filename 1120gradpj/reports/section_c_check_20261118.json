@@ -289,5 +289,10 @@
     "Long unchanged monthly values are retained as actually available; age columns expose staleness",
     "No KPX heat-unit API or two-month domestic lag used",
     "This prepares C only; A/B/D and overall model gates remain separate"
-  ]
+  ],
+  "tests": {
+    "full_suite_passed": 47,
+    "section_c_tests_passed": 9,
+    "http_auth_and_echo_tests_passed": 2
+  }
 }

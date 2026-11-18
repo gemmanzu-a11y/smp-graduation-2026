@@ -24,6 +24,8 @@ def audit(cfg, shared):
         'holidays': 'section_a/holidays_official_2023_2025.csv',
         'renewables': 'renewable_hourly.csv', 'reserve': 'power_hourly.csv',
         'weather_actual': 'weather_hourly.csv',
+        'oil': 'section_c/international_fuel_by_origin_2023_2025.csv',
+        'international_fuel': 'section_c/international_fuel_by_origin_2023_2025.csv',
     }
     inventory = []
     for source, label in SOURCES.items():
@@ -36,6 +38,7 @@ def audit(cfg, shared):
             row.update(file=filename, rows=len(data), first=str(data[timecol].min()) if timecol else None,
                 last=str(data[timecol].max()) if timecol else None,
                 state='기존 파일 존재; 새 공통 정의·품질·출처 검증 필요')
+            if source in ['oil','international_fuel']: row['state'] = 'FRED 과거 빈티지로 1,096개 발행일 입력 확보; 새 공통 행렬 연결 필요'
             if source == 'reserve': row['state'] = '기존 예비율 있음; 공급예비력 MW 정규화는 미완료'
             if source == 'holidays': row['state'] = '2023~2025 공식 API 자료 확보; 새 공통 입력 행렬 연결 필요'
             if source == 'demand_forecast': row['state'] = '공식 연간 육지 수요예측 26,304시간 확보; 원본 공표 이력은 미검증'

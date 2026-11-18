@@ -77,13 +77,21 @@
     "source": "oil",
     "variable": "FRED WTI·Brent",
     "required_period": "2023-01-01~2025-12-31",
-    "state": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개"
+    "file": "section_c/international_fuel_by_origin_2023_2025.csv",
+    "rows": 1096,
+    "first": null,
+    "last": null,
+    "state": "FRED 과거 빈티지로 1,096개 발행일 입력 확보; 새 공통 행렬 연결 필요"
   },
   {
     "source": "international_fuel",
     "variable": "FRED 국제 LNG·석탄",
     "required_period": "2023-01-01~2025-12-31",
-    "state": "전체 기간의 정규화 파일 없음; 표본 API 성공 여부와 별개"
+    "file": "section_c/international_fuel_by_origin_2023_2025.csv",
+    "rows": 1096,
+    "first": null,
+    "last": null,
+    "state": "FRED 과거 빈티지로 1,096개 발행일 입력 확보; 새 공통 행렬 연결 필요"
   },
   {
     "source": "weather_actual",
