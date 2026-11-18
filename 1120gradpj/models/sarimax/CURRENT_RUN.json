@@ -1,33 +1,33 @@
 {
-  "path": "/Users/mj/Library/Mobile Documents/com~apple~CloudDocs/26-1/26-1 졸업설계/gradpj/1120gradpj/models/sarimax/outputs/v4_a90141b81ecd_generation_911281bf_lag72/20261119T024504",
+  "path": "/Users/mj/Library/Mobile Documents/com~apple~CloudDocs/26-1/26-1 졸업설계/gradpj/1120gradpj/models/sarimax/outputs/v3_a90141b81ecd_lag72/20261119T013549",
   "metrics": [
     {
       "split": "test",
       "rows": 13104,
-      "mae": 14.239056728262979,
-      "rmse": 18.35176003229306,
-      "r2": 0.36697368673885833,
+      "mae": 13.955269518043046,
+      "rmse": 18.022954040280336,
+      "r2": 0.38945416937350985,
       "coverage": 1.0,
       "baseline_origin_day_mae": 13.087506105006105,
-      "baseline_origin_day_improvement_pct": -8.79885452596958,
+      "baseline_origin_day_improvement_pct": -6.630471887268219,
       "baseline_weekly_mae": 11.433384462759463,
-      "baseline_weekly_improvement_pct": -24.539297831207207
+      "baseline_weekly_improvement_pct": -22.05720505155586
     },
     {
       "split": "validation",
       "rows": 12888,
-      "mae": 12.475618785211,
-      "rmse": 17.184654799745296,
-      "r2": 0.31530297365169846,
+      "mae": 12.980431528135416,
+      "rmse": 17.8097057193341,
+      "r2": 0.26458869217931746,
       "coverage": 1.0,
       "baseline_origin_day_mae": 14.347254034761017,
-      "baseline_origin_day_improvement_pct": 13.045250645282758,
+      "baseline_origin_day_improvement_pct": 9.526718515710508,
       "baseline_weekly_mae": 12.2210917132216,
-      "baseline_weekly_improvement_pct": -2.0826868659698627
+      "baseline_weekly_improvement_pct": -6.213355015512323
     }
   ],
   "experiment": {
-    "dataset_version": "v4_a90141b81ecd_generation_911281bf_lag72",
+    "dataset_version": "v3_a90141b81ecd_lag72",
     "source_commit": "a90141b81ecd841c524eb75a72f4bcc4f39989f5",
     "order": [
       2,
@@ -131,16 +131,28 @@
     "statsmodels": "0.14.6",
     "numpy": "2.4.6",
     "pandas": "3.0.3",
-    "seconds": 49.49331495902152,
-    "manifest_sha256": "aa64ba38d3be20af3ba25605f34597892459e1a53a97cc79ea39b9d77273e9c6",
+    "seconds": 42.55885520900483,
+    "manifest_sha256": "e19c4c2e68dce306c2d03a34a85b72d7f18dfe44a33d9861f81b8b37ee6b167d",
     "source_code_sha256": {
-      "train.py": "7fa309072212e6e7ad3461bbdd8093517268cbf32939439d49339312be2d7978",
+      "train.py": "69fbd4b1d4687695162ac3a2803255e8b742e2b0731eaba2bfbfc75409767f0d",
       "algorithm_v3.py": "cc3561128c50fd9a22c0dff9ed51426805578e5ea6162ebd1a28969a739395a7"
     },
     "training_performed": true,
-    "test_refit": false
+    "test_refit": false,
+    "model_sha256": "7d4ccd9854006c97b55d78841b98a2f042efbaa0f17305a66ce36874f43d1ac5",
+    "post_training_checks": {
+      "saved_model_reproduces_predictions": true,
+      "all_25992_keys_match_common_targets": true,
+      "all_evaluation_keys_match_lstm": true,
+      "future_actual_mutation_invariant": true,
+      "all_bridges_73_hours": true,
+      "all_predictions_finite": true
+    },
+    "tests_passed": 83
   },
-  "report_directory": "/Users/mj/Library/Mobile Documents/com~apple~CloudDocs/26-1/26-1 졸업설계/gradpj/1120gradpj/models/sarimax/reports/v4_generation_update",
-  "experiment_status": "post-test data revision follow-up",
-  "dataset_version": "v4_a90141b81ecd_generation_911281bf_lag72"
+  "dataset_version": "v3_a90141b81ecd_lag72",
+  "report_directory": "/Users/mj/Library/Mobile Documents/com~apple~CloudDocs/26-1/26-1 졸업설계/gradpj/1120gradpj/models/sarimax/reports",
+  "active": true,
+  "selection_status": "Restored existing v3 at user request after v3/v4 comparison; v4 preserved",
+  "restored_without_training": true
 }
