@@ -1,0 +1,973 @@
+{
+  "at": "2026-11-18T18:06:04.663927+09:00",
+  "scope": "Section A only; live access sample is not full archive completeness",
+  "model_training_performed": false,
+  "credential_values_saved": false,
+  "actual_demand_local": {
+    "start": "2023-01-01 00:00:00+09:00",
+    "end": "2025-12-31 23:00:00+09:00",
+    "expected_hours": 26304,
+    "stored_rows": 26112,
+    "valid_hours": 25209,
+    "missing_hours": 1095,
+    "missing_pct": 4.16286496350365,
+    "yearly": [
+      {
+        "year": 2023,
+        "expected_hours": 8760,
+        "valid_hours": 8648,
+        "missing_hours": 112
+      },
+      {
+        "year": 2024,
+        "expected_hours": 8784,
+        "valid_hours": 8445,
+        "missing_hours": 339
+      },
+      {
+        "year": 2025,
+        "expected_hours": 8760,
+        "valid_hours": 8116,
+        "missing_hours": 644
+      }
+    ],
+    "unit": "MW",
+    "aggregation": "mean of twelve 5-minute current-load readings; incomplete hours remain NaN",
+    "geography": "EPSIS displayed load; mainland-only scope not independently established",
+    "missing_timestamp_hours": 192,
+    "incomplete_or_missing_value_hours": 903
+  },
+  "api_probes": [
+    {
+      "kind": "forecast",
+      "date": "20230101",
+      "http": 200,
+      "total_rows": 48,
+      "mainland_rows": 24,
+      "hours": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "fields": [
+        "areaName",
+        "date",
+        "hour",
+        "jlfd",
+        "mlfd",
+        "rn",
+        "slfd",
+        "smp"
+      ],
+      "sample": [
+        {
+          "date": "20230101",
+          "jlfd": 757.0,
+          "slfd": 62800.0,
+          "hour": "1",
+          "areaName": "육지",
+          "smp": 207.31,
+          "rn": 1,
+          "mlfd": 62043.0
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20230101",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:05:55.864097+09:00",
+        "sha256": "075249993ad362db7e03c29d48f974d4b050fbf0e103d966b9e7662fd82d1c87",
+        "raw": "075249993ad362db7e03c29d48f974d4b050fbf0e103d966b9e7662fd82d1c87.raw",
+        "bytes": 11555,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "forecast",
+      "date": "20230701",
+      "http": 200,
+      "total_rows": 48,
+      "mainland_rows": 24,
+      "hours": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "fields": [
+        "areaName",
+        "date",
+        "hour",
+        "jlfd",
+        "mlfd",
+        "rn",
+        "slfd",
+        "smp"
+      ],
+      "sample": [
+        {
+          "date": "20230701",
+          "jlfd": 641.0,
+          "slfd": 60300.0,
+          "hour": "1",
+          "areaName": "육지",
+          "smp": 135.15,
+          "rn": 1,
+          "mlfd": 59659.0
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20230701",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:05:56.933071+09:00",
+        "sha256": "fe92ef9ba77c548c651f109f39dd04495b6fa9ee97f38676d1ee1491b03d853c",
+        "raw": "fe92ef9ba77c548c651f109f39dd04495b6fa9ee97f38676d1ee1491b03d853c.raw",
+        "bytes": 11555,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "forecast",
+      "date": "20231231",
+      "http": 200,
+      "total_rows": 48,
+      "mainland_rows": 24,
+      "hours": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "fields": [
+        "areaName",
+        "date",
+        "hour",
+        "jlfd",
+        "mlfd",
+        "rn",
+        "slfd",
+        "smp"
+      ],
+      "sample": [
+        {
+          "date": "20231231",
+          "jlfd": 754.0,
+          "slfd": 59038.0,
+          "hour": "1",
+          "areaName": "육지",
+          "smp": 115.31,
+          "rn": 1,
+          "mlfd": 58284.0
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20231231",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:05:55.967178+09:00",
+        "sha256": "48726808862eec3a445a8c89bcdb1bcbe0eacf1f5d6c468e2446536b10cedcb9",
+        "raw": "48726808862eec3a445a8c89bcdb1bcbe0eacf1f5d6c468e2446536b10cedcb9.raw",
+        "bytes": 11537,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "forecast",
+      "date": "20240101",
+      "http": 200,
+      "total_rows": 48,
+      "mainland_rows": 24,
+      "hours": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "fields": [
+        "areaName",
+        "date",
+        "hour",
+        "jlfd",
+        "mlfd",
+        "rn",
+        "slfd",
+        "smp"
+      ],
+      "sample": [
+        {
+          "date": "20240101",
+          "jlfd": 730.0,
+          "slfd": 58558.0,
+          "hour": "1",
+          "areaName": "육지",
+          "smp": 94.09,
+          "rn": 1,
+          "mlfd": 57828.0
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20240101",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:05:58.319145+09:00",
+        "sha256": "50bdea7d5a3936771b6dc7ee50b37a16f47d6d86af3c46f024f33f2a2a2ed2fa",
+        "raw": "50bdea7d5a3936771b6dc7ee50b37a16f47d6d86af3c46f024f33f2a2a2ed2fa.raw",
+        "bytes": 11514,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "forecast",
+      "date": "20250101",
+      "http": 200,
+      "total_rows": 48,
+      "mainland_rows": 24,
+      "hours": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "fields": [
+        "areaName",
+        "date",
+        "hour",
+        "jlfd",
+        "mlfd",
+        "rn",
+        "slfd",
+        "smp"
+      ],
+      "sample": [
+        {
+          "date": "20250101",
+          "jlfd": 713.0,
+          "slfd": 59423.0,
+          "hour": "1",
+          "areaName": "육지",
+          "smp": 81.99,
+          "rn": 1,
+          "mlfd": 58710.0
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20250101",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:06:02.777497+09:00",
+        "sha256": "6a3e7cd40fd08ec0946481c3a5367bbdd40a51ae240dc9ac7ad6c51171405147",
+        "raw": "6a3e7cd40fd08ec0946481c3a5367bbdd40a51ae240dc9ac7ad6c51171405147.raw",
+        "bytes": 11503,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "forecast",
+      "date": "20250701",
+      "http": 200,
+      "total_rows": 48,
+      "mainland_rows": 24,
+      "hours": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "fields": [
+        "areaName",
+        "date",
+        "hour",
+        "jlfd",
+        "mlfd",
+        "rn",
+        "slfd",
+        "smp"
+      ],
+      "sample": [
+        {
+          "date": "20250701",
+          "jlfd": 681.0,
+          "slfd": 61549.0,
+          "hour": "1",
+          "areaName": "육지",
+          "smp": 131.98,
+          "rn": 1,
+          "mlfd": 60868.0
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20250701",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:05:59.378420+09:00",
+        "sha256": "c221cbfb57ddededdc288cfdd6c6f781ce399919ff2398d49528eac14b922d58",
+        "raw": "c221cbfb57ddededdc288cfdd6c6f781ce399919ff2398d49528eac14b922d58.raw",
+        "bytes": 11547,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "forecast",
+      "date": "20251231",
+      "http": 200,
+      "total_rows": 48,
+      "mainland_rows": 24,
+      "hours": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "fields": [
+        "areaName",
+        "date",
+        "hour",
+        "jlfd",
+        "mlfd",
+        "rn",
+        "slfd",
+        "smp"
+      ],
+      "sample": [
+        {
+          "date": "20251231",
+          "jlfd": 713.0,
+          "slfd": 63398.0,
+          "hour": "1",
+          "areaName": "육지",
+          "smp": 72.34,
+          "rn": 1,
+          "mlfd": 62685.0
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20251231",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:05:59.379043+09:00",
+        "sha256": "817d2fe31766a108c48528f20dc5182da375cd4bc014fee437924650f6ea8365",
+        "raw": "817d2fe31766a108c48528f20dc5182da375cd4bc014fee437924650f6ea8365.raw",
+        "bytes": 11517,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "forecast",
+      "date": "20261118",
+      "http": 200,
+      "total_rows": 48,
+      "mainland_rows": 24,
+      "hours": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "fields": [
+        "areaName",
+        "date",
+        "hour",
+        "jlfd",
+        "mlfd",
+        "rn",
+        "slfd",
+        "smp"
+      ],
+      "sample": [
+        {
+          "date": "20261118",
+          "jlfd": 602.0,
+          "slfd": 57527.0,
+          "hour": "01",
+          "areaName": "육지",
+          "smp": 102.55,
+          "rn": 1,
+          "mlfd": 56925.0
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20261118",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:06:01.623360+09:00",
+        "sha256": "1d69f3b1246078aca18c9774e7d6fcce826be4cd9d19d16b64a29cb34c74ff88",
+        "raw": "1d69f3b1246078aca18c9774e7d6fcce826be4cd9d19d16b64a29cb34c74ff88.raw",
+        "bytes": 11563,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "forecast",
+      "date": "20261119",
+      "http": 200,
+      "total_rows": 0,
+      "mainland_rows": 0,
+      "hours": [],
+      "fields": [],
+      "sample": [],
+      "status": "normal_empty",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/SmpWithForecastDemand/getSmpWithForecastDemand",
+        "params": {
+          "date": "20261119",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:06:02.830559+09:00",
+        "sha256": "b9800b2956dea67e95dd3a5c83a0480dc9cf6530ae41e41f53c90fc2c3ada2c9",
+        "raw": "b9800b2956dea67e95dd3a5c83a0480dc9cf6530ae41e41f53c90fc2c3ada2c9.raw",
+        "bytes": 254,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "holiday",
+      "year": "2023",
+      "http": 200,
+      "rows": 18,
+      "total": 18,
+      "fields": [
+        "dateKind",
+        "dateName",
+        "isHoliday",
+        "locdate",
+        "seq"
+      ],
+      "sample": [
+        {
+          "date": "2023-01-01",
+          "name": "1월1일",
+          "isHoliday": "Y",
+          "source": "KASI getRestDeInfo",
+          "official_api_verified": true
+        },
+        {
+          "date": "2023-01-21",
+          "name": "설날",
+          "isHoliday": "Y",
+          "source": "KASI getRestDeInfo",
+          "official_api_verified": true
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getRestDeInfo",
+        "params": {
+          "solYear": "2023",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "_type": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:06:02.095104+09:00",
+        "sha256": "e12bdd53807922c856c87e55857e58f7e448200c11b22b7cb25ec6aa71e68114",
+        "raw": "e12bdd53807922c856c87e55857e58f7e448200c11b22b7cb25ec6aa71e68114.raw",
+        "bytes": 1673,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "holiday",
+      "year": "2024",
+      "http": 200,
+      "rows": 19,
+      "total": 19,
+      "fields": [
+        "dateKind",
+        "dateName",
+        "isHoliday",
+        "locdate",
+        "seq"
+      ],
+      "sample": [
+        {
+          "date": "2024-01-01",
+          "name": "1월1일",
+          "isHoliday": "Y",
+          "source": "KASI getRestDeInfo",
+          "official_api_verified": true
+        },
+        {
+          "date": "2024-02-09",
+          "name": "설날",
+          "isHoliday": "Y",
+          "source": "KASI getRestDeInfo",
+          "official_api_verified": true
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getRestDeInfo",
+        "params": {
+          "solYear": "2024",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "_type": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:06:02.777013+09:00",
+        "sha256": "66743c1a244e62368351c9f01942d4f57b04cea87c25127a0a7bc0dd286fa898",
+        "raw": "66743c1a244e62368351c9f01942d4f57b04cea87c25127a0a7bc0dd286fa898.raw",
+        "bytes": 1788,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "holiday",
+      "year": "2025",
+      "http": 200,
+      "rows": 20,
+      "total": 20,
+      "fields": [
+        "dateKind",
+        "dateName",
+        "isHoliday",
+        "locdate",
+        "seq"
+      ],
+      "sample": [
+        {
+          "date": "2025-01-01",
+          "name": "1월1일",
+          "isHoliday": "Y",
+          "source": "KASI getRestDeInfo",
+          "official_api_verified": true
+        },
+        {
+          "date": "2025-01-27",
+          "name": "임시공휴일",
+          "isHoliday": "Y",
+          "source": "KASI getRestDeInfo",
+          "official_api_verified": true
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getRestDeInfo",
+        "params": {
+          "solYear": "2025",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "_type": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:06:02.997652+09:00",
+        "sha256": "a02474419f7a9c9f0c1e1454503cb298b6ce3f4b1680e12252a65901e190c358",
+        "raw": "a02474419f7a9c9f0c1e1454503cb298b6ce3f4b1680e12252a65901e190c358.raw",
+        "bytes": 1880,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "holiday",
+      "year": "2026",
+      "http": 200,
+      "rows": 22,
+      "total": 22,
+      "fields": [
+        "dateKind",
+        "dateName",
+        "isHoliday",
+        "locdate",
+        "seq"
+      ],
+      "sample": [
+        {
+          "date": "2026-01-01",
+          "name": "1월1일",
+          "isHoliday": "Y",
+          "source": "KASI getRestDeInfo",
+          "official_api_verified": true
+        },
+        {
+          "date": "2026-02-16",
+          "name": "설날",
+          "isHoliday": "Y",
+          "source": "KASI getRestDeInfo",
+          "official_api_verified": true
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getRestDeInfo",
+        "params": {
+          "solYear": "2026",
+          "numOfRows": 100,
+          "pageNo": 1,
+          "_type": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:06:02.997559+09:00",
+        "sha256": "63388974fde740dada0a6299d45f5955b690c7f663273cb6b6280f3afafd0ee3",
+        "raw": "63388974fde740dada0a6299d45f5955b690c7f663273cb6b6280f3afafd0ee3.raw",
+        "bytes": 2083,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "actual",
+      "date": "20230101",
+      "http": 200,
+      "hourly_rows": 24,
+      "valid_hours": 23,
+      "five_minute_samples": 287,
+      "sample": [
+        {
+          "timestamp": "2023-01-01 00:00:00+09:00",
+          "demand_mw": "64423.916666666664",
+          "samples_5m": "12"
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://epsis.kpx.or.kr/epsisnew/selectEkgeEpsMepRealGridAjax.ajax",
+        "params": {
+          "beginDate": "20230101",
+          "endDate": "20230101",
+          "editYn": "N"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:06:03.196659+09:00",
+        "sha256": "3c8b952e881eb1d4084d253415540e201650a64e6a7ec2a46d7525b54d3f8c34",
+        "raw": "3c8b952e881eb1d4084d253415540e201650a64e6a7ec2a46d7525b54d3f8c34.raw",
+        "bytes": 131728,
+        "authenticated": false
+      }
+    },
+    {
+      "kind": "actual",
+      "date": "20250701",
+      "http": 200,
+      "hourly_rows": 24,
+      "valid_hours": 23,
+      "five_minute_samples": 282,
+      "sample": [
+        {
+          "timestamp": "2025-07-01 00:00:00+09:00",
+          "demand_mw": "65714.16666666667",
+          "samples_5m": "12"
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://epsis.kpx.or.kr/epsisnew/selectEkgeEpsMepRealGridAjax.ajax",
+        "params": {
+          "beginDate": "20250701",
+          "endDate": "20250701",
+          "editYn": "N"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:06:03.770689+09:00",
+        "sha256": "752bc775059f3f2d761701cad01cd511254c671ea5d12cf839b03717d7353c43",
+        "raw": "752bc775059f3f2d761701cad01cd511254c671ea5d12cf839b03717d7353c43.raw",
+        "bytes": 129388,
+        "authenticated": false
+      }
+    },
+    {
+      "kind": "actual",
+      "date": "20251231",
+      "http": 200,
+      "hourly_rows": 24,
+      "valid_hours": 22,
+      "five_minute_samples": 284,
+      "sample": [
+        {
+          "timestamp": "2025-12-31 00:00:00+09:00",
+          "demand_mw": "65663.0",
+          "samples_5m": "12"
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://epsis.kpx.or.kr/epsisnew/selectEkgeEpsMepRealGridAjax.ajax",
+        "params": {
+          "beginDate": "20251231",
+          "endDate": "20251231",
+          "editYn": "N"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:06:03.782810+09:00",
+        "sha256": "2b8653549404ad737db3f5c995f3faaf7f636eaf35b2de8275923c3e198e704d",
+        "raw": "2b8653549404ad737db3f5c995f3faaf7f636eaf35b2de8275923c3e198e704d.raw",
+        "bytes": 130434,
+        "authenticated": false
+      }
+    },
+    {
+      "kind": "actual",
+      "date": "20261117",
+      "http": 200,
+      "hourly_rows": 24,
+      "valid_hours": 24,
+      "five_minute_samples": 288,
+      "sample": [
+        {
+          "timestamp": "2026-11-17 00:00:00+09:00",
+          "demand_mw": "60193.75",
+          "samples_5m": "12"
+        }
+      ],
+      "status": "received",
+      "receipt": {
+        "source": "https://epsis.kpx.or.kr/epsisnew/selectEkgeEpsMepRealGridAjax.ajax",
+        "params": {
+          "beginDate": "20261117",
+          "endDate": "20261117",
+          "editYn": "N"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T18:06:04.343334+09:00",
+        "sha256": "c779b3553b397e8cef963584b668d88c01680e2bc6e0a893754d12354d3f61f2",
+        "raw": "c779b3553b397e8cef963584b668d88c01680e2bc6e0a893754d12354d3f61f2.raw",
+        "bytes": 131982,
+        "authenticated": false
+      }
+    }
+  ],
+  "calendar": {
+    "rows": 26304,
+    "status": "complete including official holidays; historical designation dates unverified",
+    "columns": [
+      "timestamp",
+      "hour",
+      "weekday",
+      "month",
+      "is_weekend",
+      "season",
+      "hour_sin",
+      "hour_cos",
+      "weekday_sin",
+      "weekday_cos",
+      "month_sin",
+      "month_cos",
+      "is_holiday"
+    ]
+  },
+  "notes": [
+    "API hour is interval end: hour 01 mapped to 00:00 start",
+    "Demand forecast API date is target date, not evidence of historical publication timestamp",
+    "No fallback calendar used",
+    "Current-load historical average is MW, not settlement MWh or total behind-the-meter demand"
+  ],
+  "verification": {
+    "hourly_calendar_rows": 26304,
+    "unique_hourly_calendar": true,
+    "official_holiday_source": true,
+    "cyclic_encoding_unit_circle": true,
+    "mainland_forecast_24h_and_end_to_start_hour_conversion": true,
+    "missing_hour_accounting": true
+  }
+}
