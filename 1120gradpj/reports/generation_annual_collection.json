@@ -1,0 +1,200 @@
+{
+  "at": "2026-11-18T22:08:29.277692+09:00",
+  "status": "INCOMPLETE_2024_REQUIRED_FUELS_ABSENT",
+  "row_coverage_complete": false,
+  "expected_hours": 26304,
+  "by_year": [
+    {
+      "year": 2023,
+      "expected_hours": 8760,
+      "missing_by_column": {
+        "lng_generation_mwh": 0,
+        "bituminous_coal_generation_mwh": 0,
+        "anthracite_coal_generation_mwh": 0,
+        "nuclear_generation_mwh": 0,
+        "coal_generation_mwh": 0
+      },
+      "complete": true
+    },
+    {
+      "year": 2024,
+      "expected_hours": 8784,
+      "missing_by_column": {
+        "lng_generation_mwh": 8784,
+        "bituminous_coal_generation_mwh": 8784,
+        "anthracite_coal_generation_mwh": 8784,
+        "nuclear_generation_mwh": 8784,
+        "coal_generation_mwh": 8784
+      },
+      "complete": false
+    },
+    {
+      "year": 2025,
+      "expected_hours": 8760,
+      "missing_by_column": {
+        "lng_generation_mwh": 0,
+        "bituminous_coal_generation_mwh": 0,
+        "anthracite_coal_generation_mwh": 0,
+        "nuclear_generation_mwh": 0,
+        "coal_generation_mwh": 0
+      },
+      "complete": true
+    }
+  ],
+  "receipts": [
+    {
+      "year": 2023,
+      "file_id": "uddi:c3c4a685-8ecd-4854-9781-9724e83a7f9b",
+      "source_dataset": "15127395",
+      "rows": 179208,
+      "raw_sha256": "9421b98cf0fdfe3e2f22f0a7633a52fd0ba30a8233c3aca6e7c57a0e3c4e792a",
+      "raw_receipt": {
+        "source": "https://www.data.go.kr/cmm/cmm/fileDownload.do",
+        "params": {
+          "atchFileId": "FILE_000000002894812",
+          "fileDetailSn": "1",
+          "insertDataPrcus": "N"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T22:05:47.081248+09:00",
+        "sha256": "9421b98cf0fdfe3e2f22f0a7633a52fd0ba30a8233c3aca6e7c57a0e3c4e792a",
+        "raw": "9421b98cf0fdfe3e2f22f0a7633a52fd0ba30a8233c3aca6e7c57a0e3c4e792a.raw",
+        "bytes": 5461643,
+        "authenticated": false
+      },
+      "fuels": [
+        "IGCC",
+        "LNG",
+        "경유",
+        "기타",
+        "매립가스",
+        "무연탄",
+        "바이오SRF",
+        "바이오가스",
+        "바이오매스",
+        "바이오중유",
+        "부생가스",
+        "수력",
+        "양수",
+        "연료전지",
+        "원자력",
+        "유연탄",
+        "중유",
+        "태양광",
+        "폐기물",
+        "풍력",
+        "해양에너지"
+      ],
+      "unit": "MWh",
+      "scope": "전력시장 참여 발전기 송전단 전력거래량; 지역 구분 열 없음"
+    },
+    {
+      "year": 2024,
+      "file_id": "uddi:54f28932-fcc4-4315-a44c-f480e808a84e",
+      "source_dataset": "15127395",
+      "rows": 110544,
+      "raw_sha256": "1362d712020bf6560aa2b65a5cab9b18aba9d4cbaad281d69f8f356ab06dd6e1",
+      "raw_receipt": {
+        "source": "https://www.data.go.kr/cmm/cmm/fileDownload.do",
+        "params": {
+          "atchFileId": "FILE_000000003222593",
+          "fileDetailSn": "1",
+          "insertDataPrcus": "N"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T22:05:43.370295+09:00",
+        "sha256": "1362d712020bf6560aa2b65a5cab9b18aba9d4cbaad281d69f8f356ab06dd6e1",
+        "raw": "1362d712020bf6560aa2b65a5cab9b18aba9d4cbaad281d69f8f356ab06dd6e1.raw",
+        "bytes": 4559522,
+        "authenticated": false
+      },
+      "fuels": [
+        "IGCC",
+        "급전가능 재생에너지",
+        "매립가스",
+        "바이오SRF",
+        "바이오가스",
+        "바이오매스",
+        "바이오중유",
+        "소수력",
+        "수력",
+        "연료전지",
+        "태양광",
+        "풍력",
+        "해양에너지"
+      ],
+      "unit": "MWh",
+      "scope": "전력시장 참여 발전기 송전단 전력거래량; 지역 구분 열 없음"
+    },
+    {
+      "year": 2025,
+      "file_id": "uddi:af29850e-c2aa-4341-9b8b-ce6da5252913",
+      "source_dataset": "15127395",
+      "rows": 224928,
+      "raw_sha256": "537c8a6f98e44e7471039bf7b17320c4e99f6dd21b8e93c049ce83bea11a85d7",
+      "raw_receipt": {
+        "source": "https://www.data.go.kr/cmm/cmm/fileDownload.do",
+        "params": {
+          "atchFileId": "FILE_000000003675835",
+          "fileDetailSn": "1",
+          "insertDataPrcus": "N"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T22:05:39.609264+09:00",
+        "sha256": "537c8a6f98e44e7471039bf7b17320c4e99f6dd21b8e93c049ce83bea11a85d7",
+        "raw": "537c8a6f98e44e7471039bf7b17320c4e99f6dd21b8e93c049ce83bea11a85d7.raw",
+        "bytes": 8938162,
+        "authenticated": false
+      },
+      "fuels": [
+        "IGCC",
+        "LNG",
+        "LPG",
+        "가스압",
+        "경유",
+        "급전가능 재생에너지",
+        "기타",
+        "매립가스",
+        "무연탄",
+        "바이오SRF",
+        "바이오가스",
+        "바이오매스",
+        "바이오중유",
+        "부생가스",
+        "소수력",
+        "수력",
+        "양수",
+        "연료전지",
+        "원자력",
+        "유연탄",
+        "전기저장장치(비중앙)",
+        "중유",
+        "태양광",
+        "폐기물",
+        "풍력",
+        "해양에너지"
+      ],
+      "unit": "MWh",
+      "scope": "전력시장 참여 발전기 송전단 전력거래량; 지역 구분 열 없음"
+    }
+  ],
+  "api_comparison": {
+    "2023": {
+      "compared_rows": 9216,
+      "max_absolute_difference": 829.2589999999982,
+      "mean_absolute_difference": 0.8485594618055754
+    },
+    "2025": {
+      "compared_rows": 96,
+      "max_absolute_difference": 0.0005000000019208528,
+      "mean_absolute_difference": 0.00021182291676306286
+    }
+  },
+  "api_values_merged_into_annual": false,
+  "unit": "MWh",
+  "scope": "市场 정산 기준 송전단 전력거래량. 발전기 입찰량·설비용량·전국 총발전량과 구분. 육지/제주 분리 미확정.",
+  "blocker": "2024년 공식 연간 첨부파일은 신재생 계열만 포함: LNG·유연탄·무연탄·원자력 4개 모두 없음. 일별 API는 오늘 한도 도달.",
+  "resolution": "공식 2024년 전체 연료원 파일 정정/제공 요청 또는 API 일일 트래픽 증설 후 2024년 전체 수집. 키 변경으로 한도 우회하지 않음.",
+  "precision_note": "2023년 공식 파일은 정수 MWh로 표시되어 API 소수값과 차이가 날 수 있음. 서로 다른 정밀도를 시간별로 섞지 않음.",
+  "model_training_performed": false
+}

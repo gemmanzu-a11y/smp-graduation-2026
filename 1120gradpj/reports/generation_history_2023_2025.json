@@ -1,0 +1,5500 @@
+{
+  "at": "2026-11-18T22:04:54.247049+09:00",
+  "source": "https://apis.data.go.kr/B552115/PvAmountByPwrGen/getPvAmountByPwrGen",
+  "source_page": "https://www.data.go.kr/data/15106744/openapi.do",
+  "expected_days": 1096,
+  "expected_hours": 26304,
+  "expected_fuel_hour_rows": 210432,
+  "collected_days": 96,
+  "row_coverage_complete": false,
+  "ready_for_model": false,
+  "status": "INCOMPLETE",
+  "counts": {
+    "LNG": {
+      "valid_hours": 2304,
+      "missing_hours": 24000
+    },
+    "무연탄": {
+      "valid_hours": 2304,
+      "missing_hours": 24000
+    },
+    "수력": {
+      "valid_hours": 2304,
+      "missing_hours": 24000
+    },
+    "신재생·기타": {
+      "valid_hours": 2304,
+      "missing_hours": 24000
+    },
+    "양수": {
+      "valid_hours": 2304,
+      "missing_hours": 24000
+    },
+    "원자력": {
+      "valid_hours": 2304,
+      "missing_hours": 24000
+    },
+    "유연탄": {
+      "valid_hours": 2304,
+      "missing_hours": 24000
+    },
+    "유전": {
+      "valid_hours": 2304,
+      "missing_hours": 24000
+    }
+  },
+  "quota_reached": true,
+  "results": [
+    {
+      "date": "20230101",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230102",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230103",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230104",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230105",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230106",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230107",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230108",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230109",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230110",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230111",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230112",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230113",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230114",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230115",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230116",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230117",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230118",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230119",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230120",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230121",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230122",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230123",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230124",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230125",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230126",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230127",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230128",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230129",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230130",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230131",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230201",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230202",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230203",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230204",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230205",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230206",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230207",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230208",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230209",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230210",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230211",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230212",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230213",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230214",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230215",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230216",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230217",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230218",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230219",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230220",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230221",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230222",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230223",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230224",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230225",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230226",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230227",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230228",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230301",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230302",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230303",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230304",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230305",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230306",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230307",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230308",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230309",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230310",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230311",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230312",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230313",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230314",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230315",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230316",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230317",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230318",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230319",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230320",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230321",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230322",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230323",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230324",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230325",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230326",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230327",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230328",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230329",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230330",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230331",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230401",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230402",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230403",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230404",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230405",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230406",
+      "status": "received",
+      "rows": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ]
+    },
+    {
+      "date": "20230407",
+      "status": "quota",
+      "reason": "section_b_generation: HTTP 429"
+    },
+    {
+      "date": "20230408",
+      "status": "quota",
+      "reason": "section_b_generation: HTTP 429"
+    },
+    {
+      "date": "20230409",
+      "status": "quota",
+      "reason": "section_b_generation: HTTP 429"
+    },
+    {
+      "date": "20230410",
+      "status": "quota",
+      "reason": "section_b_generation: HTTP 429"
+    },
+    {
+      "date": "20230411",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230412",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230413",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230414",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230415",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230416",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230417",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230418",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230419",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230420",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230421",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230422",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230423",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230424",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230425",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230426",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230427",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230428",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230429",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230430",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230501",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230502",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230503",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230504",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230505",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230506",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230507",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230508",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230509",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230510",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230511",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230512",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230513",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230514",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230515",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230516",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230517",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230518",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230519",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230520",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230521",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230522",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230523",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230524",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230525",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230526",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230527",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230528",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230529",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230530",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230531",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230601",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230602",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230603",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230604",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230605",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230606",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230607",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230608",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230609",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230610",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230611",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230612",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230613",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230614",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230615",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230616",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230617",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230618",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230619",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230620",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230621",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230622",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230623",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230624",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230625",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230626",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230627",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230628",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230629",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230630",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230701",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230702",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230703",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230704",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230705",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230706",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230707",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230708",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230709",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230710",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230711",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230712",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230713",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230714",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230715",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230716",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230717",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230718",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230719",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230720",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230721",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230722",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230723",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230724",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230725",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230726",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230727",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230728",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230729",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230730",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230731",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230801",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230802",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230803",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230804",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230805",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230806",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230807",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230808",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230809",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230810",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230811",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230812",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230813",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230814",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230815",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230816",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230817",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230818",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230819",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230820",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230821",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230822",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230823",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230824",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230825",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230826",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230827",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230828",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230829",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230830",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230831",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230901",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230902",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230903",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230904",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230905",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230906",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230907",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230908",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230909",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230910",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230911",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230912",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230913",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230914",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230915",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230916",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230917",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230918",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230919",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230920",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230921",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230922",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230923",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230924",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230925",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230926",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230927",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230928",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230929",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20230930",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231001",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231002",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231003",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231004",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231005",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231006",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231007",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231008",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231009",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231010",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231011",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231012",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231013",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231014",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231015",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231016",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231017",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231018",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231019",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231020",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231021",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231022",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231023",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231024",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231025",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231026",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231027",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231028",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231029",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231030",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231031",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231101",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231102",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231103",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231104",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231105",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231106",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231107",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231108",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231109",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231110",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231111",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231112",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231113",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231114",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231115",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231116",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231117",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231118",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231119",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231120",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231121",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231122",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231123",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231124",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231125",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231126",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231127",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231128",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231129",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231130",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231201",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231202",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231203",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231204",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231205",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231206",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231207",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231208",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231209",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231210",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231211",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231212",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231213",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231214",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231215",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231216",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231217",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231218",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231219",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231220",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231221",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231222",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231223",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231224",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231225",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231226",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231227",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231228",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231229",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231230",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20231231",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240101",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240102",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240103",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240104",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240105",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240106",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240107",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240108",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240109",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240110",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240111",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240112",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240113",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240114",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240115",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240116",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240117",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240118",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240119",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240120",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240121",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240122",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240123",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240124",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240125",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240126",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240127",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240128",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240129",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240130",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240131",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240201",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240202",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240203",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240204",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240205",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240206",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240207",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240208",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240209",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240210",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240211",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240212",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240213",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240214",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240215",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240216",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240217",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240218",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240219",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240220",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240221",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240222",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240223",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240224",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240225",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240226",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240227",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240228",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240229",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240301",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240302",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240303",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240304",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240305",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240306",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240307",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240308",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240309",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240310",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240311",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240312",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240313",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240314",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240315",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240316",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240317",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240318",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240319",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240320",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240321",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240322",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240323",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240324",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240325",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240326",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240327",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240328",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240329",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240330",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240331",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240401",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240402",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240403",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240404",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240405",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240406",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240407",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240408",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240409",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240410",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240411",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240412",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240413",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240414",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240415",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240416",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240417",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240418",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240419",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240420",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240421",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240422",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240423",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240424",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240425",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240426",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240427",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240428",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240429",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240430",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240501",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240502",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240503",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240504",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240505",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240506",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240507",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240508",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240509",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240510",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240511",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240512",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240513",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240514",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240515",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240516",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240517",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240518",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240519",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240520",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240521",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240522",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240523",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240524",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240525",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240526",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240527",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240528",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240529",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240530",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240531",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240601",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240602",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240603",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240604",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240605",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240606",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240607",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240608",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240609",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240610",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240611",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240612",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240613",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240614",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240615",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240616",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240617",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240618",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240619",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240620",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240621",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240622",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240623",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240624",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240625",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240626",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240627",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240628",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240629",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240630",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240701",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240702",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240703",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240704",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240705",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240706",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240707",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240708",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240709",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240710",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240711",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240712",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240713",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240714",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240715",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240716",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240717",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240718",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240719",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240720",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240721",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240722",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240723",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240724",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240725",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240726",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240727",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240728",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240729",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240730",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240731",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240801",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240802",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240803",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240804",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240805",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240806",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240807",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240808",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240809",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240810",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240811",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240812",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240813",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240814",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240815",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240816",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240817",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240818",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240819",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240820",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240821",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240822",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240823",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240824",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240825",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240826",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240827",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240828",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240829",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240830",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240831",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240901",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240902",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240903",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240904",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240905",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240906",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240907",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240908",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240909",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240910",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240911",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240912",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240913",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240914",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240915",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240916",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240917",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240918",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240919",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240920",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240921",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240922",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240923",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240924",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240925",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240926",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240927",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240928",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240929",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20240930",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241001",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241002",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241003",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241004",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241005",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241006",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241007",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241008",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241009",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241010",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241011",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241012",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241013",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241014",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241015",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241016",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241017",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241018",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241019",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241020",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241021",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241022",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241023",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241024",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241025",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241026",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241027",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241028",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241029",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241030",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241031",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241101",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241102",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241103",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241104",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241105",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241106",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241107",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241108",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241109",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241110",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241111",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241112",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241113",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241114",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241115",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241116",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241117",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241118",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241119",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241120",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241121",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241122",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241123",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241124",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241125",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241126",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241127",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241128",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241129",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241130",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241201",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241202",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241203",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241204",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241205",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241206",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241207",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241208",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241209",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241210",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241211",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241212",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241213",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241214",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241215",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241216",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241217",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241218",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241219",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241220",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241221",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241222",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241223",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241224",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241225",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241226",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241227",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241228",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241229",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241230",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20241231",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250101",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250102",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250103",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250104",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250105",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250106",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250107",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250108",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250109",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250110",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250111",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250112",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250113",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250114",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250115",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250116",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250117",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250118",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250119",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250120",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250121",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250122",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250123",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250124",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250125",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250126",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250127",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250128",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250129",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250130",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250131",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250201",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250202",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250203",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250204",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250205",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250206",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250207",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250208",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250209",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250210",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250211",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250212",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250213",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250214",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250215",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250216",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250217",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250218",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250219",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250220",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250221",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250222",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250223",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250224",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250225",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250226",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250227",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250228",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250301",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250302",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250303",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250304",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250305",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250306",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250307",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250308",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250309",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250310",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250311",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250312",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250313",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250314",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250315",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250316",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250317",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250318",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250319",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250320",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250321",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250322",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250323",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250324",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250325",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250326",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250327",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250328",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250329",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250330",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250331",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250401",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250402",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250403",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250404",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250405",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250406",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250407",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250408",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250409",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250410",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250411",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250412",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250413",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250414",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250415",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250416",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250417",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250418",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250419",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250420",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250421",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250422",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250423",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250424",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250425",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250426",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250427",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250428",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250429",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250430",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250501",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250502",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250503",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250504",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250505",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250506",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250507",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250508",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250509",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250510",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250511",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250512",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250513",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250514",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250515",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250516",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250517",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250518",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250519",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250520",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250521",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250522",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250523",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250524",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250525",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250526",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250527",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250528",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250529",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250530",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250531",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250601",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250602",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250603",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250604",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250605",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250606",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250607",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250608",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250609",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250610",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250611",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250612",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250613",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250614",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250615",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250616",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250617",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250618",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250619",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250620",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250621",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250622",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250623",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250624",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250625",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250626",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250627",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250628",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250629",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250630",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250701",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250702",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250703",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250704",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250705",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250706",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250707",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250708",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250709",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250710",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250711",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250712",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250713",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250714",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250715",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250716",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250717",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250718",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250719",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250720",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250721",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250722",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250723",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250724",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250725",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250726",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250727",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250728",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250729",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250730",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250731",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250801",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250802",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250803",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250804",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250805",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250806",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250807",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250808",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250809",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250810",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250811",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250812",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250813",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250814",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250815",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250816",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250817",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250818",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250819",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250820",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250821",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250822",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250823",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250824",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250825",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250826",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250827",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250828",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250829",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250830",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250831",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250901",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250902",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250903",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250904",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250905",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250906",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250907",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250908",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250909",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250910",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250911",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250912",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250913",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250914",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250915",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250916",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250917",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250918",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250919",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250920",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250921",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250922",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250923",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250924",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250925",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250926",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250927",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250928",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250929",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20250930",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251001",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251002",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251003",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251004",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251005",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251006",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251007",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251008",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251009",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251010",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251011",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251012",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251013",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251014",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251015",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251016",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251017",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251018",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251019",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251020",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251021",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251022",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251023",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251024",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251025",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251026",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251027",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251028",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251029",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251030",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251031",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251101",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251102",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251103",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251104",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251105",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251106",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251107",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251108",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251109",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251110",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251111",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251112",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251113",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251114",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251115",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251116",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251117",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251118",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251119",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251120",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251121",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251122",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251123",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251124",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251125",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251126",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251127",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251128",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251129",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251130",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251201",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251202",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251203",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251204",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251205",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251206",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251207",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251208",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251209",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251210",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251211",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251212",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251213",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251214",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251215",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251216",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251217",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251218",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251219",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251220",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251221",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251222",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251223",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251224",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251225",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251226",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251227",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251228",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251229",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251230",
+      "status": "not_attempted_quota"
+    },
+    {
+      "date": "20251231",
+      "status": "not_attempted_quota"
+    }
+  ],
+  "unit": "unconfirmed: raw amgo preserved; no MW/MWh conversion",
+  "scope": "전력거래 정산데이터; 육지/제주 및 시장 포함 범위의 명확한 근거 추가 확인 필요",
+  "coal_mapping": "유연탄+무연탄, both values required; provisional until unit/scope confirmed",
+  "time_mapping": "tradeYmd + (tradeNo-1) hours, tradeNo 1..24; source interval numbering retained",
+  "model_training_performed": false,
+  "credentials_saved": false,
+  "source_revisions": "정산자료는 수정정산으로 바뀔 수 있음; 조회 시점 원본/해시 보존"
+}

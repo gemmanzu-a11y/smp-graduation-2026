@@ -1,5 +1,6 @@
 """Resumable daily 2023–2025 generation collection. Stop network requests on quota exhaustion."""
 from pathlib import Path
+import argparse
 import concurrent.futures
 import hashlib
 import json
@@ -100,14 +101,16 @@ def summarize(results):
 
 def main():
     (OUT/'daily').mkdir(parents=True,exist_ok=True);(OUT/'receipts').mkdir(exist_ok=True)
-    dates=pd.date_range('2023-01-01','2025-12-31',freq='D').strftime('%Y%m%d').tolist();results=[]
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--start',default='2023-01-01');parser.add_argument('--end',default='2025-12-31');args=parser.parse_args()
+    if args.start<'2023-01-01' or args.end>'2025-12-31' or args.start>args.end:raise ValueError('Use a range inside 2023–2025')
+    dates=pd.date_range(args.start,args.end,freq='D').strftime('%Y%m%d').tolist();results=[]
     # Only four requests may be in flight. Do not enqueue the whole range after a quota signal.
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         for index in range(0,len(dates),4):
             results.extend(pool.map(fetch,dates[index:index+4]))
             if len(results)%40==0 or STOP.is_set():
                 received=sum(row['status'] in ['received','cached'] for row in results)
-                print(f'Checked {len(results)}/1096 days; saved {received}; quota={STOP.is_set()}',flush=True)
+                print(f'Checked {len(results)}/{len(dates)} days; saved {received}; quota={STOP.is_set()}',flush=True)
             if STOP.is_set():
                 results.extend(dict(date=date,status='not_attempted_quota') for date in dates[index+4:]);break
     report=summarize(results)
