@@ -1,0 +1,31 @@
+{
+  "path": "/Users/mj/Library/Mobile Documents/com~apple~CloudDocs/26-1/26-1 졸업설계/gradpj/1120gradpj/models/lstm/outputs/v3_a90141b81ecd_lag72/20261119T012219",
+  "dataset_version": "v3_a90141b81ecd_lag72",
+  "metrics": [
+    {
+      "split": "test",
+      "rows": 13104,
+      "mae": 17.675083398201817,
+      "rmse": 21.875924471658397,
+      "r2": 0.10050417914639342,
+      "coverage": 1.0,
+      "baseline_origin_day_mae": 13.087506105006105,
+      "baseline_origin_day_improvement_pct": -35.05310527756635,
+      "baseline_weekly_mae": 11.433384462759463,
+      "baseline_weekly_improvement_pct": -54.59187483612278
+    },
+    {
+      "split": "validation",
+      "rows": 12888,
+      "mae": 12.881724752832243,
+      "rmse": 17.15464771845487,
+      "r2": 0.3176920610697187,
+      "coverage": 1.0,
+      "baseline_origin_day_mae": 14.347254034761017,
+      "baseline_origin_day_improvement_pct": 10.214702258550934,
+      "baseline_weekly_mae": 12.2210917132216,
+      "baseline_weekly_improvement_pct": -5.405679419752052
+    }
+  ],
+  "seconds": 71.8315592079889
+}

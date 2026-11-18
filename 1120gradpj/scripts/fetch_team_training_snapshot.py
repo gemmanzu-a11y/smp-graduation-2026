@@ -7,9 +7,17 @@ ROOT=Path(__file__).resolve().parents[1]
 COMMIT='a90141b81ecd841c524eb75a72f4bcc4f39989f5'
 
 def main():
- tree=json.loads(Path('/private/tmp/smp_team_tree.json').read_text())
- entries=[row for row in tree['tree'] if row['type']=='blob' and row['path'].startswith('SMP_72H_INPUT_DATA/')]
  folder=ROOT/'data/raw/team_training_snapshot'/COMMIT
+ folder.mkdir(parents=True,exist_ok=True)
+ treefile=folder/'source_tree.json'
+ if treefile.exists():tree=json.loads(treefile.read_text())
+ else:
+  response=requests.get('https://api.github.com/repos/parksiwon22/gradproject/git/trees/'+COMMIT,params={'recursive':'1'},timeout=60,verify=certifi.where())
+  response.raise_for_status();tree=response.json()
+  if tree.get('truncated'):raise ValueError('Truncated Git tree')
+  treefile.write_text(json.dumps(tree,ensure_ascii=False,indent=2)+'\n')
+ entries=[row for row in tree['tree'] if row['type']=='blob' and row['path'].startswith('SMP_72H_INPUT_DATA/')]
+ if len(entries)!=104:raise ValueError('Pinned snapshot inventory mismatch')
  def one(row):
   path=folder/row['path'];path.parent.mkdir(parents=True,exist_ok=True)
   if path.exists():body=path.read_bytes()

@@ -119,3 +119,14 @@ class CommonBundleTest(unittest.TestCase):
         issues,bundle=contract.inspect(self.path,self.cfg);self.assertIsNone(bundle);self.assertIn('International fuel',issues[0]['reason'])
 
 if __name__=='__main__':unittest.main()
+
+class ConstantFeatureScalingTest(unittest.TestCase):
+    def test_unseen_indicator_not_magnified(self):
+        h=np.ones((4,2,2),dtype='float32');c=np.zeros((4,72,2),dtype='float32')
+        y=np.full((4,72),100.,dtype='float32')
+        params=dict(hidden_size=4,layers=1,learning_rate=.001,batch_size=2,epochs=1,patience=1)
+        model=algorithm.Estimator(params,jobs=1).fit(h,c,y,(h,c,y))
+        unseen=c.copy();unseen[:,:,1]=1
+        _,transformed=model.transform(h,unseen)
+        self.assertEqual(float(transformed[:,:,1].max()),1.)
+        self.assertTrue(np.isfinite(model.predict(h,unseen)).all())

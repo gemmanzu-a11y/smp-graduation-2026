@@ -34,8 +34,10 @@ class Estimator:
     def fit(self,history,context,y,validation):
         self.check(history,context,y);vh,vc,vy=validation;self.check(vh,vc,vy)
         torch.manual_seed(self.seed);np.random.seed(self.seed);torch.use_deterministic_algorithms(True)
-        self.history_mean=history.mean(axis=(0,1));self.history_scale=np.maximum(history.std(axis=(0,1)),1e-6)
-        self.context_mean=context.mean(axis=(0,1));self.context_scale=np.maximum(context.std(axis=(0,1)),1e-6)
+        self.history_mean=history.mean(axis=(0,1));self.history_scale=history.std(axis=(0,1))
+        self.history_scale=np.where(self.history_scale<1e-6,1.0,self.history_scale)
+        self.context_mean=context.mean(axis=(0,1));self.context_scale=context.std(axis=(0,1))
+        self.context_scale=np.where(self.context_scale<1e-6,1.0,self.context_scale)
         self.y_mean=float(y.mean());self.y_scale=max(float(y.std()),1e-6)
         self.dimensions=(history.shape[2],context.shape[2]);self.lookback=history.shape[1]
         self.net=Network(*self.dimensions,self.params['hidden_size'],self.params['layers'],self.params.get('dropout',0))
@@ -52,6 +54,7 @@ class Estimator:
                 total+=float(loss.detach())*len(idx)
             score=float(np.abs(self.predict(vh,vc)-vy).mean())
             self.history.append(dict(epoch=epoch,train_scaled_mse=total/len(h),validation_mae=score))
+            if epoch==1 or epoch%5==0:print(f'epoch={epoch} validation_mae={score:.5f}',flush=True)
             if score<best-self.params.get('min_delta',1e-4):
                 best=score;state=copy.deepcopy(self.net.state_dict());self.best_epoch=epoch;wait=0
             else:wait+=1
