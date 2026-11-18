@@ -57,6 +57,12 @@ def main():
             if not len(parsed) or date in seen:continue
             seen.add(date);api.append(parsed)
         except (RuntimeError,ValueError,KeyError):continue
+    # Include validated teammate-imported day checkpoints, preserving their GitHub receipts.
+    for checkpoint in sorted((PROJECT/'data/processed/section_b/generation_history/daily').glob('*.csv')):
+        date=checkpoint.stem
+        if date in seen or not '20230101'<=date<='20251231':continue
+        parsed=validate(pd.read_csv(checkpoint,dtype={'tradeYmd':str,'tradeNo':str}).to_dict('records'),date)
+        if len(parsed):seen.add(date);api.append(parsed)
     api=pd.concat(api,ignore_index=True).sort_values(['timestamp','fuelTpCd'])
     api.to_csv(generation/'api_generation_partial_2023_2025.csv',index=False,encoding='utf-8-sig')
     subset=api[api.tradeYmd.astype(str).str.startswith('2024')]
@@ -73,6 +79,7 @@ def main():
         api_source_page='https://www.data.go.kr/data/15106744/openapi.do',
         api_days=len(seen),api_2024_days=len(received),api_2024_complete_days=len(available),api_2024_partial_days=len(received-available),pending_2024_days=len(missing),
         api_and_annual_versions_spliced=False,api_comparison=report['api_comparison'],
+        teammate_import=json.loads((PROJECT/'reports/team_generation_import_20261119.json').read_text()) if (PROJECT/'reports/team_generation_import_20261119.json').exists() else None,
         annual_source_receipts=report['receipts'],
         scope='market settlement generation; mainland/Jeju separation not verified',
         blocker_2024=report['blocker'],model_ready=False))

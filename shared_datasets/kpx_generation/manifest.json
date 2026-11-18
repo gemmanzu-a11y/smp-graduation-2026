@@ -5,11 +5,11 @@
   "api_unit": "not independently confirmed; original amgo preserved",
   "annual_source_page": "https://www.data.go.kr/data/15127395/fileData.do",
   "api_source_page": "https://www.data.go.kr/data/15106744/openapi.do",
-  "api_days": 396,
-  "api_2024_days": 299,
-  "api_2024_complete_days": 268,
+  "api_days": 462,
+  "api_2024_days": 365,
+  "api_2024_complete_days": 334,
   "api_2024_partial_days": 31,
-  "pending_2024_days": 98,
+  "pending_2024_days": 32,
   "api_and_annual_versions_spliced": false,
   "api_comparison": {
     "2023": {
@@ -24,6 +24,175 @@
       "mean_absolute_difference": 0.00021182291676306286,
       "rows_abs_difference_gt_1": 0
     }
+  },
+  "teammate_import": {
+    "at": "2026-11-19T00:38:48.244907+09:00",
+    "source_url": "https://github.com/parksiwon22/gradproject/blob/codex/smp-72h-data/SMP_72H_INPUT_DATA/05_generation_by_fuel_amgo/api_generation_partial_2023_2025_merged_20261119.csv",
+    "git_blob_sha": "42b48265194b5afa24a932345f77e876a279999c",
+    "sha256": "c55c0ba9df3aa5ff8591a4e252f8e6205bb4a5396881301bf9ec1c80d7ed1406",
+    "source_rows": 86472,
+    "duplicate_keys": 0,
+    "overlap_rows": 73608,
+    "max_overlap_difference": 0.0,
+    "conflicting_rows": 0,
+    "imported_new_days": [
+      "20241027",
+      "20241028",
+      "20241029",
+      "20241030",
+      "20241031",
+      "20241101",
+      "20241102",
+      "20241103",
+      "20241104",
+      "20241105",
+      "20241106",
+      "20241107",
+      "20241108",
+      "20241109",
+      "20241110",
+      "20241111",
+      "20241112",
+      "20241113",
+      "20241114",
+      "20241115",
+      "20241116",
+      "20241117",
+      "20241118",
+      "20241119",
+      "20241120",
+      "20241121",
+      "20241122",
+      "20241123",
+      "20241124",
+      "20241125",
+      "20241126",
+      "20241127",
+      "20241128",
+      "20241129",
+      "20241130",
+      "20241201",
+      "20241202",
+      "20241203",
+      "20241204",
+      "20241205",
+      "20241206",
+      "20241207",
+      "20241208",
+      "20241209",
+      "20241210",
+      "20241211",
+      "20241212",
+      "20241213",
+      "20241214",
+      "20241215",
+      "20241216",
+      "20241217",
+      "20241218",
+      "20241219",
+      "20241220",
+      "20241221",
+      "20241222",
+      "20241223",
+      "20241224",
+      "20241225",
+      "20241226",
+      "20241227",
+      "20241228",
+      "20241229",
+      "20241230",
+      "20241231",
+      "20250101"
+    ],
+    "retained_existing_days": 395,
+    "years": [
+      {
+        "year": 2023,
+        "expected_hours": 8760,
+        "received_days": 96,
+        "coverage": {
+          "LNG": {
+            "valid_hours": 2304,
+            "missing_hours": 6456
+          },
+          "유연탄": {
+            "valid_hours": 2304,
+            "missing_hours": 6456
+          },
+          "무연탄": {
+            "valid_hours": 2304,
+            "missing_hours": 6456
+          },
+          "원자력": {
+            "valid_hours": 2304,
+            "missing_hours": 6456
+          },
+          "coal_amgo": {
+            "valid_hours": 2304,
+            "missing_hours": 6456
+          }
+        }
+      },
+      {
+        "year": 2024,
+        "expected_hours": 8784,
+        "received_days": 365,
+        "coverage": {
+          "LNG": {
+            "valid_hours": 8760,
+            "missing_hours": 24
+          },
+          "유연탄": {
+            "valid_hours": 8760,
+            "missing_hours": 24
+          },
+          "무연탄": {
+            "valid_hours": 8016,
+            "missing_hours": 768
+          },
+          "원자력": {
+            "valid_hours": 8016,
+            "missing_hours": 768
+          },
+          "coal_amgo": {
+            "valid_hours": 8016,
+            "missing_hours": 768
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "expected_hours": 8760,
+        "received_days": 1,
+        "coverage": {
+          "LNG": {
+            "valid_hours": 24,
+            "missing_hours": 8736
+          },
+          "유연탄": {
+            "valid_hours": 24,
+            "missing_hours": 8736
+          },
+          "무연탄": {
+            "valid_hours": 24,
+            "missing_hours": 8736
+          },
+          "원자력": {
+            "valid_hours": 24,
+            "missing_hours": 8736
+          },
+          "coal_amgo": {
+            "valid_hours": 24,
+            "missing_hours": 8736
+          }
+        }
+      }
+    ],
+    "unit": "raw API amgo; independent unit evidence pending",
+    "region": "source has no mainland/Jeju region field",
+    "status": "IMPORTED_2024_STILL_INCOMPLETE",
+    "model_training_performed": false,
+    "network_api_calls": 0
   },
   "annual_source_receipts": [
     {
@@ -180,21 +349,28 @@
     },
     {
       "file": "api_generation_2024_partial.csv",
-      "rows": 55176,
-      "bytes": 3244558,
-      "sha256": "7f4a686aaa7fa21e065d8fbaf9b7a57d191822d59ed2e585a95466f193035b95"
+      "rows": 67848,
+      "bytes": 3984714,
+      "sha256": "fb80d64d47fb195511b62b6c056ee8bcc542a291a53835a1b446fb7dd5b5b3c3"
     },
     {
       "file": "api_generation_partial_2023_2025.csv",
-      "rows": 73800,
-      "bytes": 4344359,
-      "sha256": "4e7cacc9a9f1507ba37fa0ac3d200b05244037eb382c9d37e43f648972ad23ea"
+      "rows": 86472,
+      "bytes": 5084515,
+      "sha256": "dacc2f0971a165d76a708f0bddc2a949a7b0697db91ea399433455237d3c7960"
     },
     {
       "file": "pending_dates_2024.csv",
-      "rows": 98,
-      "bytes": 894,
-      "sha256": "b369742ab425fb4e52b3d25d0417687e32e7ec41f0c163de534a81f347cca72c"
+      "rows": 32,
+      "bytes": 300,
+      "sha256": "65263ff912d85c97f23caf7def0a1ff68766f9fc4454d7f69892ff09135fb93d"
     }
-  ]
+  ],
+  "teammate_original_file": {
+    "file": "api_generation_partial_2023_2025_merged_20261119.csv",
+    "rows": 86472,
+    "bytes": 5089267,
+    "sha256": "c55c0ba9df3aa5ff8591a4e252f8e6205bb4a5396881301bf9ec1c80d7ed1406",
+    "git_blob_sha": "42b48265194b5afa24a932345f77e876a279999c"
+  }
 }
