@@ -1,0 +1,718 @@
+{
+  "at": "2026-11-18T19:38:10.210875+09:00",
+  "model_training_performed": false,
+  "scope": "B supply: API samples plus full existing historical coverage audit",
+  "renewables": {
+    "solar_mwh": {
+      "expected_hours": 26304,
+      "valid_hours": 26303,
+      "missing_hours": 1,
+      "missing_timestamps": [
+        "2023-01-10 06:00:00+09:00"
+      ],
+      "minimum": 0.0,
+      "maximum": 6879.661037999999
+    },
+    "wind_mwh": {
+      "expected_hours": 26304,
+      "valid_hours": 26304,
+      "missing_hours": 0,
+      "missing_timestamps": [],
+      "minimum": 0.024542,
+      "maximum": 1342.110072
+    }
+  },
+  "supply_reserve": {
+    "supply_mw": {
+      "expected_hours": 26304,
+      "valid_hours": 25209,
+      "missing_hours": 1095,
+      "unit": "MW"
+    },
+    "reserve_mw": {
+      "expected_hours": 26304,
+      "valid_hours": 25209,
+      "missing_hours": 1095,
+      "unit": "MW"
+    },
+    "reserve_rate_pct": {
+      "expected_hours": 26304,
+      "valid_hours": 25209,
+      "missing_hours": 1095,
+      "unit": "%"
+    },
+    "identity_check": {
+      "compared_hours": 25209,
+      "mean_absolute_difference_mw": 309.23902508363574,
+      "maximum_absolute_difference_mw": 4452.500000000007,
+      "note": "Raw reported reserve retained; differences are flagged, not overwritten by derived values."
+    }
+  },
+  "api_probes": [
+    {
+      "kind": "generation",
+      "date": "20230101",
+      "http": 200,
+      "status": "received",
+      "rows": 192,
+      "total": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ],
+      "hours_per_fuel": {
+        "LNG": 24,
+        "무연탄": 24,
+        "수력": 24,
+        "신재생·기타": 24,
+        "양수": 24,
+        "원자력": 24,
+        "유연탄": 24,
+        "유전": 24
+      },
+      "sample": [
+        {
+          "tradeNo": "01",
+          "fuelTpCd": "유전",
+          "tradeYmd": "20230101",
+          "amgo": 85.531,
+          "rn": 1
+        },
+        {
+          "tradeNo": "02",
+          "fuelTpCd": "유전",
+          "tradeYmd": "20230101",
+          "amgo": 67.486,
+          "rn": 2
+        }
+      ],
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByPwrGen/getPvAmountByPwrGen",
+        "params": {
+          "tradeYmd": "20230101",
+          "numOfRows": 1000,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:37:56.856698+09:00",
+        "sha256": "90e553a14768013013733ba123242eeb9817e8beec7831234f3ad686a030993c",
+        "raw": "90e553a14768013013733ba123242eeb9817e8beec7831234f3ad686a030993c.raw",
+        "bytes": 30232,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "generation",
+      "date": "20240101",
+      "http": 200,
+      "status": "received",
+      "rows": 192,
+      "total": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ],
+      "hours_per_fuel": {
+        "LNG": 24,
+        "무연탄": 24,
+        "수력": 24,
+        "신재생·기타": 24,
+        "양수": 24,
+        "원자력": 24,
+        "유연탄": 24,
+        "유전": 24
+      },
+      "sample": [
+        {
+          "tradeNo": "01",
+          "fuelTpCd": "유전",
+          "tradeYmd": "20240101",
+          "amgo": 31.202,
+          "rn": 1
+        },
+        {
+          "tradeNo": "02",
+          "fuelTpCd": "유전",
+          "tradeYmd": "20240101",
+          "amgo": 31.319,
+          "rn": 2
+        }
+      ],
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByPwrGen/getPvAmountByPwrGen",
+        "params": {
+          "tradeYmd": "20240101",
+          "numOfRows": 1000,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:37:53.540045+09:00",
+        "sha256": "4d5d5a0f57c326f459359538dc17f7c2924f0c29983e412f7fcacc779775d638",
+        "raw": "4d5d5a0f57c326f459359538dc17f7c2924f0c29983e412f7fcacc779775d638.raw",
+        "bytes": 30242,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "generation",
+      "date": "20250101",
+      "http": 200,
+      "status": "received",
+      "rows": 192,
+      "total": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ],
+      "hours_per_fuel": {
+        "LNG": 24,
+        "무연탄": 24,
+        "수력": 24,
+        "신재생·기타": 24,
+        "양수": 24,
+        "원자력": 24,
+        "유연탄": 24,
+        "유전": 24
+      },
+      "sample": [
+        {
+          "tradeNo": "01",
+          "fuelTpCd": "유전",
+          "tradeYmd": "20250101",
+          "amgo": 38.445,
+          "rn": 1
+        },
+        {
+          "tradeNo": "02",
+          "fuelTpCd": "유전",
+          "tradeYmd": "20250101",
+          "amgo": 38.201,
+          "rn": 2
+        }
+      ],
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByPwrGen/getPvAmountByPwrGen",
+        "params": {
+          "tradeYmd": "20250101",
+          "numOfRows": 1000,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:37:57.087299+09:00",
+        "sha256": "d1b602e02e397ef677f08020bbd09b3b93f308fa33cf6ed24ca085ef936e71b2",
+        "raw": "d1b602e02e397ef677f08020bbd09b3b93f308fa33cf6ed24ca085ef936e71b2.raw",
+        "bytes": 30205,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "generation",
+      "date": "20260901",
+      "http": 200,
+      "status": "received",
+      "rows": 192,
+      "total": 192,
+      "fuels": [
+        "LNG",
+        "무연탄",
+        "수력",
+        "신재생·기타",
+        "양수",
+        "원자력",
+        "유연탄",
+        "유전"
+      ],
+      "hours_per_fuel": {
+        "LNG": 24,
+        "무연탄": 24,
+        "수력": 24,
+        "신재생·기타": 24,
+        "양수": 24,
+        "원자력": 24,
+        "유연탄": 24,
+        "유전": 24
+      },
+      "sample": [
+        {
+          "tradeNo": "01",
+          "fuelTpCd": "유전",
+          "tradeYmd": "20260901",
+          "amgo": 5.14,
+          "rn": 1
+        },
+        {
+          "tradeNo": "02",
+          "fuelTpCd": "유전",
+          "tradeYmd": "20260901",
+          "amgo": 5.44,
+          "rn": 2
+        }
+      ],
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByPwrGen/getPvAmountByPwrGen",
+        "params": {
+          "tradeYmd": "20260901",
+          "numOfRows": 1000,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:37:59.286214+09:00",
+        "sha256": "8334af683eb49f860d0dd6f6851688fe5469e761c1a2a6f19d11401074a4bdab",
+        "raw": "8334af683eb49f860d0dd6f6851688fe5469e761c1a2a6f19d11401074a4bdab.raw",
+        "bytes": 30161,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "generation",
+      "date": "20261117",
+      "http": 200,
+      "status": "normal_empty",
+      "rows": 0,
+      "total": 0,
+      "fuels": [],
+      "hours_per_fuel": {},
+      "sample": [],
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552115/PvAmountByPwrGen/getPvAmountByPwrGen",
+        "params": {
+          "tradeYmd": "20261117",
+          "numOfRows": 1000,
+          "pageNo": 1,
+          "dataType": "json"
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:37:57.508285+09:00",
+        "sha256": "e15e8777cac01f19d8dd0502cbbcf5bec2b173d37b01c5de6fd19ba7fe89facb",
+        "raw": "e15e8777cac01f19d8dd0502cbbcf5bec2b173d37b01c5de6fd19ba7fe89facb.raw",
+        "bytes": 255,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "solar_forecast",
+      "baseDate": "20230101",
+      "predDate": "20230102",
+      "http": 200,
+      "status": "normal_empty",
+      "rows": 0,
+      "total": 0,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20230101",
+          "predDate": "20230102",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:38:04.588272+09:00",
+        "sha256": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b",
+        "raw": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b.raw",
+        "bytes": 135,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "solar_forecast",
+      "baseDate": "20240101",
+      "predDate": "20240102",
+      "http": 200,
+      "status": "normal_empty",
+      "rows": 0,
+      "total": 0,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20240101",
+          "predDate": "20240102",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:38:04.587940+09:00",
+        "sha256": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b",
+        "raw": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b.raw",
+        "bytes": 135,
+        "authenticated": true
+      }
+    },
+    {
+      "kind": "solar_forecast",
+      "baseDate": "20250101",
+      "predDate": "20250102",
+      "http": 200,
+      "status": "received",
+      "rows": 238,
+      "total": 238,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20250101",
+          "predDate": "20250102",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:38:07.565806+09:00",
+        "sha256": "73187d9090f086f66ba3d2f6d1726728cd9d44fe353804054985acc43eaf953b",
+        "raw": "73187d9090f086f66ba3d2f6d1726728cd9d44fe353804054985acc43eaf953b.raw",
+        "bytes": 86620,
+        "authenticated": true
+      },
+      "cities": [
+        "강원",
+        "경기",
+        "경남",
+        "경북",
+        "광주",
+        "대구",
+        "대전",
+        "부산",
+        "서울",
+        "세종",
+        "울산",
+        "인천",
+        "전남",
+        "전북",
+        "제주",
+        "충남",
+        "충북"
+      ],
+      "hours": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "mainland_hour_rows": 14,
+      "fields": [
+        "hh",
+        "temp",
+        "baseDate",
+        "city",
+        "pvKpxRst",
+        "solgenPpa",
+        "solgenAll",
+        "pvBtmEst",
+        "predDate",
+        "leapYear",
+        "exSolRad",
+        "humid",
+        "useRate",
+        "dc3tca",
+        "icsrPred",
+        "pvPpaEst",
+        "solgenKpx",
+        "pvAll",
+        "ws",
+        "baseTime",
+        "solgenBtm"
+      ],
+      "sample": [
+        {
+          "hh": "09",
+          "temp": "-3",
+          "baseDate": "20250101",
+          "city": "경기",
+          "pvKpxRst": "452.797",
+          "solgenPpa": "250.421",
+          "solgenAll": "442.13",
+          "pvBtmEst": "702.286",
+          "predDate": "20250102",
+          "leapYear": "N",
+          "exSolRad": "1.06",
+          "humid": "75",
+          "useRate": "16.6",
+          "dc3tca": "2",
+          "icsrPred": "0.2",
+          "pvPpaEst": "1508.841",
+          "solgenKpx": "75.15",
+          "pvAll": "2663.924",
+          "ws": "1",
+          "baseTime": "1400",
+          "solgenBtm": "116.558"
+        }
+      ]
+    },
+    {
+      "kind": "solar_forecast",
+      "baseDate": "20250701",
+      "predDate": "20250702",
+      "http": 200,
+      "status": "received",
+      "rows": 238,
+      "total": 238,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20250701",
+          "predDate": "20250702",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:38:07.390570+09:00",
+        "sha256": "b2c6cbdf7fdb56d7ad6fd4628aa3631314e63793c54e79a6976b40ab17ba943c",
+        "raw": "b2c6cbdf7fdb56d7ad6fd4628aa3631314e63793c54e79a6976b40ab17ba943c.raw",
+        "bytes": 88956,
+        "authenticated": true
+      },
+      "cities": [
+        "강원",
+        "경기",
+        "경남",
+        "경북",
+        "광주",
+        "대구",
+        "대전",
+        "부산",
+        "서울",
+        "세종",
+        "울산",
+        "인천",
+        "전남",
+        "전북",
+        "제주",
+        "충남",
+        "충북"
+      ],
+      "hours": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "mainland_hour_rows": 14,
+      "fields": [
+        "hh",
+        "temp",
+        "baseDate",
+        "city",
+        "pvKpxRst",
+        "solgenPpa",
+        "solgenAll",
+        "pvBtmEst",
+        "predDate",
+        "leapYear",
+        "exSolRad",
+        "humid",
+        "useRate",
+        "dc3tca",
+        "icsrPred",
+        "pvPpaEst",
+        "solgenKpx",
+        "pvAll",
+        "ws",
+        "baseTime",
+        "solgenBtm"
+      ],
+      "sample": [
+        {
+          "hh": "13",
+          "temp": "32",
+          "baseDate": "20250701",
+          "city": "부산",
+          "pvKpxRst": "147.049",
+          "solgenPpa": "59.014",
+          "solgenAll": "193.739",
+          "pvBtmEst": "122.401",
+          "predDate": "20250702",
+          "leapYear": "N",
+          "exSolRad": "4.61",
+          "humid": "60",
+          "useRate": "50",
+          "dc3tca": "1",
+          "icsrPred": "3.17",
+          "pvPpaEst": "118.027",
+          "solgenKpx": "73.525",
+          "pvAll": "387.477",
+          "ws": "1.8",
+          "baseTime": "1400",
+          "solgenBtm": "61.201"
+        }
+      ]
+    },
+    {
+      "kind": "solar_forecast",
+      "baseDate": "20261117",
+      "predDate": "20261118",
+      "http": 200,
+      "status": "received",
+      "rows": 238,
+      "total": 238,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20261117",
+          "predDate": "20261118",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:38:10.204867+09:00",
+        "sha256": "26badb049376b9ddfac1f78b87b76dc9a91421a727579422d749f2b23b82277a",
+        "raw": "26badb049376b9ddfac1f78b87b76dc9a91421a727579422d749f2b23b82277a.raw",
+        "bytes": 86757,
+        "authenticated": true
+      },
+      "cities": [
+        "강원",
+        "경기",
+        "경남",
+        "경북",
+        "광주",
+        "대구",
+        "대전",
+        "부산",
+        "서울",
+        "세종",
+        "울산",
+        "인천",
+        "전남",
+        "전북",
+        "제주",
+        "충남",
+        "충북"
+      ],
+      "hours": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "mainland_hour_rows": 14,
+      "fields": [
+        "hh",
+        "temp",
+        "baseDate",
+        "city",
+        "pvKpxRst",
+        "solgenPpa",
+        "solgenAll",
+        "pvBtmEst",
+        "predDate",
+        "leapYear",
+        "exSolRad",
+        "humid",
+        "useRate",
+        "dc3tca",
+        "icsrPred",
+        "pvPpaEst",
+        "solgenKpx",
+        "pvAll",
+        "ws",
+        "baseTime",
+        "solgenBtm"
+      ],
+      "sample": [
+        {
+          "hh": "12",
+          "temp": "6",
+          "baseDate": "20261117",
+          "city": "서울",
+          "pvKpxRst": "18.488",
+          "solgenPpa": "5.748",
+          "solgenAll": "68.281",
+          "pvBtmEst": "319.05",
+          "predDate": "20261118",
+          "leapYear": "N",
+          "exSolRad": "2.73",
+          "humid": "65",
+          "useRate": "18.53",
+          "dc3tca": "3",
+          "icsrPred": "0.7",
+          "pvPpaEst": "31.025",
+          "solgenKpx": "3.425",
+          "pvAll": "368.563",
+          "ws": "2.5",
+          "baseTime": "1400",
+          "solgenBtm": "59.108"
+        }
+      ]
+    },
+    {
+      "kind": "solar_forecast",
+      "baseDate": "20261118",
+      "predDate": "20261119",
+      "http": 200,
+      "status": "normal_empty",
+      "rows": 0,
+      "total": 0,
+      "receipt": {
+        "source": "https://apis.data.go.kr/B552070/forecastService/oamsFile31",
+        "params": {
+          "baseDate": "20261118",
+          "predDate": "20261119",
+          "apiType": "JSON",
+          "pageNo": 1,
+          "numOfRows": 1000
+        },
+        "http_status": 200,
+        "first_received_at": "2026-11-18T19:38:09.864997+09:00",
+        "sha256": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b",
+        "raw": "147af71bccfbc252101acbd0634de415e9882d4d02ab7cadefc4132d94d0d81b.raw",
+        "bytes": 135,
+        "authenticated": true
+      }
+    }
+  ],
+  "credentials_saved": false
+}
