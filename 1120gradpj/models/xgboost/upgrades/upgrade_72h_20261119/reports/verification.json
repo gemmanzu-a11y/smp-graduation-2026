@@ -1,0 +1,19 @@
+{
+  "originals_and_other_models_unchanged": true,
+  "baseline_references_before_cutoff": true,
+  "test_rows_per_experiment": 13104,
+  "validation_rows_per_experiment": 12888,
+  "rolling_oof_rows": 12600,
+  "test_selection_frozen": true,
+  "checkpoint_roundtrip": true,
+  "features_unchanged": true,
+  "elapsed_seconds": 136.37099719047546,
+  "python": "3.14.5",
+  "numpy": "2.4.6",
+  "pandas": "3.0.3",
+  "model_library_version": "3.4.1",
+  "metadata_resume_only": true,
+  "upgrade_tests_passed": 8,
+  "native_tree_count": 231,
+  "first_fold_original_prediction_max_difference": 0.0
+}

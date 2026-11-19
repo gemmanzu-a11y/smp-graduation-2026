@@ -1,0 +1,89 @@
+[
+  {
+    "fold": 1,
+    "start": "2025-01-01 00:00:00+09:00",
+    "end": "2025-03-01 00:00:00+09:00",
+    "fit_latest_target": "2024-12-31 23:00:00+09:00",
+    "heldout_rows": 4104,
+    "raw": {
+      "rows": 4104,
+      "mae": 10.210579742892675,
+      "rmse": 14.846853971744032,
+      "r2": 0.5790910084774957,
+      "bias": 0.7763755523949338,
+      "overprediction_fraction": 0.5060916179337231,
+      "underprediction_fraction": 0.4939083820662768,
+      "prediction_variance": 275.6159973144531,
+      "actual_variance": 523.6977049622046
+    },
+    "blended": {
+      "rows": 4104,
+      "mae": 10.589207296390052,
+      "rmse": 15.734698985226172,
+      "r2": 0.5272449166575106,
+      "bias": 0.3825054998565064,
+      "overprediction_fraction": 0.5056042884990254,
+      "underprediction_fraction": 0.49439571150097467,
+      "prediction_variance": 292.96682521232674,
+      "actual_variance": 523.6977049622046
+    }
+  },
+  {
+    "fold": 2,
+    "start": "2025-03-01 00:00:00+09:00",
+    "end": "2025-05-01 00:00:00+09:00",
+    "fit_latest_target": "2025-02-28 23:00:00+09:00",
+    "heldout_rows": 4248,
+    "raw": {
+      "rows": 4248,
+      "mae": 11.691758550367338,
+      "rmse": 16.820566711515387,
+      "r2": 0.4065699483778882,
+      "bias": -1.814965561329757,
+      "overprediction_fraction": 0.4578625235404896,
+      "underprediction_fraction": 0.5421374764595104,
+      "prediction_variance": 251.92481994628906,
+      "actual_variance": 476.77306486781424
+    },
+    "blended": {
+      "rows": 4248,
+      "mae": 10.860759773060428,
+      "rmse": 15.843613429691445,
+      "r2": 0.47350195510919935,
+      "bias": -1.8066247328347036,
+      "overprediction_fraction": 0.4500941619585687,
+      "underprediction_fraction": 0.5499058380414312,
+      "prediction_variance": 261.9243800446231,
+      "actual_variance": 476.77306486781424
+    }
+  },
+  {
+    "fold": 3,
+    "start": "2025-05-01 00:00:00+09:00",
+    "end": "2025-07-01 00:00:00+09:00",
+    "fit_latest_target": "2025-04-30 23:00:00+09:00",
+    "heldout_rows": 4248,
+    "raw": {
+      "rows": 4248,
+      "mae": 9.295987977352969,
+      "rmse": 11.509006571110646,
+      "r2": 0.5300593921917442,
+      "bias": 2.655485308156849,
+      "overprediction_fraction": 0.626412429378531,
+      "underprediction_fraction": 0.3735875706214689,
+      "prediction_variance": 242.88966369628906,
+      "actual_variance": 281.8595159750761
+    },
+    "blended": {
+      "rows": 4248,
+      "mae": 8.543070965718414,
+      "rmse": 10.860598310497828,
+      "r2": 0.5815199098247992,
+      "bias": 1.917372267735648,
+      "overprediction_fraction": 0.6245291902071564,
+      "underprediction_fraction": 0.3754708097928437,
+      "prediction_variance": 229.89728423796245,
+      "actual_variance": 281.8595159750761
+    }
+  }
+]

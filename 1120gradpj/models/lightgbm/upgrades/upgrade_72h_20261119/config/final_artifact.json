@@ -1,0 +1,5 @@
+{
+  "checkpoint": "models/final_model.txt",
+  "checkpoint_sha256": "8d008e574f7808249a028ba337ebcc9e66f0d58e48bb6d068dc12a1f867d6e7b",
+  "adopted_experiment": "E3"
+}
