@@ -18,7 +18,7 @@ def read(path,index='timestamp'):
 def load_inputs():
     manifest=json.loads((SHARED/'manifest.json').read_text());features=manifest['context_features']
     old=read(SHARED/'hourly.csv');grid=pd.date_range(old.index.min(),CUTOFF-pd.Timedelta(hours=1),freq='h',tz=c.TZ)
-    raw=old[c.HISTORY].reindex(grid);original=raw.loc[:'2025-12-31'].copy()
+    raw=old[c.HISTORY].reindex(grid);raw.index.name='timestamp';original=raw.loc[:'2025-12-31'].copy()
     def assign(frame,key,source):
         vals=pd.to_numeric(frame[source],errors='coerce');idx=frame.index.intersection(grid);idx=idx[idx.year>=2026]
         raw.loc[idx,key]=vals.reindex(idx)
