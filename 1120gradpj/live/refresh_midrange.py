@@ -6,7 +6,7 @@ import requests
 OUT=Path(__file__).resolve().parents[1]/'data/live_20261120';OUT.mkdir(parents=True,exist_ok=True)
 for element,label in [('WT','temperature'),('WL','weather')]:
     try:
-        params=dict(pgmNo='646',elementCds=element,stnIds='_108',startDt='20261118',endDt='20261119',lrgClssCd='WTF',mddlClssCd='WTF04',serviceSe='F00102',dataFormCd='F00502',menuNo='635',fileType='csv')
+        params=dict(pgmNo='646',elementCds=element,stnIds='_108',startDt='20261118',endDt='20261119',lrgClssCd='WTF',mddlClssCd='WTF04',serviceSe='F00102',dataFormCd='F00502',menuNo='635',fileType='csv',rstView2='1')
         with requests.Session() as s:
             r=s.post('https://data.kma.go.kr/data/weatherReport/downloadMrfDataCSV.do',data=params,timeout=60);r.raise_for_status();name=r.text.strip()
             if not name.startswith('/n027/') or not name.endswith('.csv'):raise ValueError('Unexpected download response')
