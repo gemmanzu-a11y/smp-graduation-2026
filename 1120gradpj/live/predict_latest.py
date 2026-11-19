@@ -10,7 +10,7 @@ from smp_forecast import common_v3 as c
 from smp_forecast.http import write_json
 OUT=ROOT/'data/live_20261120';SHARED=WORK/'SMP_SHARED_DATA/versions'/c.VERSION
 ORIGIN=pd.Timestamp('2026-11-19 23:00',tz=c.TZ);CUTOFF=ORIGIN-pd.Timedelta(hours=72)
-MODEL_ROOT=Path('/private/tmp/smp-xgb-lightgbm-upgrade-20261119/1120gradpj/models/sarimax/upgrades/upgrade_72h_20261119')
+MODEL_ROOT=OUT/'frozen_model'
 
 def read(path,index='timestamp'):
     f=pd.read_csv(path);f.index=c.times(f.pop(index));return f
@@ -77,7 +77,9 @@ class Context:
             block[name+'_sin']=np.sin(2*np.pi*values/period);block[name+'_cos']=np.cos(2*np.pi*values/period)
         block['season']=target.month%12//3;block['weekend']=(target.dayofweek>=5).astype(float);block['holiday']=[float(t.strftime('%Y-%m-%d') in self.holidays) for t in target]
         # Existing exact monthly workbook, fixed October value in the November demo.
-        block['lng_domestic']=[float(self.lng.get(t.strftime('%Y-%m'),self.lng['2026-10'])) for t in target]
+        months=target.strftime('%Y-%m')
+        if any(month not in self.lng and month!='2026-11' for month in months):raise ValueError('Domestic LNG month not available')
+        block['lng_domestic']=[float(self.lng[month if month in self.lng else '2026-10']) for month in months]
         asof=origin.normalize()-pd.Timedelta(days=2)
         for series,frame in self.fred.items():
             key=(series,str(asof.date()))
@@ -111,13 +113,15 @@ def run():
     f=pd.read_csv(SHARED/'forecast_inputs.csv',usecols=['forecast_origin','target_timestamp','actual_smp',*features]);f['forecast_origin']=c.times(f.forecast_origin);f['target_timestamp']=c.times(f.target_timestamp)
     past=f.sort_values('forecast_origin').drop_duplicates('target_timestamp',keep='last').set_index('target_timestamp').sort_index()
     appended=[]
-    for day in pd.date_range('2026-01-01',ORIGIN.normalize(),freq='D',tz=c.TZ):
+    for day in pd.date_range(pd.Timestamp('2026-01-01',tz=c.TZ),ORIGIN.normalize(),freq='D'):
         origin=day-pd.Timedelta(hours=1);target=pd.date_range(day,periods=24,freq='h');block=ctx.build(origin,target);block['actual_smp']=raw.smp.reindex(target);appended.append(block)
     hourly=pd.concat([past,pd.concat(appended)])[['actual_smp',*features]]
     if not (hourly.index.to_series().diff().iloc[1:]==pd.Timedelta(hours=1)).all():raise ValueError('State exog time gap')
     prefix=hourly[hourly.index<CUTOFF];bridge=hourly.loc[CUTOFF:ORIGIN]
     if prefix.actual_smp.isna().any():raise ValueError('Actual SMP missing in state prefix; refusing synthetic SMP')
     if not np.isfinite(hourly[features].to_numpy()).all():raise ValueError('Nonfinite state exog')
+    selection=json.loads((MODEL_ROOT/'config/selection_before_test.json').read_text())
+    if selection['blending']!={'baseline':'baseline_weekly','alpha':.4} or selection['correction']['mode']!='none':raise ValueError('Unexpected adopted E3 policy')
     path=MODEL_ROOT/'models/final_model.npz';expected=json.loads((MODEL_ROOT/'config/final_artifact.json').read_text())['checkpoint_sha256'];digest=hashlib.sha256(path.read_bytes()).hexdigest()
     if digest!=expected:raise ValueError('Frozen checkpoint hash mismatch')
     spec=importlib.util.spec_from_file_location('latest_sarimax',ROOT/'models/sarimax/algorithm_v3.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);model=module.Estimator.load(path)
