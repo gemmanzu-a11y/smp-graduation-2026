@@ -1,0 +1,18 @@
+{
+  "predictions": [
+    {
+      "name": "tuning_predictions.csv.gz",
+      "bytes": 1304287
+    },
+    {
+      "name": "confirmation_candidate.csv.gz",
+      "bytes": 69772
+    },
+    {
+      "name": "test_predictions.csv.gz",
+      "bytes": 1878255
+    }
+  ],
+  "policy": "previous_lstm_upgrade",
+  "all_six_tuning_checkpoints_reproduce_scores": true
+}

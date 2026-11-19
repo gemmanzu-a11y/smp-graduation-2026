@@ -1,0 +1,11 @@
+{
+  "SMP_SHARED_DATA/versions/v3_a90141b81ecd_lag72/manifest.json": "e19c4c2e68dce306c2d03a34a85b72d7f18dfe44a33d9861f81b8b37ee6b167d",
+  "prior_upgrade/lstm/upgrades/upgrade_72h_20261119/models/final_model.pt": "dccc4256830bb852e196206119a3b7976bcf5ff51a870c616a1c09ca06c71234",
+  "prior_upgrade/lstm/upgrades/upgrade_72h_20261119/outputs/predictions/final_test_predictions.csv.gz": "4aad83bd41d2ba4822fef893dce0e621fee28874c5621225df978964905abf0a",
+  "prior_upgrade/sarimax/upgrades/upgrade_72h_20261119/models/final_model.npz": "0d228328f62e629a18e92b85d99e0732b4d7d3a3f4db5d7201b8ce749c24be04",
+  "1120gradpj/models/lstm/outputs/v3_a90141b81ecd_lag72/20261119T012219/model.pt": "a46922d9def2332a03b0e62e25dbe5bd34b7bd4b584f19fe2ae878163aa7f786",
+  "1120gradpj/models/lstm/CURRENT_RUN.json": "76d94dcf04da2164fcab3ae96f44b76776b413c898fa7a0723dd4010bfac92ce",
+  "1120gradpj/models/sarimax/CURRENT_RUN.json": "c1a6635d3e3f7ea3d04c0665a6204ca69a2c2a58c1eba68f8162d71439e37ee7",
+  "1120gradpj/models/xgboost/CURRENT_RUN.json": "09a13898eb6f3b42f2d1f6519b9bfb459888d1f907febc1b394dd6cf4287524c",
+  "1120gradpj/models/lightgbm/CURRENT_RUN.json": "43227ce09b7124b3c5f204600d1540b47ea828a5cde532b37eb05a8481fdf619"
+}

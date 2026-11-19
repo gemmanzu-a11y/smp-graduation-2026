@@ -1,0 +1,17 @@
+{
+  "checkpoint_roundtrip": true,
+  "future_actual_mutation_invariant_inputs": true,
+  "protected_files_unchanged": true,
+  "test_rows_per_variant": 13104,
+  "tuning_rows": 8496,
+  "confirmation_rows": 4248,
+  "excluded_validation_boundary_rows": 144,
+  "selection_frozen_before_confirmation": true,
+  "policy_frozen_before_test": true,
+  "seconds": 47.676475499989465,
+  "torch": "2.12.0",
+  "numpy": "2.4.6",
+  "pandas": "3.0.3",
+  "tests_passed": 8,
+  "all_six_tuning_checkpoints_reproduce_scores": true
+}

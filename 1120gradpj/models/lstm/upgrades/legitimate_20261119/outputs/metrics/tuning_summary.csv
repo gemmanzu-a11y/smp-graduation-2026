@@ -1,0 +1,7 @@
+candidate_id,target,loss,lookback,hidden,best_epoch,raw_mae,mixed_mae,alpha
+absolute_huber48,absolute,huber,48,32,22,13.715993019329062,11.884989802648205,0.5
+residual_mse48,weekly_residual,mse,48,32,1,14.05930615209486,13.64913173486265,0.1
+residual_mae48,weekly_residual,mae,48,32,14,13.22939683483463,13.191042053828824,0.8
+residual_huber48,weekly_residual,huber,48,32,3,13.735914573461459,13.552887685313022,0.4
+residual_huber168,weekly_residual,huber,168,32,3,13.736607630897149,13.553080417624871,0.4
+residual_mae168,weekly_residual,mae,168,64,15,13.110526614317601,13.095016419647557,0.9
