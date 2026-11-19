@@ -23,3 +23,5 @@ Git 브랜치: codex/xgboost-lightgbm-72h-upgrade-20261119.
 python scripts/run_upgrade.py --source-project /path/to/1120gradpj --output-dir /tmp/new-lightgbm-run
 python scripts/evaluate_upgrade.py --model lightgbm --source-project /path/to/1120gradpj --upgrade-dir /tmp/new-lightgbm-run
 ```
+
+실험 코드·최초 결과 커밋: `e4febcc`. 원격 저장소: `gemmanzu-a11y/smp-graduation-2026`. 기존 LSTM·SARIMAX 업그레이드 브랜치를 기반으로 한 별도 후속 브랜치입니다.
