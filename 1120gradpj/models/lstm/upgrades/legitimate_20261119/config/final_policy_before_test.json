@@ -1,0 +1,41 @@
+{
+  "chosen_candidate": {
+    "params": {
+      "id": "absolute_huber48",
+      "target": "absolute",
+      "loss": "huber",
+      "lookback": 48,
+      "hidden": 32,
+      "lr": 0.001,
+      "max_epochs": 60,
+      "patience": 8
+    },
+    "best_epoch": 22,
+    "blending": {
+      "alpha": 0.5,
+      "mae": 11.884989802648205
+    }
+  },
+  "confirmation": {
+    "accepted": false,
+    "candidate_mae": 8.964476224800197,
+    "reference_mae": 8.88486801129501,
+    "monthly": [
+      {
+        "month": 5,
+        "candidate_mae": 8.301012961288855,
+        "reference_mae": 8.632865177437111
+      },
+      {
+        "month": 6,
+        "candidate_mae": 9.650817531880895,
+        "reference_mae": 9.145560598044561
+      }
+    ],
+    "rule": ">=1% holdout MAE improvement, neither May nor June worsens"
+  },
+  "adopt": "previous_lstm_upgrade",
+  "fit_target_end": "2025-06-30",
+  "test_used_for_choice": false,
+  "no_further_candidate_search": true
+}

@@ -1,0 +1,17 @@
+{
+  "params": {
+    "id": "absolute_huber48",
+    "target": "absolute",
+    "loss": "huber",
+    "lookback": 48,
+    "hidden": 32,
+    "lr": 0.001,
+    "max_epochs": 60,
+    "patience": 8
+  },
+  "best_epoch": 22,
+  "blending": {
+    "alpha": 0.5,
+    "mae": 11.884989802648205
+  }
+}
