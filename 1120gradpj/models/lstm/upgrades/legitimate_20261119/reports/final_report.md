@@ -76,3 +76,5 @@ python scripts/report_experiment.py --source-project /path/to/1120gradpj --exper
 설계·체크포인트 검사 4개와 저장 결과·채택 규칙·원본 보호 검사 4개, 총 8개가 통과했습니다. 후보 6개의 튜닝 체크포인트를 다시 불러와 기록한 오차가 재현되는지도 확인했습니다. 다른 모델 및 기존 LSTM의 선택 파일·체크포인트·자료는 바꾸지 않았습니다.
 
 Git 브랜치: `codex/lstm-legitimate-improvement-20261119`.
+
+코드·최초 실험 산출물 커밋: `17791ac`. 원격 저장소: `gemmanzu-a11y/smp-graduation-2026`. 기존 LSTM·SARIMAX 업그레이드 브랜치를 기반으로 한 별도 미채택 실험 기록입니다.
