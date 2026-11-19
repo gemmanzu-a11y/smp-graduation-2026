@@ -1,0 +1,48 @@
+{
+  "model": "lightgbm",
+  "dataset_version": "v3_a90141b81ecd_lag72",
+  "steps": [
+    "baseline blend on Validation",
+    "chronological OOF calibration before final fit",
+    "Train+Validation fixed-setting refit",
+    "frozen Test evaluation"
+  ],
+  "source_project": "provided locally by --source-project; contains the frozen v3 inputs",
+  "original_run": "models/lightgbm/outputs/v3_a90141b81ecd_lag72/20261119T025702",
+  "original_selected": {
+    "params": {
+      "n_estimators": 1200,
+      "learning_rate": 0.03,
+      "num_leaves": 15,
+      "max_depth": 5,
+      "min_child_samples": 100,
+      "subsample": 0.85,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.85,
+      "reg_lambda": 10,
+      "reg_alpha": 0.1
+    },
+    "best_rounds": 187,
+    "validation_mae": 10.428670578738119
+  },
+  "folds": [
+    [
+      "2025-01-01",
+      "2025-03-01"
+    ],
+    [
+      "2025-03-01",
+      "2025-05-01"
+    ],
+    [
+      "2025-05-01",
+      "2025-07-01"
+    ]
+  ],
+  "bias_min_improvement": 0.01,
+  "unchanged_imputation": "original Train-only common imputation; no additional scaling for trees",
+  "input_group_count": 12,
+  "publication_reaudit": false,
+  "test_reused": true,
+  "other_models_modified": false
+}

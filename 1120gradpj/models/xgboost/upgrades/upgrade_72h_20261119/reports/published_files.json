@@ -1,0 +1,31 @@
+{
+  "compressed_predictions": [
+    {
+      "file": "final_test_predictions.csv.gz",
+      "bytes": 1606353
+    },
+    {
+      "file": "experiments_validation.csv.gz",
+      "bytes": 1762327
+    },
+    {
+      "file": "rolling_oof.csv.gz",
+      "bytes": 572866
+    }
+  ],
+  "selected_test_metrics": {
+    "split": "test",
+    "experiment_id": "E3",
+    "rows": 13104,
+    "mae": 14.409496538644303,
+    "rmse": 18.309041516790188,
+    "r2": 0.3699173249222687,
+    "bias": 10.617490874741096,
+    "overprediction_fraction": 0.7886904761904762,
+    "underprediction_fraction": 0.2113095238095238,
+    "prediction_variance": 271.04329955938823,
+    "actual_variance": 532.0270093479267,
+    "evaluation_role": "known Test reevaluation"
+  },
+  "baseline_weekly_mae": 11.433384462759465
+}
